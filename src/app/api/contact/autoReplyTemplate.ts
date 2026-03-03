@@ -11,6 +11,7 @@ const translations: Record<
     thankYou: string;
     expectation: string;
     closing: string;
+    whatsapp: string;
     team: string;
   }
 > = {
@@ -22,6 +23,7 @@ const translations: Record<
       "We've received your message and our team will get back to you within 24 hours on business days.",
     closing:
       "In the meantime, feel free to reply to this email if you have any additional details to share.",
+    whatsapp: "You can also reach us on WhatsApp for a quicker response:",
     team: "The Atlas Studio Team",
   },
   sq: {
@@ -32,6 +34,7 @@ const translations: Record<
       "Kemi marrë mesazhin tuaj dhe ekipi ynë do t'ju përgjigjet brenda 24 orëve në ditë pune.",
     closing:
       "Ndërkohë, mos hezitoni t'i përgjigjeni këtij emaili nëse keni detaje shtesë për të ndarë.",
+    whatsapp: "Mund të na kontaktoni edhe në WhatsApp për përgjigje më të shpejtë:",
     team: "Ekipi i Atlas Studio",
   },
 };
@@ -52,6 +55,10 @@ export function buildAutoReplyHtml({
         <p style="font-size: 16px; line-height: 1.6; margin-bottom: 16px;">${t.thankYou}</p>
         <p style="font-size: 16px; line-height: 1.6; margin-bottom: 24px;">${t.expectation}</p>
         <p style="font-size: 16px; line-height: 1.6; margin-bottom: 24px;">${t.closing}</p>
+        <div style="margin: 24px 0; padding: 16px; background: #f5f3ef; border-radius: 12px; text-align: center;">
+          <p style="font-size: 14px; color: #37474b; margin-bottom: 12px;">${t.whatsapp}</p>
+          <a href="https://wa.me/38345957990" style="display: inline-block; background: #25D366; color: #ffffff; font-size: 14px; font-weight: 600; padding: 10px 24px; border-radius: 8px; text-decoration: none;">WhatsApp: +383 45 957 990</a>
+        </div>
         <p style="font-size: 16px; margin-top: 32px; color: #487877; font-weight: 600;">${t.team}</p>
       </div>
       <div style="text-align: center; margin-top: 24px; font-size: 13px; color: #37474b80;">

@@ -18,9 +18,9 @@ export default async function Footer() {
               <Image
                 src="/Images/atlas-studio-png.png"
                 alt="Atlas Studio"
-                width={28}
+                width={19}
                 height={28}
-                className="w-7 h-7"
+                className="h-7 w-auto"
               />
               <span className="font-semibold text-slate">Atlas Studio</span>
             </a>

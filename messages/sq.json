@@ -72,8 +72,10 @@
       "description": "Hiqni sfondin e imazheve automatikisht me inteligjence artificiale — direkt ne shfletues.",
       "processing": "Duke procesuar...",
       "first_time": "Hera e pare kerkon shkarkimin e modelit (~40MB)",
+      "downloading_model": "Duke shkarkuar modelin AI...",
       "download": "Shkarko pa Sfond",
-      "max_size_warning": "Per rezultate me te mira, perdorni imazhe nen 10MB"
+      "max_size_warning": "Per rezultate me te mira, perdorni imazhe nen 10MB",
+      "try_again": "Provo perseri"
     },
     "color-picker": {
       "name": "Zgjedhes Ngjyrash",

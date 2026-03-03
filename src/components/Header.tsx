@@ -24,9 +24,9 @@ export default function Header() {
           <Image
             src="/Images/atlas-studio-png.png"
             alt="Atlas Studio"
-            width={32}
+            width={22}
             height={32}
-            className="w-8 h-8"
+            className="h-8 w-auto"
           />
           <span className="font-semibold text-slate text-lg tracking-tight">
             Atlas Studio{" "}

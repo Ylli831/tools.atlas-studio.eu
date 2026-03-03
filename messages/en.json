@@ -72,8 +72,10 @@
       "description": "Remove image backgrounds automatically with AI — right in your browser.",
       "processing": "Processing...",
       "first_time": "First time requires model download (~40MB)",
+      "downloading_model": "Downloading AI model...",
       "download": "Download Without Background",
-      "max_size_warning": "For best results, use images under 10MB"
+      "max_size_warning": "For best results, use images under 10MB",
+      "try_again": "Try again"
     },
     "color-picker": {
       "name": "Color Picker",
