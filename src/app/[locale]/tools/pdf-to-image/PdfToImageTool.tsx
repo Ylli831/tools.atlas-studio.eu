@@ -32,6 +32,7 @@ export default function PdfToImageTool() {
         canvas.width = viewport.width;
         canvas.height = viewport.height;
         const ctx = canvas.getContext("2d")!;
+        // @ts-expect-error - pdfjs-dist types require canvas but canvasContext works at runtime
         await page.render({ canvasContext: ctx, viewport }).promise;
         results.push(canvas.toDataURL(`image/${format}`, format === "jpeg" ? 0.92 : undefined));
       }
