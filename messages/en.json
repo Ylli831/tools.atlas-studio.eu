@@ -20,6 +20,8 @@
     "cat_developer": "Developer",
     "cat_generator": "Generator",
     "cat_text": "Text",
+    "cat_pdf": "PDF",
+    "cat_business": "Business",
     "tools_count": "tools",
     "popular_tools": "Popular Tools",
     "privacy_title": "Privacy Guaranteed",
@@ -200,6 +202,164 @@
       "now": "Now",
       "local_time": "Local Time",
       "utc_time": "UTC Time"
+    },
+    "image-to-pdf": {
+      "name": "Image to PDF",
+      "description": "Convert one or more images into a single PDF document.",
+      "drag_to_reorder": "Drag images to reorder them",
+      "orientation": "Orientation",
+      "portrait": "Portrait",
+      "landscape": "Landscape",
+      "margin": "Margin",
+      "generate_pdf": "Generate PDF"
+    },
+    "pdf-merge": {
+      "name": "PDF Merge",
+      "description": "Combine multiple PDF files into one document.",
+      "drag_to_reorder": "Drag files to reorder them",
+      "merge": "Merge PDFs"
+    },
+    "pdf-to-image": {
+      "name": "PDF to Image",
+      "description": "Convert PDF pages to PNG or JPEG images.",
+      "scale": "Resolution",
+      "format": "Format",
+      "pages_converted": "{count} pages converted",
+      "download_all": "Download All",
+      "page": "Page"
+    },
+    "image-resizer": {
+      "name": "Image Resizer",
+      "description": "Resize images to exact dimensions or social media presets.",
+      "original": "Original",
+      "width": "Width",
+      "height": "Height",
+      "lock_aspect": "Lock aspect ratio",
+      "format": "Format",
+      "quality": "Quality",
+      "presets": "Social Media Presets",
+      "resize_download": "Resize & Download"
+    },
+    "favicon-generator": {
+      "name": "Favicon Generator",
+      "description": "Generate favicons and app icons in all sizes from a single image.",
+      "generate": "Generate All Sizes",
+      "download_ico": "Download favicon.ico"
+    },
+    "svg-to-png": {
+      "name": "SVG to PNG",
+      "description": "Convert SVG vector files to high-resolution PNG images.",
+      "svg_preview": "SVG Preview",
+      "png_result": "PNG Result",
+      "scale": "Scale",
+      "transparent_bg": "Background",
+      "transparent": "Transparent",
+      "bg_color": "Background Color",
+      "convert": "Convert"
+    },
+    "case-converter": {
+      "name": "Case Converter",
+      "description": "Convert text between uppercase, lowercase, camelCase, snake_case and more.",
+      "input_label": "Enter your text",
+      "input_placeholder": "Type or paste your text here...",
+      "uppercase": "UPPERCASE",
+      "lowercase": "lowercase",
+      "title_case": "Title Case",
+      "sentence_case": "Sentence case",
+      "alternating": "aLtErNaTiNg",
+      "inverse": "iNVERSE"
+    },
+    "text-diff": {
+      "name": "Text Diff",
+      "description": "Compare two texts side by side and highlight the differences.",
+      "original": "Original Text",
+      "modified": "Modified Text",
+      "original_placeholder": "Paste original text here...",
+      "modified_placeholder": "Paste modified text here...",
+      "added": "added",
+      "removed": "removed",
+      "unchanged": "unchanged"
+    },
+    "ocr-image-to-text": {
+      "name": "OCR — Image to Text",
+      "description": "Extract text from images using optical character recognition.",
+      "language": "Document Language",
+      "extract_text": "Extract Text",
+      "result": "Extracted Text"
+    },
+    "regex-tester": {
+      "name": "Regex Tester",
+      "description": "Test regular expressions with real-time matching and highlighting.",
+      "pattern": "Pattern",
+      "pattern_placeholder": "Enter regex pattern...",
+      "test_string": "Test String",
+      "test_placeholder": "Enter text to test against...",
+      "global": "Global",
+      "case_insensitive": "Case Insensitive",
+      "multiline": "Multiline",
+      "dotall": "Dot All",
+      "highlighted": "Highlighted Matches",
+      "matches": "Matches",
+      "match": "Match",
+      "index": "Index",
+      "groups": "Groups",
+      "empty_match": "(empty)"
+    },
+    "uuid-generator": {
+      "name": "UUID Generator",
+      "description": "Generate random UUIDs (v4) in various formats.",
+      "count": "Count",
+      "format": "Format",
+      "standard": "Standard (dashes)",
+      "no_dashes": "No dashes",
+      "uppercase_fmt": "UPPERCASE",
+      "braces": "With braces {…}",
+      "generate": "Generate",
+      "copy_all": "Copy All"
+    },
+    "hash-generator": {
+      "name": "Hash Generator",
+      "description": "Generate SHA-1, SHA-256, SHA-384 and SHA-512 hashes from text or files.",
+      "text_mode": "Text",
+      "file_mode": "File",
+      "input_label": "Enter text",
+      "input_placeholder": "Type or paste text to hash..."
+    },
+    "invoice-generator": {
+      "name": "Invoice Generator",
+      "description": "Create professional PDF invoices directly in your browser.",
+      "invoice_number": "Invoice #",
+      "date": "Date",
+      "due_date": "Due Date",
+      "currency": "Currency",
+      "from": "From",
+      "to": "Bill To",
+      "company_name": "Your company name",
+      "client_name": "Client name",
+      "address": "Address",
+      "items": "Items",
+      "item_description": "Description",
+      "qty": "Qty",
+      "price": "Price",
+      "amount": "Amount",
+      "add_item": "Add Item",
+      "subtotal": "Subtotal",
+      "tax": "Tax",
+      "total": "Total",
+      "notes": "Notes",
+      "notes_placeholder": "Payment terms, bank details, thank you note...",
+      "download_pdf": "Download PDF"
+    },
+    "og-preview": {
+      "name": "Open Graph Preview",
+      "description": "Preview how your website looks when shared on social media.",
+      "url_label": "Website URL",
+      "url_placeholder": "https://example.com",
+      "preview": "Preview",
+      "fetch_error": "Could not fetch the URL. Make sure it's accessible.",
+      "meta_tags": "Open Graph Tags",
+      "facebook_preview": "Facebook / LinkedIn",
+      "twitter_preview": "Twitter / X"
     }
   },
   "contact": {
@@ -247,7 +407,9 @@
     "image": "Image",
     "developer": "Developer",
     "generator": "Generator",
-    "text": "Text"
+    "text": "Text",
+    "pdf": "PDF",
+    "business": "Business"
   },
   "cookieConsent": {
     "title": "Cookie Notice",

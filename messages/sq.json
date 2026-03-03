@@ -20,6 +20,8 @@
     "cat_developer": "Zhvillues",
     "cat_generator": "Gjenerues",
     "cat_text": "Tekst",
+    "cat_pdf": "PDF",
+    "cat_business": "Biznes",
     "tools_count": "vegla",
     "popular_tools": "Veglat me te Njohura",
     "privacy_title": "Privatesia e Garantuar",
@@ -200,6 +202,164 @@
       "now": "Tani",
       "local_time": "Koha Lokale",
       "utc_time": "Koha UTC"
+    },
+    "image-to-pdf": {
+      "name": "Imazh ne PDF",
+      "description": "Konvertoni nje ose me shume imazhe ne nje dokument PDF.",
+      "drag_to_reorder": "Terhiqni imazhet per ti rirenditur",
+      "orientation": "Orientimi",
+      "portrait": "Vertikal",
+      "landscape": "Horizontal",
+      "margin": "Margjina",
+      "generate_pdf": "Gjenero PDF"
+    },
+    "pdf-merge": {
+      "name": "Bashko PDF",
+      "description": "Kombinoni shume skedare PDF ne nje dokument.",
+      "drag_to_reorder": "Terhiqni skedaret per ti rirenditur",
+      "merge": "Bashko PDF-te"
+    },
+    "pdf-to-image": {
+      "name": "PDF ne Imazh",
+      "description": "Konvertoni faqet PDF ne imazhe PNG ose JPEG.",
+      "scale": "Rezolucioni",
+      "format": "Formati",
+      "pages_converted": "{count} faqe u konvertuan",
+      "download_all": "Shkarko te Gjitha",
+      "page": "Faqja"
+    },
+    "image-resizer": {
+      "name": "Ndryshues Madhesie Imazhesh",
+      "description": "Ndryshoni madhesine e imazheve ne permasat e sakta ose per rrjete sociale.",
+      "original": "Origjinali",
+      "width": "Gjeresia",
+      "height": "Lartesia",
+      "lock_aspect": "Mbaj raportin e aspektit",
+      "format": "Formati",
+      "quality": "Cilesia",
+      "presets": "Permasa per Rrjete Sociale",
+      "resize_download": "Ndrysho & Shkarko"
+    },
+    "favicon-generator": {
+      "name": "Gjenerues Favicon",
+      "description": "Gjeneroni favicon dhe ikona aplikacionesh ne te gjitha madhesive.",
+      "generate": "Gjenero te Gjitha Madhesive",
+      "download_ico": "Shkarko favicon.ico"
+    },
+    "svg-to-png": {
+      "name": "SVG ne PNG",
+      "description": "Konvertoni skedare vektore SVG ne imazhe PNG me rezolucion te larte.",
+      "svg_preview": "Parashikimi SVG",
+      "png_result": "Rezultati PNG",
+      "scale": "Shkalla",
+      "transparent_bg": "Sfondi",
+      "transparent": "Transparent",
+      "bg_color": "Ngjyra e Sfondit",
+      "convert": "Konverto"
+    },
+    "case-converter": {
+      "name": "Konvertues Shkronjash",
+      "description": "Konvertoni tekstin midis shkronjave te medha, te vogla, camelCase, snake_case dhe me shume.",
+      "input_label": "Shkruani tekstin tuaj",
+      "input_placeholder": "Shkruani ose ngjisni tekstin ketu...",
+      "uppercase": "SHKRONJA TE MEDHA",
+      "lowercase": "shkronja te vogla",
+      "title_case": "Shkronja e Pare e Madhe",
+      "sentence_case": "Shkronja e fjalis",
+      "alternating": "aLtErNuEsE",
+      "inverse": "iNVERSE"
+    },
+    "text-diff": {
+      "name": "Krahasues Tekstesh",
+      "description": "Krahasoni dy tekste krah per krah dhe shfaqni ndryshimet.",
+      "original": "Teksti Origjinal",
+      "modified": "Teksti i Modifikuar",
+      "original_placeholder": "Ngjisni tekstin origjinal ketu...",
+      "modified_placeholder": "Ngjisni tekstin e modifikuar ketu...",
+      "added": "shtuar",
+      "removed": "hequr",
+      "unchanged": "pa ndryshim"
+    },
+    "ocr-image-to-text": {
+      "name": "OCR — Imazh ne Tekst",
+      "description": "Nxirrni tekst nga imazhet duke perdorur njohjen optike te karaktereve.",
+      "language": "Gjuha e Dokumentit",
+      "extract_text": "Nxirr Tekstin",
+      "result": "Teksti i Nxjerre"
+    },
+    "regex-tester": {
+      "name": "Testues Regex",
+      "description": "Testoni shprehjet e rregullta me perputhjeve ne kohe reale.",
+      "pattern": "Shabllon",
+      "pattern_placeholder": "Shkruani shabllon regex...",
+      "test_string": "Teksti per Test",
+      "test_placeholder": "Shkruani tekstin per te testuar...",
+      "global": "Global",
+      "case_insensitive": "Pa Dallim Shkronjash",
+      "multiline": "Shumrreshtor",
+      "dotall": "Pika per te Gjitha",
+      "highlighted": "Perputhjet e Theksuara",
+      "matches": "Perputhjet",
+      "match": "Perputhja",
+      "index": "Indeksi",
+      "groups": "Grupet",
+      "empty_match": "(bosh)"
+    },
+    "uuid-generator": {
+      "name": "Gjenerues UUID",
+      "description": "Gjeneroni UUID te rastesishme (v4) ne formate te ndryshme.",
+      "count": "Numri",
+      "format": "Formati",
+      "standard": "Standard (me viza)",
+      "no_dashes": "Pa viza",
+      "uppercase_fmt": "SHKRONJA TE MEDHA",
+      "braces": "Me kllapa {…}",
+      "generate": "Gjenero",
+      "copy_all": "Kopjo te Gjitha"
+    },
+    "hash-generator": {
+      "name": "Gjenerues Hash",
+      "description": "Gjeneroni hash SHA-1, SHA-256, SHA-384 dhe SHA-512 nga teksti ose skedaret.",
+      "text_mode": "Tekst",
+      "file_mode": "Skedar",
+      "input_label": "Shkruani tekstin",
+      "input_placeholder": "Shkruani ose ngjisni tekstin per hash..."
+    },
+    "invoice-generator": {
+      "name": "Gjenerues Faturash",
+      "description": "Krijoni fatura profesionale PDF direkt ne shfletuesin tuaj.",
+      "invoice_number": "Fatura #",
+      "date": "Data",
+      "due_date": "Afati",
+      "currency": "Valuta",
+      "from": "Nga",
+      "to": "Per",
+      "company_name": "Emri i kompanis",
+      "client_name": "Emri i klientit",
+      "address": "Adresa",
+      "items": "Artikujt",
+      "item_description": "Pershkrimi",
+      "qty": "Sas",
+      "price": "Cmimi",
+      "amount": "Shuma",
+      "add_item": "Shto Artikull",
+      "subtotal": "Nentotali",
+      "tax": "Tatimi",
+      "total": "Totali",
+      "notes": "Shenime",
+      "notes_placeholder": "Kushtet e pageses, detajet bankare, falenderim...",
+      "download_pdf": "Shkarko PDF"
+    },
+    "og-preview": {
+      "name": "Parashikues Open Graph",
+      "description": "Parashikoni si duket faqja juaj kur ndahet ne rrjete sociale.",
+      "url_label": "URL e Faqjes",
+      "url_placeholder": "https://shembull.com",
+      "preview": "Parashiko",
+      "fetch_error": "Nuk mund te merret URL. Sigurohuni qe eshte e arritshme.",
+      "meta_tags": "Etiketat Open Graph",
+      "facebook_preview": "Facebook / LinkedIn",
+      "twitter_preview": "Twitter / X"
     }
   },
   "contact": {
@@ -247,7 +407,9 @@
     "image": "Imazhe",
     "developer": "Zhvillues",
     "generator": "Gjenerues",
-    "text": "Tekst"
+    "text": "Tekst",
+    "pdf": "PDF",
+    "business": "Biznes"
   },
   "cookieConsent": {
     "title": "Njoftim per Cookie",

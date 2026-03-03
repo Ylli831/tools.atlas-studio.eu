@@ -21,17 +21,21 @@ function HomeContent() {
   const tc = useTranslations("categories");
 
   const categoryIcons: Record<string, string> = {
+    pdf: "file-image",
     image: "image",
-    developer: "code",
     generator: "qr",
     text: "text",
+    developer: "code",
+    business: "receipt",
   };
 
   const categories = [
+    { key: "pdf", count: tools.filter((t) => t.category === "pdf").length },
     { key: "image", count: tools.filter((t) => t.category === "image").length },
     { key: "generator", count: tools.filter((t) => t.category === "generator").length },
-    { key: "developer", count: tools.filter((t) => t.category === "developer").length },
     { key: "text", count: tools.filter((t) => t.category === "text").length },
+    { key: "developer", count: tools.filter((t) => t.category === "developer").length },
+    { key: "business", count: tools.filter((t) => t.category === "business").length },
   ];
 
   return (
@@ -72,7 +76,7 @@ function HomeContent() {
       {/* Categories */}
       <section className="pb-12">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
             {categories.map((cat) => (
               <div
                 key={cat.key}

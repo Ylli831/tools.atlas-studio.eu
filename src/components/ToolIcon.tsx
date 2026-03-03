@@ -3,128 +3,62 @@ export default function ToolIcon({ icon, size = 20 }: { icon: string; size?: num
 
   switch (icon) {
     case "qr":
-      return (
-        <svg {...props}>
-          <rect x="2" y="2" width="8" height="8" rx="1" />
-          <rect x="14" y="2" width="8" height="8" rx="1" />
-          <rect x="2" y="14" width="8" height="8" rx="1" />
-          <rect x="14" y="14" width="4" height="4" />
-          <rect x="20" y="14" width="2" height="2" />
-          <rect x="14" y="20" width="2" height="2" />
-          <rect x="20" y="20" width="2" height="2" />
-        </svg>
-      );
+      return (<svg {...props}><rect x="2" y="2" width="8" height="8" rx="1" /><rect x="14" y="2" width="8" height="8" rx="1" /><rect x="2" y="14" width="8" height="8" rx="1" /><rect x="14" y="14" width="4" height="4" /><rect x="20" y="14" width="2" height="2" /><rect x="14" y="20" width="2" height="2" /><rect x="20" y="20" width="2" height="2" /></svg>);
     case "image":
-      return (
-        <svg {...props}>
-          <rect x="3" y="3" width="18" height="18" rx="2" />
-          <circle cx="8.5" cy="8.5" r="1.5" />
-          <path d="M21 15l-5-5L5 21" />
-        </svg>
-      );
+      return (<svg {...props}><rect x="3" y="3" width="18" height="18" rx="2" /><circle cx="8.5" cy="8.5" r="1.5" /><path d="M21 15l-5-5L5 21" /></svg>);
     case "compress":
-      return (
-        <svg {...props}>
-          <path d="M4 14.899A7 7 0 1115.71 8h1.79a4.5 4.5 0 012.5 8.242" />
-          <path d="M12 12v9" />
-          <path d="M8 17l4 4 4-4" />
-        </svg>
-      );
+      return (<svg {...props}><path d="M4 14.899A7 7 0 1115.71 8h1.79a4.5 4.5 0 012.5 8.242" /><path d="M12 12v9" /><path d="M8 17l4 4 4-4" /></svg>);
     case "scissors":
-      return (
-        <svg {...props}>
-          <path d="M5 12h14" />
-          <path d="M12 5v14" />
-          <path d="M5 5l14 14" />
-          <path d="M19 5L5 19" />
-          <circle cx="12" cy="12" r="3" fill="none" />
-        </svg>
-      );
+      return (<svg {...props}><path d="M5 12h14" /><path d="M12 5v14" /><path d="M5 5l14 14" /><path d="M19 5L5 19" /><circle cx="12" cy="12" r="3" fill="none" /></svg>);
     case "palette":
-      return (
-        <svg {...props}>
-          <circle cx="13.5" cy="6.5" r="2.5" fill="currentColor" stroke="none" opacity="0.3" />
-          <circle cx="17.5" cy="10.5" r="2.5" fill="currentColor" stroke="none" opacity="0.5" />
-          <circle cx="8.5" cy="7.5" r="2.5" fill="currentColor" stroke="none" opacity="0.2" />
-          <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 011.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z" />
-        </svg>
-      );
+      return (<svg {...props}><circle cx="13.5" cy="6.5" r="2.5" fill="currentColor" stroke="none" opacity="0.3" /><circle cx="17.5" cy="10.5" r="2.5" fill="currentColor" stroke="none" opacity="0.5" /><circle cx="8.5" cy="7.5" r="2.5" fill="currentColor" stroke="none" opacity="0.2" /><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 011.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z" /></svg>);
     case "code":
-      return (
-        <svg {...props}>
-          <polyline points="16 18 22 12 16 6" />
-          <polyline points="8 6 2 12 8 18" />
-          <line x1="14" y1="4" x2="10" y2="20" />
-        </svg>
-      );
+      return (<svg {...props}><polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" /><line x1="14" y1="4" x2="10" y2="20" /></svg>);
     case "braces":
-      return (
-        <svg {...props}>
-          <path d="M8 3H7a2 2 0 00-2 2v5a2 2 0 01-2 2 2 2 0 012 2v5c0 1.1.9 2 2 2h1" />
-          <path d="M16 21h1a2 2 0 002-2v-5c0-1.1.9-2 2-2a2 2 0 01-2-2V5a2 2 0 00-2-2h-1" />
-        </svg>
-      );
+      return (<svg {...props}><path d="M8 3H7a2 2 0 00-2 2v5a2 2 0 01-2 2 2 2 0 012 2v5c0 1.1.9 2 2 2h1" /><path d="M16 21h1a2 2 0 002-2v-5c0-1.1.9-2 2-2a2 2 0 01-2-2V5a2 2 0 00-2-2h-1" /></svg>);
     case "text":
-      return (
-        <svg {...props}>
-          <path d="M17 6.1H3" />
-          <path d="M21 12.1H3" />
-          <path d="M15.1 18H3" />
-        </svg>
-      );
+      return (<svg {...props}><path d="M17 6.1H3" /><path d="M21 12.1H3" /><path d="M15.1 18H3" /></svg>);
     case "lock":
-      return (
-        <svg {...props}>
-          <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
-          <path d="M7 11V7a5 5 0 0110 0v4" />
-        </svg>
-      );
+      return (<svg {...props}><rect x="3" y="11" width="18" height="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0110 0v4" /></svg>);
     case "counter":
-      return (
-        <svg {...props}>
-          <path d="M4 4h16v16H4z" />
-          <path d="M4 9h16" />
-          <path d="M9 4v16" />
-        </svg>
-      );
+      return (<svg {...props}><path d="M4 4h16v16H4z" /><path d="M4 9h16" /><path d="M9 4v16" /></svg>);
     case "gradient":
-      return (
-        <svg {...props}>
-          <rect x="3" y="3" width="18" height="18" rx="2" />
-          <path d="M3 3l18 18" />
-          <path d="M3 9l12 12" />
-          <path d="M3 15l6 6" />
-          <path d="M9 3l12 12" />
-          <path d="M15 3l6 6" />
-        </svg>
-      );
+      return (<svg {...props}><rect x="3" y="3" width="18" height="18" rx="2" /><path d="M3 3l18 18" /><path d="M3 9l12 12" /><path d="M3 15l6 6" /><path d="M9 3l12 12" /><path d="M15 3l6 6" /></svg>);
     case "markdown":
-      return (
-        <svg {...props}>
-          <rect x="2" y="4" width="20" height="16" rx="2" />
-          <path d="M6 8v8l3-3 3 3V8" />
-          <path d="M18 12l-2.5-3v6" />
-        </svg>
-      );
+      return (<svg {...props}><rect x="2" y="4" width="20" height="16" rx="2" /><path d="M6 8v8l3-3 3 3V8" /><path d="M18 12l-2.5-3v6" /></svg>);
     case "link":
-      return (
-        <svg {...props}>
-          <path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71" />
-          <path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71" />
-        </svg>
-      );
+      return (<svg {...props}><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71" /><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71" /></svg>);
     case "clock":
-      return (
-        <svg {...props}>
-          <circle cx="12" cy="12" r="10" />
-          <polyline points="12 6 12 12 16 14" />
-        </svg>
-      );
+      return (<svg {...props}><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>);
+    case "file-image":
+      return (<svg {...props}><path d="M14.5 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V7.5L14.5 2z" /><polyline points="14 2 14 8 20 8" /><circle cx="10" cy="13" r="2" /><path d="M20 17l-1.09-1.09a2 2 0 00-2.82 0L10 22" /></svg>);
+    case "file-plus":
+      return (<svg {...props}><path d="M14.5 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V7.5L14.5 2z" /><polyline points="14 2 14 8 20 8" /><line x1="12" y1="18" x2="12" y2="12" /><line x1="9" y1="15" x2="15" y2="15" /></svg>);
+    case "file-down":
+      return (<svg {...props}><path d="M14.5 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V7.5L14.5 2z" /><polyline points="14 2 14 8 20 8" /><path d="M12 18v-6" /><path d="M9 15l3 3 3-3" /></svg>);
+    case "resize":
+      return (<svg {...props}><rect x="3" y="3" width="18" height="18" rx="2" /><path d="M9 3v18" /><path d="M3 9h18" /></svg>);
+    case "star":
+      return (<svg {...props}><rect x="3" y="3" width="18" height="18" rx="2" /><path d="M12 7l1.5 3 3.5.5-2.5 2.5.5 3.5L12 15l-3 1.5.5-3.5L7 10.5l3.5-.5L12 7z" /></svg>);
+    case "image-down":
+      return (<svg {...props}><path d="M21 12.5V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2h7.5" /><circle cx="9" cy="9" r="2" /><path d="M21 15l-3.09-3.09a2 2 0 00-2.82 0L6 21" /><path d="M19 16v6" /><path d="M22 19l-3 3-3-3" /></svg>);
+    case "fingerprint":
+      return (<svg {...props}><path d="M2 12C2 6.5 6.5 2 12 2a10 10 0 018 4" /><path d="M5 19.5C5.5 18 6 15 6 12c0-3.5 2.5-6 6-6 1 0 2 .2 3 .5" /><path d="M12 12c0 4-1 8-3 10" /><path d="M12 12c0 5 1.5 8 3 10" /><path d="M18 12c0 2-.5 5-2 8" /><path d="M22 12a10 10 0 01-2 6" /></svg>);
+    case "case":
+      return (<svg {...props}><path d="M2 16.1A5 5 0 0113 16.1" /><path d="M7 7v9" /><path d="M2 7h10" /><path d="M15 16V7l4 9 4-9v9" /></svg>);
+    case "diff":
+      return (<svg {...props}><rect x="2" y="4" width="8" height="16" rx="1" /><rect x="14" y="4" width="8" height="16" rx="1" /><path d="M5 8h2" /><path d="M5 12h2" /><path d="M17 8h2" /><path d="M17 12h2" /></svg>);
+    case "scan":
+      return (<svg {...props}><path d="M3 7V5a2 2 0 012-2h2" /><path d="M17 3h2a2 2 0 012 2v2" /><path d="M21 17v2a2 2 0 01-2 2h-2" /><path d="M7 21H5a2 2 0 01-2-2v-2" /><path d="M7 8h10" /><path d="M7 12h10" /><path d="M7 16h7" /></svg>);
+    case "regex":
+      return (<svg {...props}><path d="M17 3v10" /><path d="M12.67 5.5l8.66 5" /><path d="M12.67 10.5l8.66-5" /><path d="M9 17a2 2 0 00-2-2H5a2 2 0 00-2 2v0a2 2 0 002 2h2a2 2 0 002-2z" /></svg>);
+    case "hash":
+      return (<svg {...props}><line x1="4" y1="9" x2="20" y2="9" /><line x1="4" y1="15" x2="20" y2="15" /><line x1="10" y1="3" x2="8" y2="21" /><line x1="16" y1="3" x2="14" y2="21" /></svg>);
+    case "receipt":
+      return (<svg {...props}><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1-2-1z" /><path d="M8 7h8" /><path d="M8 11h8" /><path d="M8 15h4" /></svg>);
+    case "share":
+      return (<svg {...props}><rect x="3" y="3" width="18" height="18" rx="2" /><path d="M7 12h10" /><path d="M7 7h10" /><path d="M7 17h6" /></svg>);
     default:
-      return (
-        <svg {...props}>
-          <circle cx="12" cy="12" r="10" />
-        </svg>
-      );
+      return (<svg {...props}><circle cx="12" cy="12" r="10" /></svg>);
   }
 }
