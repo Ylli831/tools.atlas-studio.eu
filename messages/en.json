@@ -1,0 +1,149 @@
+{
+  "metadata": {
+    "title": "Free Online Tools — Atlas Studio",
+    "template": "%s | Atlas Studio Tools",
+    "description": "Free online tools for developers and designers. QR code generator, image converter, background remover, JSON formatter and more."
+  },
+  "nav": {
+    "home": "Home",
+    "tools": "Tools"
+  },
+  "home": {
+    "badge": "Free Online Tools",
+    "hero_title": "Powerful tools, right in your browser",
+    "hero_subtitle": "Convert, compress, generate — all without a server, no sign-up, completely free.",
+    "explore_tools": "Explore Tools",
+    "categories_title": "Categories",
+    "cat_image": "Image",
+    "cat_developer": "Developer",
+    "cat_generator": "Generator",
+    "cat_text": "Text",
+    "privacy_title": "Privacy Guaranteed",
+    "privacy_description": "All tools run directly in your browser. No files are uploaded to any server.",
+    "cta_title": "Need a custom solution?",
+    "cta_description": "Atlas Studio builds web apps, mobile apps, and cloud solutions.",
+    "cta_button": "Visit Atlas Studio"
+  },
+  "tools": {
+    "title": "All Tools",
+    "subtitle": "Choose a tool to get started",
+    "qr-code-generator": {
+      "name": "QR Code Generator",
+      "description": "Generate QR codes from text or URLs. Download as PNG or SVG.",
+      "input_label": "Enter text or URL",
+      "input_placeholder": "https://example.com",
+      "size": "Size",
+      "error_correction": "Error Correction",
+      "fg_color": "Foreground Color",
+      "bg_color": "Background Color",
+      "download_png": "Download PNG",
+      "download_svg": "Download SVG"
+    },
+    "image-converter": {
+      "name": "Image Converter",
+      "description": "Convert images between JPG, PNG, WebP, ICO and AVIF formats.",
+      "select_format": "Target Format",
+      "quality": "Quality",
+      "convert": "Convert",
+      "download": "Download",
+      "unsupported_avif": "AVIF is not supported in your browser. Please use Chrome or Edge."
+    },
+    "image-compressor": {
+      "name": "Image Compressor",
+      "description": "Reduce image file sizes while maintaining quality.",
+      "quality": "Quality",
+      "max_width": "Max Width",
+      "max_height": "Max Height",
+      "compress": "Compress",
+      "original_size": "Original Size",
+      "compressed_size": "Compressed Size",
+      "savings": "Savings"
+    },
+    "background-remover": {
+      "name": "Background Remover",
+      "description": "Remove image backgrounds automatically with AI — right in your browser.",
+      "processing": "Processing...",
+      "first_time": "First time requires model download (~40MB)",
+      "download": "Download Without Background",
+      "max_size_warning": "For best results, use images under 10MB"
+    },
+    "color-picker": {
+      "name": "Color Picker",
+      "description": "Pick colors, generate palettes, copy in HEX/RGB/HSL formats.",
+      "pick_color": "Pick a Color",
+      "palette": "Color Palette",
+      "complementary": "Complementary",
+      "analogous": "Analogous",
+      "triadic": "Triadic",
+      "split_complementary": "Split Complementary",
+      "monochromatic": "Monochromatic",
+      "copy_css": "Copy as CSS Variables",
+      "eyedropper": "Pick from Screen"
+    },
+    "base64-encoder": {
+      "name": "Base64 Encoder / Decoder",
+      "description": "Encode and decode text and files to and from Base64.",
+      "text_mode": "Text",
+      "file_mode": "File",
+      "encode": "Encode",
+      "decode": "Decode",
+      "input_placeholder": "Enter text to encode or decode...",
+      "output_label": "Output"
+    },
+    "json-formatter": {
+      "name": "JSON Formatter",
+      "description": "Format, validate and minify JSON directly in your browser.",
+      "format": "Format",
+      "minify": "Minify",
+      "validate": "Validate",
+      "valid": "Valid JSON",
+      "invalid": "Invalid JSON",
+      "error_at": "Error at",
+      "tree_view": "Tree View",
+      "raw_view": "Raw View",
+      "input_placeholder": "Paste your JSON here..."
+    },
+    "lorem-ipsum-generator": {
+      "name": "Lorem Ipsum Generator",
+      "description": "Generate placeholder text in Latin or Albanian.",
+      "language": "Language",
+      "latin": "Latin",
+      "albanian": "Albanian",
+      "type": "Type",
+      "words": "Words",
+      "sentences": "Sentences",
+      "paragraphs": "Paragraphs",
+      "count": "Count",
+      "start_lorem": "Start with 'Lorem ipsum...'",
+      "include_html": "Include HTML tags",
+      "generate": "Generate"
+    }
+  },
+  "common": {
+    "upload": "Upload File",
+    "upload_hint": "Drag & drop here or click to upload",
+    "download": "Download",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "processing": "Processing...",
+    "error": "An error occurred",
+    "max_size": "Max size: {size}",
+    "file_type_error": "File format not supported",
+    "reset": "Reset",
+    "back_to_tools": "Back to Tools",
+    "privacy_note": "Everything is processed in your browser. No files are sent to any server."
+  },
+  "footer": {
+    "built_by": "Built by",
+    "tagline": "Free online tools by Atlas Studio",
+    "description": "Web Development & Tech Solutions",
+    "privacy": "Privacy",
+    "terms": "Terms"
+  },
+  "categories": {
+    "image": "Image",
+    "developer": "Developer",
+    "generator": "Generator",
+    "text": "Text"
+  }
+}

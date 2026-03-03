@@ -1,0 +1,149 @@
+{
+  "metadata": {
+    "title": "Vegla Online Falas — Atlas Studio",
+    "template": "%s | Atlas Studio Tools",
+    "description": "Vegla online falas per zhvillues dhe dizajnere. Gjenerues QR kodesh, konvertues imazhesh, heqes sfondi, formatues JSON dhe me shume."
+  },
+  "nav": {
+    "home": "Ballina",
+    "tools": "Veglat"
+  },
+  "home": {
+    "badge": "Vegla Online Falas",
+    "hero_title": "Vegla te fuqishme, direkt ne shfletues",
+    "hero_subtitle": "Konverto, komprimo, gjenero — te gjitha pa server, pa regjistrim, falas.",
+    "explore_tools": "Eksploro Veglat",
+    "categories_title": "Kategorite",
+    "cat_image": "Imazhe",
+    "cat_developer": "Zhvillues",
+    "cat_generator": "Gjenerues",
+    "cat_text": "Tekst",
+    "privacy_title": "Privatesia e Garantuar",
+    "privacy_description": "Te gjitha veglat funksionojne direkt ne shfletuesin tuaj. Asnje skedar nuk ngarkohet ne server.",
+    "cta_title": "Keni nevoje per nje zgjidhje te personalizuar?",
+    "cta_description": "Atlas Studio nderton aplikacione web, mobile dhe zgjidhje cloud.",
+    "cta_button": "Vizitoni Atlas Studio"
+  },
+  "tools": {
+    "title": "Te gjitha Veglat",
+    "subtitle": "Zgjidhni nje vegle per te filluar",
+    "qr-code-generator": {
+      "name": "Gjenerues QR Kodi",
+      "description": "Gjeneroni QR kode nga teksti ose URL. Shkarkoni si PNG ose SVG.",
+      "input_label": "Shkruani tekstin ose URL",
+      "input_placeholder": "https://shembull.com",
+      "size": "Madhesia",
+      "error_correction": "Korrigjimi i Gabimeve",
+      "fg_color": "Ngjyra e Pare",
+      "bg_color": "Ngjyra e Sfondit",
+      "download_png": "Shkarko PNG",
+      "download_svg": "Shkarko SVG"
+    },
+    "image-converter": {
+      "name": "Konvertues Imazhesh",
+      "description": "Konvertoni imazhe midis formateve JPG, PNG, WebP, ICO dhe AVIF.",
+      "select_format": "Formati i Synuar",
+      "quality": "Cilesia",
+      "convert": "Konverto",
+      "download": "Shkarko",
+      "unsupported_avif": "AVIF nuk suportohet ne shfletuesin tuaj. Perdorni Chrome ose Edge."
+    },
+    "image-compressor": {
+      "name": "Kompresues Imazhesh",
+      "description": "Zvogloni madhesine e skedareve te imazheve duke ruajtur cilesine.",
+      "quality": "Cilesia",
+      "max_width": "Gjeresia Maksimale",
+      "max_height": "Lartesia Maksimale",
+      "compress": "Komprimo",
+      "original_size": "Madhesia Origjinale",
+      "compressed_size": "Madhesia e Re",
+      "savings": "Kursimi"
+    },
+    "background-remover": {
+      "name": "Heqes Sfondi",
+      "description": "Hiqni sfondin e imazheve automatikisht me inteligjence artificiale — direkt ne shfletues.",
+      "processing": "Duke procesuar...",
+      "first_time": "Hera e pare kerkon shkarkimin e modelit (~40MB)",
+      "download": "Shkarko pa Sfond",
+      "max_size_warning": "Per rezultate me te mira, perdorni imazhe nen 10MB"
+    },
+    "color-picker": {
+      "name": "Zgjedhes Ngjyrash",
+      "description": "Zgjidhni ngjyra, gjeneroni paleta, kopjoni ne HEX/RGB/HSL.",
+      "pick_color": "Zgjidhni nje Ngjyre",
+      "palette": "Paleta e Ngjyrave",
+      "complementary": "Komplementare",
+      "analogous": "Analoge",
+      "triadic": "Triadike",
+      "split_complementary": "Komplementare e Ndare",
+      "monochromatic": "Monokromatike",
+      "copy_css": "Kopjo si Variabla CSS",
+      "eyedropper": "Merr nga Ekrani"
+    },
+    "base64-encoder": {
+      "name": "Base64 Enkoder / Dekoder",
+      "description": "Enkodoni dhe dekodoni tekst dhe skedare ne dhe nga Base64.",
+      "text_mode": "Tekst",
+      "file_mode": "Skedar",
+      "encode": "Enkodo",
+      "decode": "Dekodo",
+      "input_placeholder": "Shkruani tekstin per te enkoduar ose dekoduar...",
+      "output_label": "Dalja"
+    },
+    "json-formatter": {
+      "name": "Formatues JSON",
+      "description": "Formatoni, validoni dhe minifikoni JSON direkt ne shfletues.",
+      "format": "Formato",
+      "minify": "Minifico",
+      "validate": "Valido",
+      "valid": "JSON Valide",
+      "invalid": "JSON Invalide",
+      "error_at": "Gabim ne",
+      "tree_view": "Pamja ne Dege",
+      "raw_view": "Pamja Tekst",
+      "input_placeholder": "Ngjisni JSON-in tuaj ketu..."
+    },
+    "lorem-ipsum-generator": {
+      "name": "Gjenerues Lorem Ipsum",
+      "description": "Gjeneroni tekst vendmbajtesi ne Latinisht ose Shqip.",
+      "language": "Gjuha",
+      "latin": "Latinisht",
+      "albanian": "Shqip",
+      "type": "Lloji",
+      "words": "Fjale",
+      "sentences": "Fjali",
+      "paragraphs": "Paragraf",
+      "count": "Numri",
+      "start_lorem": "Fillo me 'Lorem ipsum...'",
+      "include_html": "Perfshi etiketat HTML",
+      "generate": "Gjenero"
+    }
+  },
+  "common": {
+    "upload": "Ngarko Skedar",
+    "upload_hint": "Terhiqni ketu ose klikoni per te ngarkuar",
+    "download": "Shkarko",
+    "copy": "Kopjo",
+    "copied": "U kopjua!",
+    "processing": "Duke procesuar...",
+    "error": "Ndodhi nje gabim",
+    "max_size": "Madhesia maksimale: {size}",
+    "file_type_error": "Formati i skedarit nuk suportohet",
+    "reset": "Rivendos",
+    "back_to_tools": "Kthehu te Veglat",
+    "privacy_note": "Gjithcka procesohet ne shfletuesin tuaj. Asnje skedar nuk dergohet ne server."
+  },
+  "footer": {
+    "built_by": "Ndertuar nga",
+    "tagline": "Vegla online falas nga Atlas Studio",
+    "description": "Zhvillim Web & Zgjidhje Teknologjike",
+    "privacy": "Privatesia",
+    "terms": "Kushtet"
+  },
+  "categories": {
+    "image": "Imazhe",
+    "developer": "Zhvillues",
+    "generator": "Gjenerues",
+    "text": "Tekst"
+  }
+}

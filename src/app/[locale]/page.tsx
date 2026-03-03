@@ -1,0 +1,104 @@
+import { setRequestLocale } from "next-intl/server";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
+import { tools, categories } from "@/lib/tools-registry";
+import ToolCard from "@/components/ToolCard";
+
+export default function HomePage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  return <HomeContent params={params} />;
+}
+
+function HomeContent({
+  params: _params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const t = useTranslations("home");
+
+  return (
+    <>
+      {/* Hero */}
+      <section className="py-16 md:py-24">
+        <div className="max-w-7xl mx-auto px-4 md:px-8 text-center">
+          <span className="inline-block text-sm font-medium text-teal bg-teal/10 px-4 py-1.5 rounded-full mb-6">
+            {t("badge")}
+          </span>
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-slate tracking-tight mb-4">
+            {t("hero_title")}
+          </h1>
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
+            {t("hero_subtitle")}
+          </p>
+          <Link
+            href="/tools"
+            className="inline-flex items-center gap-2 bg-teal text-white font-medium px-6 py-3 rounded-full hover:bg-teal-hover transition-colors"
+          >
+            {t("explore_tools")}
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </Link>
+        </div>
+      </section>
+
+      {/* Tools Grid */}
+      <section className="pb-16 md:pb-24">
+        <div className="max-w-7xl mx-auto px-4 md:px-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {tools.map((tool) => (
+              <ToolCard key={tool.slug} tool={tool} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Privacy Badge */}
+      <section className="pb-16 md:pb-24">
+        <div className="max-w-7xl mx-auto px-4 md:px-8">
+          <div className="bg-card border border-border rounded-2xl p-8 md:p-12 text-center">
+            <div className="w-12 h-12 rounded-full bg-teal/10 flex items-center justify-center text-teal mx-auto mb-4">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                <path d="M7 11V7a5 5 0 0110 0v4" />
+              </svg>
+            </div>
+            <h2 className="text-xl md:text-2xl font-bold text-slate mb-2">
+              {t("privacy_title")}
+            </h2>
+            <p className="text-muted-foreground max-w-lg mx-auto">
+              {t("privacy_description")}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="pb-16 md:pb-24">
+        <div className="max-w-7xl mx-auto px-4 md:px-8 text-center">
+          <h2 className="text-xl md:text-2xl font-bold text-slate mb-2">
+            {t("cta_title")}
+          </h2>
+          <p className="text-muted-foreground mb-6">{t("cta_description")}</p>
+          <a
+            href="https://atlas-studio.eu"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 border border-teal text-teal font-medium px-6 py-3 rounded-full hover:bg-teal hover:text-white transition-colors"
+          >
+            {t("cta_button")}
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+              <polyline points="15 3 21 3 21 9" />
+              <line x1="10" y1="14" x2="21" y2="3" />
+            </svg>
+          </a>
+        </div>
+      </section>
+    </>
+  );
+}

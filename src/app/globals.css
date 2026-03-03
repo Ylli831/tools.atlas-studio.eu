@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+:root {
+  --background: #f5f3ef;
+  --foreground: #37474b;
+  --cream: #f5f3ef;
+  --slate: #37474b;
+  --teal: #487877;
+  --teal-hover: #3d6665;
+  --terracotta: #cb6a3f;
+  --terracotta-hover: #b55a33;
+  --card: #ffffff;
+  --card-hover: #fafaf8;
+  --border: #e5e2dc;
+  --border-hover: #d5d0c8;
+  --muted: #8a9295;
+  --muted-foreground: #6b7280;
+  --surface: #ebe8e2;
+  --success: #16a34a;
+  --warning: #d97706;
+  --danger: #dc2626;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-cream: var(--cream);
+  --color-slate: var(--slate);
+  --color-teal: var(--teal);
+  --color-teal-hover: var(--teal-hover);
+  --color-terracotta: var(--terracotta);
+  --color-terracotta-hover: var(--terracotta-hover);
+  --color-card: var(--card);
+  --color-card-hover: var(--card-hover);
+  --color-border: var(--border);
+  --color-border-hover: var(--border-hover);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-surface: var(--surface);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-garamond);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+::selection {
+  background: rgba(72, 120, 119, 0.2);
+  color: var(--foreground);
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-hover);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted);
+}
+
+.tool-card {
+  transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border: 1px solid var(--border);
+}
+.tool-card:hover {
+  border-color: var(--teal);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px -8px rgba(72, 120, 119, 0.15);
+}
+
+.drop-zone {
+  border: 2px dashed var(--border);
+  transition: all 0.2s ease;
+}
+.drop-zone.active,
+.drop-zone:hover {
+  border-color: var(--teal);
+  background: rgba(72, 120, 119, 0.04);
+}
+
+.section-line {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--teal) 20%,
+    var(--teal) 80%,
+    transparent
+  );
+  opacity: 0.15;
+}
