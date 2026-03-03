@@ -1,12 +1,13 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { tools } from "@/lib/tools-registry";
 import ToolCard from "./ToolCard";
 import { useRecentTools } from "@/hooks/useRecentTools";
 import { useToolAnalytics } from "@/hooks/useToolAnalytics";
+import { toast } from "sonner";
 
 export default function ToolLayout({
   toolSlug,
@@ -17,9 +18,9 @@ export default function ToolLayout({
 }) {
   const t = useTranslations(`tools.${toolSlug}`);
   const tc = useTranslations("common");
+  const tcat = useTranslations("categories");
   const { addRecentTool } = useRecentTools();
   const { trackUsed } = useToolAnalytics(toolSlug);
-  const [shareCopied, setShareCopied] = useState(false);
 
   useEffect(() => {
     addRecentTool(toolSlug);
@@ -39,8 +40,7 @@ export default function ToolLayout({
       } catch {}
     } else {
       await navigator.clipboard.writeText(url);
-      setShareCopied(true);
-      setTimeout(() => setShareCopied(false), 2000);
+      toast.success(tc("link_copied"));
     }
   };
 
@@ -51,6 +51,17 @@ export default function ToolLayout({
           <Link href="/tools" className="hover:text-foreground transition-colors">
             {tc("back_to_tools")}
           </Link>
+          {currentTool && (
+            <>
+              <span>/</span>
+              <Link
+                href={`/tools?category=${currentTool.category}` as never}
+                className="hover:text-foreground transition-colors"
+              >
+                {tcat(currentTool.category)}
+              </Link>
+            </>
+          )}
           <span>/</span>
           <span className="text-foreground">{t("name")}</span>
         </div>
@@ -58,22 +69,11 @@ export default function ToolLayout({
           onClick={handleShare}
           className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground transition-colors px-3 py-1.5 rounded-lg border border-border hover:border-teal"
         >
-          {shareCopied ? (
-            <>
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <polyline points="20 6 9 17 4 12" />
-              </svg>
-              {tc("copied")}
-            </>
-          ) : (
-            <>
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="18" cy="5" r="3" /><circle cx="6" cy="12" r="3" /><circle cx="18" cy="19" r="3" />
-                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" /><line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
-              </svg>
-              {tc("share")}
-            </>
-          )}
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <circle cx="18" cy="5" r="3" /><circle cx="6" cy="12" r="3" /><circle cx="18" cy="19" r="3" />
+            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" /><line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
+          </svg>
+          {tc("share")}
         </button>
       </nav>
 

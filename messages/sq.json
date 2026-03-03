@@ -10,7 +10,16 @@
     "contact": "Kontakti"
   },
   "home": {
-    "badge": "Vegla Online Falas",
+    "badge": "{count} Vegla Online Falas",
+    "badge_suffix": "Vegla Online Falas",
+    "greeting_morning": "Miremengjes.",
+    "greeting_afternoon": "Miremesdite.",
+    "greeting_evening": "Mirembrema.",
+    "greeting_night": "Po punoni akoma?",
+    "greeting_returning": "Miresevini perseri.",
+    "greeting_subtitle": "Ketu jane veglat tuaja.",
+    "tool_of_day": "Zgjedhja e dites",
+    "tool_of_day_cta": "Provoje sot",
     "hero_title": "Vegla te fuqishme, direkt ne shfletues",
     "hero_subtitle": "Konverto, komprimo, gjenero — te gjitha pa server, pa regjistrim, falas.",
     "explore_tools": "Eksploro Veglat",
@@ -35,7 +44,10 @@
     "cta_button": "Vizitoni Atlas Studio",
     "recent_tools": "Te Perdorura Koheve Fundit",
     "favorite_tools": "Favoritet Tuaj",
-    "view_all": "Shiko te gjitha"
+    "new_tools": "Shtuar Koheve Fundit",
+    "view_all": "Shiko te gjitha",
+    "announcement": "16 vegla te reja u shtuan!",
+    "announcement_cta": "Eksploro →"
   },
   "tools": {
     "title": "Te gjitha Veglat",
@@ -366,6 +378,8 @@
     },
     "search_placeholder": "Kerkoni vegla...",
     "filter_all": "Te Gjitha",
+    "filter_new": "Te Reja",
+    "showing_count": "{count} vegla",
     "no_results": "Nuk u gjet asnje vegle per",
     "jwt-decoder": {
       "name": "Dekodues JWT",
@@ -606,6 +620,7 @@
     "back_to_tools": "Kthehu te Veglat",
     "privacy_note": "Gjithcka procesohet ne shfletuesin tuaj. Asnje skedar nuk dergohet ne server.",
     "share": "Ndaj",
+    "link_copied": "Lidhja u kopjua!",
     "related_tools": "Vegla te Ngjashme"
   },
   "footer": {

@@ -9,6 +9,7 @@ import CookieConsent from "@/components/CookieConsent";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import BackToTop from "@/components/BackToTop";
 import Script from "next/script";
+import { Toaster } from "sonner";
 import "../globals.css";
 
 const inter = localFont({
@@ -138,6 +139,7 @@ export default async function LocaleLayout({
           <Footer />
           <BackToTop />
           <CookieConsent />
+          <Toaster position="bottom-center" richColors />
         </NextIntlClientProvider>
       </body>
     </html>

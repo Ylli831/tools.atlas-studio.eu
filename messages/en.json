@@ -10,7 +10,16 @@
     "contact": "Contact"
   },
   "home": {
-    "badge": "Free Online Tools",
+    "badge": "{count} Free Online Tools",
+    "badge_suffix": "Free Online Tools",
+    "greeting_morning": "Good morning.",
+    "greeting_afternoon": "Good afternoon.",
+    "greeting_evening": "Good evening.",
+    "greeting_night": "Still working?",
+    "greeting_returning": "Welcome back.",
+    "greeting_subtitle": "Here are your tools.",
+    "tool_of_day": "Today's pick",
+    "tool_of_day_cta": "Try it today",
     "hero_title": "Powerful tools, right in your browser",
     "hero_subtitle": "Convert, compress, generate — all without a server, no sign-up, completely free.",
     "explore_tools": "Explore Tools",
@@ -35,7 +44,10 @@
     "cta_button": "Visit Atlas Studio",
     "recent_tools": "Recently Used",
     "favorite_tools": "Your Favorites",
-    "view_all": "View all"
+    "new_tools": "Recently Added",
+    "view_all": "View all",
+    "announcement": "16 new tools just added!",
+    "announcement_cta": "Explore them →"
   },
   "tools": {
     "title": "All Tools",
@@ -366,6 +378,8 @@
     },
     "search_placeholder": "Search tools...",
     "filter_all": "All",
+    "filter_new": "New",
+    "showing_count": "{count} tools",
     "no_results": "No tools found for",
     "jwt-decoder": {
       "name": "JWT Decoder",
@@ -606,6 +620,7 @@
     "back_to_tools": "Back to Tools",
     "privacy_note": "Everything is processed in your browser. No files are sent to any server.",
     "share": "Share",
+    "link_copied": "Link copied!",
     "related_tools": "Related Tools"
   },
   "footer": {

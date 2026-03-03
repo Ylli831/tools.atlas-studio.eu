@@ -4,7 +4,11 @@ import { Link } from "@/i18n/navigation";
 import { tools } from "@/lib/tools-registry";
 import ToolCard from "@/components/ToolCard";
 import ToolIcon from "@/components/ToolIcon";
-import { RecentToolsSection, FavoriteToolsSection } from "@/components/HomeSections";
+import { RecentToolsSection, FavoriteToolsSection, NewToolsSection } from "@/components/HomeSections";
+import AnnouncementBanner from "@/components/AnnouncementBanner";
+import HeroGreeting from "@/components/HeroGreeting";
+import ToolOfTheDay from "@/components/ToolOfTheDay";
+import AnimatedCount from "@/components/AnimatedCount";
 
 export default async function HomePage({
   params,
@@ -43,11 +47,15 @@ function HomeContent() {
 
   return (
     <>
+      {/* Announcement banner */}
+      <AnnouncementBanner />
+
       {/* Hero */}
       <section className="py-20 md:py-32">
         <div className="max-w-7xl mx-auto px-4 md:px-8 text-center">
+          <HeroGreeting />
           <span className="inline-block text-sm font-medium text-teal bg-teal/10 px-4 py-1.5 rounded-full mb-6">
-            {t("badge")}
+            <AnimatedCount to={tools.length} /> {t("badge_suffix")}
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate tracking-tight mb-5 leading-tight">
             {t("hero_title")}
@@ -76,6 +84,9 @@ function HomeContent() {
         </div>
       </section>
 
+      {/* Tool of the Day */}
+      <ToolOfTheDay />
+
       {/* Categories */}
       <section className="pb-12">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
@@ -98,6 +109,9 @@ function HomeContent() {
           </div>
         </div>
       </section>
+
+      {/* New tools */}
+      <NewToolsSection />
 
       {/* Recently used (client, localStorage) */}
       <RecentToolsSection />

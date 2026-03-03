@@ -3,6 +3,7 @@ import { getTranslations } from "next-intl/server";
 import { tools } from "@/lib/tools-registry";
 import ToolsGrid from "./ToolsGrid";
 import type { Metadata } from "next";
+import { Suspense } from "react";
 
 export async function generateMetadata({
   params,
@@ -35,5 +36,5 @@ export default async function ToolsPage({
   const { locale } = await params;
   setRequestLocale(locale);
 
-  return <ToolsGrid />;
+  return <Suspense fallback={null}><ToolsGrid /></Suspense>;
 }
