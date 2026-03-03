@@ -28,7 +28,7 @@ export function NewToolsSection() {
             {t("view_all")} →
           </Link>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
           {newTools.slice(0, 8).map((tool) => (
             <ToolCard key={tool.slug} tool={tool} />
           ))}
@@ -52,7 +52,7 @@ export function RecentToolsSection() {
     <section className="pb-10 md:pb-14">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <h2 className="text-lg font-semibold text-slate mb-4">{t("recent_tools")}</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
           {recentToolDefs.map((tool) => (
             <ToolCard key={tool.slug} tool={tool} />
           ))}
@@ -81,7 +81,7 @@ export function FavoriteToolsSection() {
           </svg>
           {t("favorite_tools")}
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
           {favToolDefs.map((tool) => (
             <ToolCard key={tool.slug} tool={tool} />
           ))}

@@ -69,7 +69,7 @@ export default function ToolsGrid() {
 
   const isFiltered = search.trim() !== "" || activeCategory !== "all";
 
-  useScrollReveal(".reveal");
+  useScrollReveal(".reveal", `${activeCategory}-${search}`);
 
   return (
     <section className="py-8 md:py-12">
@@ -176,9 +176,9 @@ export default function ToolsGrid() {
             </p>
           </div>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
             {filtered.map((tool, i) => (
-              <div key={tool.slug} className="reveal" style={{ transitionDelay: `${Math.min(i, 8) * 40}ms` }}>
+              <div key={tool.slug} className="reveal h-full" style={{ transitionDelay: `${Math.min(i, 8) * 40}ms` }}>
                 <ToolCard tool={tool} />
               </div>
             ))}

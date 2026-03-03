@@ -4,7 +4,7 @@ import { Link } from "@/i18n/navigation";
 import { tools } from "@/lib/tools-registry";
 import ToolCard from "@/components/ToolCard";
 import ToolIcon from "@/components/ToolIcon";
-import { RecentToolsSection, FavoriteToolsSection, NewToolsSection } from "@/components/HomeSections";
+import { RecentToolsSection, NewToolsSection } from "@/components/HomeSections";
 import AnnouncementBanner from "@/components/AnnouncementBanner";
 import HeroGreeting from "@/components/HeroGreeting";
 import ToolOfTheDay from "@/components/ToolOfTheDay";
@@ -116,9 +116,6 @@ function HomeContent() {
       {/* Recently used (client, localStorage) */}
       <RecentToolsSection />
 
-      {/* Favorites (client, localStorage) */}
-      <FavoriteToolsSection />
-
       {/* Popular Tools */}
       <section className="pb-16 md:pb-24">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
@@ -128,7 +125,7 @@ function HomeContent() {
               {t("view_all")} →
             </Link>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
             {popularTools.map((tool) => (
               <ToolCard key={tool.slug} tool={tool} />
             ))}
