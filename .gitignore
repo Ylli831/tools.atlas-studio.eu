@@ -20,6 +20,9 @@
 # production
 /build
 
+# wasm files copied from node_modules
+/public/wasm
+
 # misc
 .DS_Store
 *.pem

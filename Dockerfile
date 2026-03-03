@@ -8,6 +8,7 @@ WORKDIR /app
 COPY package.json package-lock.json ./
 RUN npm install
 COPY . .
+RUN mkdir -p public/wasm && cp node_modules/onnxruntime-web/dist/*.wasm public/wasm/
 RUN npm run build
 
 FROM node:22-alpine AS runner

@@ -29,6 +29,12 @@ export default function BackgroundRemoverTool() {
     setProgress(t("first_time"));
 
     try {
+      // Set WASM paths before importing the library so onnxruntime-web
+      // loads .wasm files from /wasm/ instead of broken blob: URLs
+      // @ts-expect-error - onnxruntime-web types don't resolve with package.json exports
+      const ort = await import("onnxruntime-web");
+      ort.env.wasm.wasmPaths = "/wasm/";
+
       const { removeBackground } = await import("@imgly/background-removal");
       setProgress(t("processing"));
 

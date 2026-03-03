@@ -13,8 +13,6 @@ const nextConfig: NextConfig = {
       crypto: false,
       stream: false,
     };
-    // Allow WASM files for @imgly/background-removal (onnxruntime-web)
-    config.experiments = { ...config.experiments, asyncWebAssembly: true };
     if (!isServer) {
       config.resolve.alias = {
         ...config.resolve.alias,
