@@ -1,6 +1,25 @@
 import { NextRequest, NextResponse } from "next/server";
 import { buildAutoReplyHtml } from "./autoReplyTemplate";
 
+// Simple in-memory rate limiter: 5 requests per 60 seconds per IP
+const rateLimitMap = new Map<string, { count: number; resetAt: number }>();
+const RATE_LIMIT = 5;
+const RATE_WINDOW_MS = 60_000;
+
+function isRateLimited(req: NextRequest): boolean {
+  const forwarded = req.headers.get("x-forwarded-for");
+  const ip = forwarded ? forwarded.split(",")[0].trim() : "unknown";
+  const now = Date.now();
+  const record = rateLimitMap.get(ip);
+  if (!record || now > record.resetAt) {
+    rateLimitMap.set(ip, { count: 1, resetAt: now + RATE_WINDOW_MS });
+    return false;
+  }
+  if (record.count >= RATE_LIMIT) return true;
+  record.count++;
+  return false;
+}
+
 async function getAccessToken(): Promise<string> {
   const tenantId = process.env.AZURE_TENANT_ID!;
   const res = await fetch(
@@ -27,6 +46,13 @@ async function getAccessToken(): Promise<string> {
 }
 
 export async function POST(req: NextRequest) {
+  if (isRateLimited(req)) {
+    return NextResponse.json(
+      { error: "Too many requests. Please wait a minute before trying again." },
+      { status: 429 }
+    );
+  }
+
   const { name, email, subject, message, locale = "en" } = await req.json();
 
   if (!name || !email || !message) {

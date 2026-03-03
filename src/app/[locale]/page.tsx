@@ -4,6 +4,7 @@ import { Link } from "@/i18n/navigation";
 import { tools } from "@/lib/tools-registry";
 import ToolCard from "@/components/ToolCard";
 import ToolIcon from "@/components/ToolIcon";
+import { RecentToolsSection, FavoriteToolsSection } from "@/components/HomeSections";
 
 export default async function HomePage({
   params,
@@ -37,6 +38,8 @@ function HomeContent() {
     { key: "developer", count: tools.filter((t) => t.category === "developer").length },
     { key: "business", count: tools.filter((t) => t.category === "business").length },
   ];
+
+  const popularTools = tools.slice(0, 8);
 
   return (
     <>
@@ -78,9 +81,10 @@ function HomeContent() {
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
             {categories.map((cat) => (
-              <div
+              <Link
                 key={cat.key}
-                className="flex items-center gap-3 bg-card border border-border rounded-xl p-4"
+                href={`/tools?category=${cat.key}` as never}
+                className="flex items-center gap-3 bg-card border border-border rounded-xl p-4 hover:border-teal transition-colors"
               >
                 <div className="w-9 h-9 rounded-lg bg-teal/10 flex items-center justify-center text-teal flex-shrink-0">
                   <ToolIcon icon={categoryIcons[cat.key]} size={16} />
@@ -89,18 +93,29 @@ function HomeContent() {
                   <p className="text-sm font-semibold text-foreground">{tc(cat.key)}</p>
                   <p className="text-xs text-muted-foreground">{cat.count} {t("tools_count")}</p>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Tools Grid */}
+      {/* Recently used (client, localStorage) */}
+      <RecentToolsSection />
+
+      {/* Favorites (client, localStorage) */}
+      <FavoriteToolsSection />
+
+      {/* Popular Tools */}
       <section className="pb-16 md:pb-24">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <h2 className="text-2xl font-bold text-slate mb-6">{t("popular_tools")}</h2>
+          <div className="flex items-center justify-between mb-6">
+            <h2 className="text-2xl font-bold text-slate">{t("popular_tools")}</h2>
+            <Link href="/tools" className="text-sm text-teal hover:underline">
+              {t("view_all")} →
+            </Link>
+          </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {tools.map((tool) => (
+            {popularTools.map((tool) => (
               <ToolCard key={tool.slug} tool={tool} />
             ))}
           </div>
