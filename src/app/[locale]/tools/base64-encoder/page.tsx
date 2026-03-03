@@ -11,7 +11,7 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "tools.base64-encoder" });
   const baseUrl = "https://tools.atlas-studio.eu";
-  const localePath = locale === "sq" ? "" : `/${locale}`;
+  const localePath = locale === "en" ? "" : `/${locale}`;
 
   return {
     title: t("name"),
@@ -19,8 +19,8 @@ export async function generateMetadata({
     alternates: {
       canonical: `${baseUrl}${localePath}/tools/base64-encoder`,
       languages: {
-        sq: `${baseUrl}/tools/base64-encoder`,
-        en: `${baseUrl}/en/tools/base64-encoder`,
+        en: `${baseUrl}/tools/base64-encoder`,
+        sq: `${baseUrl}/sq/tools/base64-encoder`,
       },
     },
   };

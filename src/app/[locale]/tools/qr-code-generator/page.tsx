@@ -11,7 +11,7 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "tools.qr-code-generator" });
   const baseUrl = "https://tools.atlas-studio.eu";
-  const localePath = locale === "sq" ? "" : `/${locale}`;
+  const localePath = locale === "en" ? "" : `/${locale}`;
 
   return {
     title: t("name"),
@@ -19,8 +19,8 @@ export async function generateMetadata({
     alternates: {
       canonical: `${baseUrl}${localePath}/tools/qr-code-generator`,
       languages: {
-        sq: `${baseUrl}/tools/qr-code-generator`,
-        en: `${baseUrl}/en/tools/qr-code-generator`,
+        en: `${baseUrl}/tools/qr-code-generator`,
+        sq: `${baseUrl}/sq/tools/qr-code-generator`,
       },
     },
   };

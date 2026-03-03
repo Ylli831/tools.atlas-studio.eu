@@ -6,20 +6,28 @@
   },
   "nav": {
     "home": "Home",
-    "tools": "Tools"
+    "tools": "Tools",
+    "contact": "Contact"
   },
   "home": {
     "badge": "Free Online Tools",
     "hero_title": "Powerful tools, right in your browser",
     "hero_subtitle": "Convert, compress, generate — all without a server, no sign-up, completely free.",
     "explore_tools": "Explore Tools",
+    "contact_us": "Contact Us",
     "categories_title": "Categories",
     "cat_image": "Image",
     "cat_developer": "Developer",
     "cat_generator": "Generator",
     "cat_text": "Text",
+    "tools_count": "tools",
+    "popular_tools": "Popular Tools",
     "privacy_title": "Privacy Guaranteed",
     "privacy_description": "All tools run directly in your browser. No files are uploaded to any server.",
+    "no_signup_title": "No Sign-up Required",
+    "no_signup_description": "Use every tool instantly — no account, no email, no registration.",
+    "instant_title": "Instant Results",
+    "instant_description": "Everything runs client-side. Get results in milliseconds, not minutes.",
     "cta_title": "Need a custom solution?",
     "cta_description": "Atlas Studio builds web apps, mobile apps, and cloud solutions.",
     "cta_button": "Visit Atlas Studio"
@@ -117,7 +125,100 @@
       "start_lorem": "Start with 'Lorem ipsum...'",
       "include_html": "Include HTML tags",
       "generate": "Generate"
+    },
+    "password-generator": {
+      "name": "Password Generator",
+      "description": "Generate secure, random passwords with customizable rules.",
+      "length": "Length",
+      "uppercase": "Uppercase (A-Z)",
+      "lowercase": "Lowercase (a-z)",
+      "numbers": "Numbers (0-9)",
+      "symbols": "Symbols (!@#$...)",
+      "exclude_ambiguous": "Exclude ambiguous characters",
+      "quantity": "Number of passwords",
+      "generate": "Generate",
+      "strength": "Strength",
+      "weak": "Weak",
+      "fair": "Fair",
+      "strong": "Strong",
+      "very_strong": "Very Strong"
+    },
+    "word-counter": {
+      "name": "Word Counter",
+      "description": "Count words, characters, sentences and paragraphs in your text.",
+      "placeholder": "Start typing or paste your text here...",
+      "words": "Words",
+      "characters": "Characters",
+      "characters_no_spaces": "Characters (no spaces)",
+      "sentences": "Sentences",
+      "paragraphs": "Paragraphs",
+      "reading_time": "Reading time",
+      "speaking_time": "Speaking time",
+      "minutes": "min",
+      "seconds": "sec"
+    },
+    "css-gradient-generator": {
+      "name": "CSS Gradient Generator",
+      "description": "Create beautiful CSS gradients with a visual editor.",
+      "type": "Type",
+      "linear": "Linear",
+      "radial": "Radial",
+      "conic": "Conic",
+      "angle": "Angle",
+      "colors": "Colors",
+      "add_color": "Add Color",
+      "css_output": "CSS Output",
+      "preview": "Preview"
+    },
+    "markdown-preview": {
+      "name": "Markdown Preview",
+      "description": "Write Markdown and see it rendered in real time.",
+      "editor": "Editor",
+      "preview": "Preview",
+      "placeholder": "# Hello World\n\nStart writing Markdown here..."
+    },
+    "url-encoder": {
+      "name": "URL Encoder / Decoder",
+      "description": "Encode and decode URLs and query parameters.",
+      "encode": "Encode",
+      "decode": "Decode",
+      "input_placeholder": "Enter URL or text...",
+      "output_label": "Output",
+      "encode_component": "Encode Component",
+      "full_url": "Full URL"
+    },
+    "timestamp-converter": {
+      "name": "Timestamp Converter",
+      "description": "Convert between Unix timestamps, ISO 8601, and human-readable dates.",
+      "current_time": "Current Time",
+      "unix_timestamp": "Unix Timestamp",
+      "iso_format": "ISO 8601",
+      "human_readable": "Human Readable",
+      "convert": "Convert",
+      "now": "Now",
+      "local_time": "Local Time",
+      "utc_time": "UTC Time"
     }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Have a question or want to work together? Get in touch.",
+    "name": "Name",
+    "name_placeholder": "Your name",
+    "email": "Email",
+    "email_placeholder": "your@email.com",
+    "subject": "Subject",
+    "subject_placeholder": "What is this about?",
+    "message": "Message",
+    "message_placeholder": "Tell us more...",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "success_title": "Message Sent!",
+    "success_message": "Thank you for reaching out. We'll get back to you soon.",
+    "send_another": "Send Another",
+    "direct_email": "Or email us directly at",
+    "direct_email_label": "Email",
+    "social": "Follow us"
   },
   "common": {
     "upload": "Upload File",
@@ -145,5 +246,18 @@
     "developer": "Developer",
     "generator": "Generator",
     "text": "Text"
+  },
+  "cookieConsent": {
+    "title": "Cookie Notice",
+    "message": "We use analytics cookies to understand how you use our tools and improve your experience. No personal data is sold or shared.",
+    "learnMore": "Learn more",
+    "accept": "Accept",
+    "decline": "Decline"
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "description": "The page you're looking for doesn't exist or has been moved.",
+    "back_home": "Go Home",
+    "back_tools": "Browse Tools"
   }
 }

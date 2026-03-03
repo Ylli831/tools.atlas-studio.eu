@@ -11,7 +11,7 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "tools.image-converter" });
   const baseUrl = "https://tools.atlas-studio.eu";
-  const localePath = locale === "sq" ? "" : `/${locale}`;
+  const localePath = locale === "en" ? "" : `/${locale}`;
 
   return {
     title: t("name"),
@@ -19,8 +19,8 @@ export async function generateMetadata({
     alternates: {
       canonical: `${baseUrl}${localePath}/tools/image-converter`,
       languages: {
-        sq: `${baseUrl}/tools/image-converter`,
-        en: `${baseUrl}/en/tools/image-converter`,
+        en: `${baseUrl}/tools/image-converter`,
+        sq: `${baseUrl}/sq/tools/image-converter`,
       },
     },
   };

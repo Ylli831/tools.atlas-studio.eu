@@ -11,7 +11,7 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "tools.lorem-ipsum-generator" });
   const baseUrl = "https://tools.atlas-studio.eu";
-  const localePath = locale === "sq" ? "" : `/${locale}`;
+  const localePath = locale === "en" ? "" : `/${locale}`;
 
   return {
     title: t("name"),
@@ -19,8 +19,8 @@ export async function generateMetadata({
     alternates: {
       canonical: `${baseUrl}${localePath}/tools/lorem-ipsum-generator`,
       languages: {
-        sq: `${baseUrl}/tools/lorem-ipsum-generator`,
-        en: `${baseUrl}/en/tools/lorem-ipsum-generator`,
+        en: `${baseUrl}/tools/lorem-ipsum-generator`,
+        sq: `${baseUrl}/sq/tools/lorem-ipsum-generator`,
       },
     },
   };

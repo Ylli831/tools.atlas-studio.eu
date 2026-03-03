@@ -1,8 +1,7 @@
 import { setRequestLocale } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
-import { tools } from "@/lib/tools-registry";
-import ToolsGrid from "./ToolsGrid";
 import type { Metadata } from "next";
+import ContactForm from "./ContactForm";
 
 export async function generateMetadata({
   params,
@@ -10,7 +9,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "tools" });
+  const t = await getTranslations({ locale, namespace: "contact" });
   const baseUrl = "https://tools.atlas-studio.eu";
   const localePath = locale === "en" ? "" : `/${locale}`;
 
@@ -18,16 +17,16 @@ export async function generateMetadata({
     title: t("title"),
     description: t("subtitle"),
     alternates: {
-      canonical: `${baseUrl}${localePath}/tools`,
+      canonical: `${baseUrl}${localePath}/contact`,
       languages: {
-        en: `${baseUrl}/tools`,
-        sq: `${baseUrl}/sq/tools`,
+        en: `${baseUrl}/contact`,
+        sq: `${baseUrl}/sq/contact`,
       },
     },
   };
 }
 
-export default async function ToolsPage({
+export default async function ContactPage({
   params,
 }: {
   params: Promise<{ locale: string }>;
@@ -35,5 +34,5 @@ export default async function ToolsPage({
   const { locale } = await params;
   setRequestLocale(locale);
 
-  return <ToolsGrid />;
+  return <ContactForm />;
 }

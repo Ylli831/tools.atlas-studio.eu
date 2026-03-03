@@ -6,20 +6,28 @@
   },
   "nav": {
     "home": "Ballina",
-    "tools": "Veglat"
+    "tools": "Veglat",
+    "contact": "Kontakti"
   },
   "home": {
     "badge": "Vegla Online Falas",
     "hero_title": "Vegla te fuqishme, direkt ne shfletues",
     "hero_subtitle": "Konverto, komprimo, gjenero — te gjitha pa server, pa regjistrim, falas.",
     "explore_tools": "Eksploro Veglat",
+    "contact_us": "Na Kontaktoni",
     "categories_title": "Kategorite",
     "cat_image": "Imazhe",
     "cat_developer": "Zhvillues",
     "cat_generator": "Gjenerues",
     "cat_text": "Tekst",
+    "tools_count": "vegla",
+    "popular_tools": "Veglat me te Njohura",
     "privacy_title": "Privatesia e Garantuar",
     "privacy_description": "Te gjitha veglat funksionojne direkt ne shfletuesin tuaj. Asnje skedar nuk ngarkohet ne server.",
+    "no_signup_title": "Pa Regjistrim",
+    "no_signup_description": "Perdorni cdo vegle menjehere — pa llogari, pa email, pa regjistrim.",
+    "instant_title": "Rezultate te Menjehershme",
+    "instant_description": "Gjithcka funksionon ne shfletues. Merrni rezultate per milisekonda, jo minuta.",
     "cta_title": "Keni nevoje per nje zgjidhje te personalizuar?",
     "cta_description": "Atlas Studio nderton aplikacione web, mobile dhe zgjidhje cloud.",
     "cta_button": "Vizitoni Atlas Studio"
@@ -117,7 +125,100 @@
       "start_lorem": "Fillo me 'Lorem ipsum...'",
       "include_html": "Perfshi etiketat HTML",
       "generate": "Gjenero"
+    },
+    "password-generator": {
+      "name": "Gjenerues Fjalekalimesh",
+      "description": "Gjeneroni fjalekalime te sigurta dhe te rastesishme me rregulla te personalizueshme.",
+      "length": "Gjatesia",
+      "uppercase": "Shkronja te medha (A-Z)",
+      "lowercase": "Shkronja te vogla (a-z)",
+      "numbers": "Numra (0-9)",
+      "symbols": "Simbole (!@#$...)",
+      "exclude_ambiguous": "Perjashtoni karaktere te ngjashme",
+      "quantity": "Numri i fjalekalimeve",
+      "generate": "Gjenero",
+      "strength": "Fuqia",
+      "weak": "E dobet",
+      "fair": "Mesatare",
+      "strong": "E forte",
+      "very_strong": "Shume e forte"
+    },
+    "word-counter": {
+      "name": "Numerues Fjalesh",
+      "description": "Numroni fjalet, karakteret, fjalite dhe paragrafet ne tekstin tuaj.",
+      "placeholder": "Filloni te shkruani ose ngjisni tekstin tuaj ketu...",
+      "words": "Fjale",
+      "characters": "Karaktere",
+      "characters_no_spaces": "Karaktere (pa hapesira)",
+      "sentences": "Fjali",
+      "paragraphs": "Paragraf",
+      "reading_time": "Koha e leximit",
+      "speaking_time": "Koha e te folurit",
+      "minutes": "min",
+      "seconds": "sek"
+    },
+    "css-gradient-generator": {
+      "name": "Gjenerues CSS Gradient",
+      "description": "Krijoni gradiente te bukura CSS me nje redaktues vizual.",
+      "type": "Lloji",
+      "linear": "Linear",
+      "radial": "Radial",
+      "conic": "Konik",
+      "angle": "Kendi",
+      "colors": "Ngjyrat",
+      "add_color": "Shto Ngjyre",
+      "css_output": "Kodi CSS",
+      "preview": "Parashikimi"
+    },
+    "markdown-preview": {
+      "name": "Parashikues Markdown",
+      "description": "Shkruani Markdown dhe shikoni si renderohet ne kohe reale.",
+      "editor": "Redaktori",
+      "preview": "Parashikimi",
+      "placeholder": "# Pershendetje Bota\n\nFilloni te shkruani Markdown ketu..."
+    },
+    "url-encoder": {
+      "name": "URL Enkoder / Dekoder",
+      "description": "Enkodoni dhe dekodoni URL-te dhe parametrat e pyetjeve.",
+      "encode": "Enkodo",
+      "decode": "Dekodo",
+      "input_placeholder": "Shkruani URL ose tekst...",
+      "output_label": "Dalja",
+      "encode_component": "Enkodo Komponentin",
+      "full_url": "URL e Plote"
+    },
+    "timestamp-converter": {
+      "name": "Konvertues Timestamp",
+      "description": "Konvertoni midis Unix timestamp, ISO 8601, dhe datave te lexueshme.",
+      "current_time": "Koha Aktuale",
+      "unix_timestamp": "Unix Timestamp",
+      "iso_format": "ISO 8601",
+      "human_readable": "I Lexueshem",
+      "convert": "Konverto",
+      "now": "Tani",
+      "local_time": "Koha Lokale",
+      "utc_time": "Koha UTC"
     }
+  },
+  "contact": {
+    "title": "Na Kontaktoni",
+    "subtitle": "Keni pyetje ose deshironi te bashkepunoni? Na kontaktoni.",
+    "name": "Emri",
+    "name_placeholder": "Emri juaj",
+    "email": "Email",
+    "email_placeholder": "email@juaj.com",
+    "subject": "Subjekti",
+    "subject_placeholder": "Per cfare behet fjale?",
+    "message": "Mesazhi",
+    "message_placeholder": "Na tregoni me shume...",
+    "send": "Dergo Mesazhin",
+    "sending": "Duke derguar...",
+    "success_title": "Mesazhi u Dergua!",
+    "success_message": "Faleminderit qe na kontaktuat. Do t'ju pergjigjemi se shpejti.",
+    "send_another": "Dergo Tjeter",
+    "direct_email": "Ose na dergoni email direkt ne",
+    "direct_email_label": "Email",
+    "social": "Na ndiqni"
   },
   "common": {
     "upload": "Ngarko Skedar",
@@ -145,5 +246,18 @@
     "developer": "Zhvillues",
     "generator": "Gjenerues",
     "text": "Tekst"
+  },
+  "cookieConsent": {
+    "title": "Njoftim per Cookie",
+    "message": "Ne perdorim cookies analitike per te kuptuar se si i perdorni veglat tona dhe per te permiresuar pervoje tuaj. Asnje e dhene personale nuk shitet ose ndahet.",
+    "learnMore": "Mesoni me shume",
+    "accept": "Prano",
+    "decline": "Refuzo"
+  },
+  "notFound": {
+    "title": "Faqja Nuk u Gjet",
+    "description": "Faqja qe po kerkoni nuk ekziston ose eshte zhvendosur.",
+    "back_home": "Kthehu ne Ballina",
+    "back_tools": "Shfleto Veglat"
   }
 }

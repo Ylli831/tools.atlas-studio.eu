@@ -72,6 +72,54 @@ export default function ToolIcon({ icon, size = 20 }: { icon: string; size?: num
           <path d="M15.1 18H3" />
         </svg>
       );
+    case "lock":
+      return (
+        <svg {...props}>
+          <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+          <path d="M7 11V7a5 5 0 0110 0v4" />
+        </svg>
+      );
+    case "counter":
+      return (
+        <svg {...props}>
+          <path d="M4 4h16v16H4z" />
+          <path d="M4 9h16" />
+          <path d="M9 4v16" />
+        </svg>
+      );
+    case "gradient":
+      return (
+        <svg {...props}>
+          <rect x="3" y="3" width="18" height="18" rx="2" />
+          <path d="M3 3l18 18" />
+          <path d="M3 9l12 12" />
+          <path d="M3 15l6 6" />
+          <path d="M9 3l12 12" />
+          <path d="M15 3l6 6" />
+        </svg>
+      );
+    case "markdown":
+      return (
+        <svg {...props}>
+          <rect x="2" y="4" width="20" height="16" rx="2" />
+          <path d="M6 8v8l3-3 3 3V8" />
+          <path d="M18 12l-2.5-3v6" />
+        </svg>
+      );
+    case "link":
+      return (
+        <svg {...props}>
+          <path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71" />
+          <path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71" />
+        </svg>
+      );
+    case "clock":
+      return (
+        <svg {...props}>
+          <circle cx="12" cy="12" r="10" />
+          <polyline points="12 6 12 12 16 14" />
+        </svg>
+      );
     default:
       return (
         <svg {...props}>

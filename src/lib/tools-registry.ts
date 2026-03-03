@@ -54,6 +54,42 @@ export const tools: ToolDefinition[] = [
     category: "text",
     hasFileUpload: false,
   },
+  {
+    slug: "password-generator",
+    icon: "lock",
+    category: "generator",
+    hasFileUpload: false,
+  },
+  {
+    slug: "word-counter",
+    icon: "counter",
+    category: "text",
+    hasFileUpload: false,
+  },
+  {
+    slug: "css-gradient-generator",
+    icon: "gradient",
+    category: "generator",
+    hasFileUpload: false,
+  },
+  {
+    slug: "markdown-preview",
+    icon: "markdown",
+    category: "text",
+    hasFileUpload: false,
+  },
+  {
+    slug: "url-encoder",
+    icon: "link",
+    category: "developer",
+    hasFileUpload: false,
+  },
+  {
+    slug: "timestamp-converter",
+    icon: "clock",
+    category: "developer",
+    hasFileUpload: false,
+  },
 ];
 
 export const categories = ["image", "generator", "developer", "text"] as const;

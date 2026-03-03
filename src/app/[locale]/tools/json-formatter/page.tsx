@@ -11,7 +11,7 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "tools.json-formatter" });
   const baseUrl = "https://tools.atlas-studio.eu";
-  const localePath = locale === "sq" ? "" : `/${locale}`;
+  const localePath = locale === "en" ? "" : `/${locale}`;
 
   return {
     title: t("name"),
@@ -19,8 +19,8 @@ export async function generateMetadata({
     alternates: {
       canonical: `${baseUrl}${localePath}/tools/json-formatter`,
       languages: {
-        sq: `${baseUrl}/tools/json-formatter`,
-        en: `${baseUrl}/en/tools/json-formatter`,
+        en: `${baseUrl}/tools/json-formatter`,
+        sq: `${baseUrl}/sq/tools/json-formatter`,
       },
     },
   };

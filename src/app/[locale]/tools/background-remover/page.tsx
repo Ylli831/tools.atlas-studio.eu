@@ -11,7 +11,7 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "tools.background-remover" });
   const baseUrl = "https://tools.atlas-studio.eu";
-  const localePath = locale === "sq" ? "" : `/${locale}`;
+  const localePath = locale === "en" ? "" : `/${locale}`;
 
   return {
     title: t("name"),
@@ -19,8 +19,8 @@ export async function generateMetadata({
     alternates: {
       canonical: `${baseUrl}${localePath}/tools/background-remover`,
       languages: {
-        sq: `${baseUrl}/tools/background-remover`,
-        en: `${baseUrl}/en/tools/background-remover`,
+        en: `${baseUrl}/tools/background-remover`,
+        sq: `${baseUrl}/sq/tools/background-remover`,
       },
     },
   };

@@ -1,7 +1,7 @@
 import { setRequestLocale } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
-import ImageCompressorTool from "./ImageCompressorTool";
+import TimestampConverterTool from "./TimestampConverterTool";
 
 export async function generateMetadata({
   params,
@@ -9,7 +9,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "tools.image-compressor" });
+  const t = await getTranslations({ locale, namespace: "tools.timestamp-converter" });
   const baseUrl = "https://tools.atlas-studio.eu";
   const localePath = locale === "en" ? "" : `/${locale}`;
 
@@ -17,16 +17,16 @@ export async function generateMetadata({
     title: t("name"),
     description: t("description"),
     alternates: {
-      canonical: `${baseUrl}${localePath}/tools/image-compressor`,
+      canonical: `${baseUrl}${localePath}/tools/timestamp-converter`,
       languages: {
-        en: `${baseUrl}/tools/image-compressor`,
-        sq: `${baseUrl}/sq/tools/image-compressor`,
+        en: `${baseUrl}/tools/timestamp-converter`,
+        sq: `${baseUrl}/sq/tools/timestamp-converter`,
       },
     },
   };
 }
 
-export default async function ImageCompressorPage({
+export default async function TimestampConverterPage({
   params,
 }: {
   params: Promise<{ locale: string }>;
@@ -42,16 +42,16 @@ export default async function ImageCompressorPage({
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebApplication",
-            name: "Image Compressor - Atlas Studio Tools",
-            url: "https://tools.atlas-studio.eu/tools/image-compressor",
-            applicationCategory: "MultimediaApplication",
+            name: "Timestamp Converter - Atlas Studio Tools",
+            url: "https://tools.atlas-studio.eu/tools/timestamp-converter",
+            applicationCategory: "UtilityApplication",
             operatingSystem: "Any",
             offers: { "@type": "Offer", price: "0", priceCurrency: "EUR" },
             creator: { "@type": "Organization", name: "Atlas Studio", url: "https://atlas-studio.eu" },
           }),
         }}
       />
-      <ImageCompressorTool />
+      <TimestampConverterTool />
     </>
   );
 }

@@ -5,6 +5,9 @@ import { getMessages, getTranslations, setRequestLocale } from "next-intl/server
 import { routing } from "@/i18n/routing";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import CookieConsent from "@/components/CookieConsent";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
+import BackToTop from "@/components/BackToTop";
 import Script from "next/script";
 import "../globals.css";
 
@@ -51,7 +54,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "metadata" });
-  const localePath = locale === "sq" ? "" : `/${locale}`;
+  const localePath = locale === "en" ? "" : `/${locale}`;
 
   return {
     title: {
@@ -63,8 +66,8 @@ export async function generateMetadata({
     alternates: {
       canonical: `${baseUrl}${localePath}`,
       languages: {
-        sq: baseUrl,
-        en: `${baseUrl}/en`,
+        en: baseUrl,
+        sq: `${baseUrl}/sq`,
       },
     },
     icons: {
@@ -129,9 +132,12 @@ export default async function LocaleLayout({
         className={`${inter.variable} ${garamond.variable} font-sans antialiased bg-background text-foreground min-h-screen flex flex-col`}
       >
         <NextIntlClientProvider messages={messages}>
+          <GoogleAnalytics />
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />
+          <BackToTop />
+          <CookieConsent />
         </NextIntlClientProvider>
       </body>
     </html>

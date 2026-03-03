@@ -11,7 +11,7 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "tools.color-picker" });
   const baseUrl = "https://tools.atlas-studio.eu";
-  const localePath = locale === "sq" ? "" : `/${locale}`;
+  const localePath = locale === "en" ? "" : `/${locale}`;
 
   return {
     title: t("name"),
@@ -19,8 +19,8 @@ export async function generateMetadata({
     alternates: {
       canonical: `${baseUrl}${localePath}/tools/color-picker`,
       languages: {
-        sq: `${baseUrl}/tools/color-picker`,
-        en: `${baseUrl}/en/tools/color-picker`,
+        en: `${baseUrl}/tools/color-picker`,
+        sq: `${baseUrl}/sq/tools/color-picker`,
       },
     },
   };
