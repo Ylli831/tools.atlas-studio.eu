@@ -22,18 +22,14 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-cream/95 backdrop-blur-sm border-b border-border">
       <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between h-16">
-        <Link href="/" className="flex items-center gap-3">
+        <Link href="/" className="flex items-center">
           <Image
-            src="/Images/atlas-studio-png.png"
-            alt="Atlas Studio"
-            width={22}
-            height={32}
+            src="/Images/atlas-studio-tools-logo.svg"
+            alt="Atlas Studio Tools"
+            width={773}
+            height={279}
             className="h-8 w-auto"
           />
-          <span className="font-semibold text-slate text-lg tracking-tight">
-            Atlas Studio{" "}
-            <span className="text-teal font-bold">Tools</span>
-          </span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">

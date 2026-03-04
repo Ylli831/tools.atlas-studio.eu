@@ -16,13 +16,12 @@ export default async function Footer() {
               className="flex items-center gap-3 mb-3"
             >
               <Image
-                src="/Images/atlas-studio-png.png"
-                alt="Atlas Studio"
-                width={19}
-                height={28}
+                src="/Images/atlas-studio-tools-logo.svg"
+                alt="Atlas Studio Tools"
+                width={773}
+                height={279}
                 className="h-7 w-auto"
               />
-              <span className="font-semibold text-slate">Atlas Studio</span>
             </a>
             <p className="text-sm text-muted-foreground">{t("description")}</p>
           </div>
