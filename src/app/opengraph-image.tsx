@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "Atlas Studio Tools — Free Online Developer & Design Tools";
+export const alt = "Atlas Studio Tools: Free Online Developer & Design Tools";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -93,7 +93,7 @@ export default function OGImage() {
             }}
           >
             PDF tools, image converters, QR generators, text utilities, dev
-            tools, and more — all free, all client-side.
+            tools, and more. All free, all client-side.
           </div>
           <div
             style={{

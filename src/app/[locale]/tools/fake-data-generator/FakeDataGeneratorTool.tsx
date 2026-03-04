@@ -181,7 +181,7 @@ export default function FakeDataGeneratorTool() {
         <div className="bg-card border border-border rounded-xl p-4 space-y-4">
           <div>
             <label className="block text-sm font-medium text-foreground mb-1.5">
-              {t("count")} — {count}
+              {t("count")}: {count}
             </label>
             <input
               type="range"

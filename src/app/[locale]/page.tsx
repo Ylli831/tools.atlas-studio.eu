@@ -4,7 +4,7 @@ import { Link } from "@/i18n/navigation";
 import { tools } from "@/lib/tools-registry";
 import ToolCard from "@/components/ToolCard";
 import ToolIcon from "@/components/ToolIcon";
-import { RecentToolsSection, NewToolsSection, FavoriteToolsSection } from "@/components/HomeSections";
+import { RecentToolsSection, NewToolsSection } from "@/components/HomeSections";
 import AnnouncementBanner from "@/components/AnnouncementBanner";
 import HeroGreeting from "@/components/HeroGreeting";
 import ToolOfTheDay from "@/components/ToolOfTheDay";
@@ -146,9 +146,6 @@ function HomeContent() {
 
       {/* New tools */}
       <NewToolsSection />
-
-      {/* Favorites (client, localStorage) */}
-      <FavoriteToolsSection />
 
       {/* Recently used (client, localStorage) */}
       <RecentToolsSection />

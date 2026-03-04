@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "title": "Free Online Tools — Atlas Studio",
+    "title": "Free Online Tools | Atlas Studio",
     "template": "%s | Atlas Studio Tools",
     "description": "Free online tools for developers and designers. QR code generator, image converter, background remover, JSON formatter and more."
   },
@@ -21,7 +21,7 @@
     "tool_of_day": "Today's pick",
     "tool_of_day_cta": "Try it today",
     "hero_title": "Powerful tools, right in your browser",
-    "hero_subtitle": "Convert, compress, generate — all without a server, no sign-up, completely free.",
+    "hero_subtitle": "Convert, compress, generate. All without a server, no sign-up, completely free.",
     "explore_tools": "Explore Tools",
     "contact_us": "Contact Us",
     "categories_title": "Categories",
@@ -36,7 +36,7 @@
     "privacy_title": "Privacy Guaranteed",
     "privacy_description": "All tools run directly in your browser. No files are uploaded to any server.",
     "no_signup_title": "No Sign-up Required",
-    "no_signup_description": "Use every tool instantly — no account, no email, no registration.",
+    "no_signup_description": "Use every tool instantly, no account, no email, no registration.",
     "instant_title": "Instant Results",
     "instant_description": "Everything runs client-side. Get results in milliseconds, not minutes.",
     "cta_title": "Need a custom solution?",
@@ -86,7 +86,7 @@
     },
     "background-remover": {
       "name": "Background Remover",
-      "description": "Remove image backgrounds automatically with AI — right in your browser.",
+      "description": "Remove image backgrounds automatically with AI, right in your browser.",
       "processing": "Processing...",
       "first_time": "First time requires model download (~40MB)",
       "downloading_model": "Downloading AI model...",
@@ -296,7 +296,7 @@
       "unchanged": "unchanged"
     },
     "ocr-image-to-text": {
-      "name": "OCR — Image to Text",
+      "name": "OCR: Image to Text",
       "description": "Extract text from images using optical character recognition.",
       "language": "Document Language",
       "extract_text": "Extract Text",
@@ -422,13 +422,13 @@
       "background": "Background Color",
       "contrast_ratio": "Contrast Ratio",
       "preview_text": "Sample Text",
-      "wcag_aa_normal": "WCAG AA — Normal text",
+      "wcag_aa_normal": "WCAG AA: Normal text",
       "wcag_aa_normal_desc": "Requires ratio ≥ 4.5:1",
-      "wcag_aa_large": "WCAG AA — Large text",
+      "wcag_aa_large": "WCAG AA: Large text",
       "wcag_aa_large_desc": "Requires ratio ≥ 3:1 (18pt or 14pt bold)",
-      "wcag_aaa_normal": "WCAG AAA — Normal text",
+      "wcag_aaa_normal": "WCAG AAA: Normal text",
       "wcag_aaa_normal_desc": "Requires ratio ≥ 7:1",
-      "wcag_aaa_large": "WCAG AAA — Large text",
+      "wcag_aaa_large": "WCAG AAA: Large text",
       "wcag_aaa_large_desc": "Requires ratio ≥ 4.5:1",
       "pass": "Pass",
       "fail": "Fail",
@@ -895,7 +895,7 @@
     },
     "image-filter": {
       "name": "Image Filter",
-      "description": "Apply filters to images — adjust brightness, contrast, saturation, blur and more.",
+      "description": "Apply filters to images. Adjust brightness, contrast, saturation, blur and more.",
       "brightness": "Brightness",
       "contrast": "Contrast",
       "saturation": "Saturation",

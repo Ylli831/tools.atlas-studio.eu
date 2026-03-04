@@ -99,7 +99,7 @@ export default function InvoiceGeneratorTool() {
       doc.setFont("helvetica", "normal");
       y += 12;
       items.forEach((item) => {
-        doc.text(item.description || "—", 22, y);
+        doc.text(item.description || "-", 22, y);
         doc.text(String(item.quantity), 120, y);
         doc.text(`${sym}${item.price.toFixed(2)}`, 145, y);
         doc.text(`${sym}${(item.quantity * item.price).toFixed(2)}`, pw - 22, y, { align: "right" });

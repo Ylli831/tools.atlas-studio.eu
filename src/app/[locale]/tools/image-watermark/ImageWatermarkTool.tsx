@@ -171,7 +171,7 @@ export default function ImageWatermarkTool() {
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-1.5">
-                    {t("font_size")} — {fontSize}px
+                    {t("font_size")}: {fontSize}px
                   </label>
                   <input
                     type="range"
@@ -184,7 +184,7 @@ export default function ImageWatermarkTool() {
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-1.5">
-                    {t("opacity")} — {opacity}%
+                    {t("opacity")}: {opacity}%
                   </label>
                   <input
                     type="range"
@@ -211,7 +211,7 @@ export default function ImageWatermarkTool() {
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-1.5">
-                    {t("rotation")} — {rotation}&deg;
+                    {t("rotation")}: {rotation}&deg;
                   </label>
                   <input
                     type="range"

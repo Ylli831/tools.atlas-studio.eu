@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "title": "Vegla Online Falas — Atlas Studio",
+    "title": "Vegla Online Falas | Atlas Studio",
     "template": "%s | Atlas Studio Tools",
     "description": "Vegla online falas per zhvillues dhe dizajnere. Gjenerues QR kodesh, konvertues imazhesh, heqes sfondi, formatues JSON dhe me shume."
   },
@@ -21,7 +21,7 @@
     "tool_of_day": "Zgjedhja e dites",
     "tool_of_day_cta": "Provoje sot",
     "hero_title": "Vegla te fuqishme, direkt ne shfletues",
-    "hero_subtitle": "Konverto, komprimo, gjenero — te gjitha pa server, pa regjistrim, falas.",
+    "hero_subtitle": "Konverto, komprimo, gjenero. Te gjitha pa server, pa regjistrim, falas.",
     "explore_tools": "Eksploro Veglat",
     "contact_us": "Na Kontaktoni",
     "categories_title": "Kategorite",
@@ -36,7 +36,7 @@
     "privacy_title": "Privatesia e Garantuar",
     "privacy_description": "Te gjitha veglat funksionojne direkt ne shfletuesin tuaj. Asnje skedar nuk ngarkohet ne server.",
     "no_signup_title": "Pa Regjistrim",
-    "no_signup_description": "Perdorni cdo vegle menjehere — pa llogari, pa email, pa regjistrim.",
+    "no_signup_description": "Perdorni cdo vegle menjehere, pa llogari, pa email, pa regjistrim.",
     "instant_title": "Rezultate te Menjehershme",
     "instant_description": "Gjithcka funksionon ne shfletues. Merrni rezultate per milisekonda, jo minuta.",
     "cta_title": "Keni nevoje per nje zgjidhje te personalizuar?",
@@ -86,7 +86,7 @@
     },
     "background-remover": {
       "name": "Heqes Sfondi",
-      "description": "Hiqni sfondin e imazheve automatikisht me inteligjence artificiale — direkt ne shfletues.",
+      "description": "Hiqni sfondin e imazheve automatikisht me inteligjence artificiale, direkt ne shfletues.",
       "processing": "Duke procesuar...",
       "first_time": "Hera e pare kerkon shkarkimin e modelit (~40MB)",
       "downloading_model": "Duke shkarkuar modelin AI...",
@@ -296,7 +296,7 @@
       "unchanged": "pa ndryshim"
     },
     "ocr-image-to-text": {
-      "name": "OCR — Imazh ne Tekst",
+      "name": "OCR: Imazh ne Tekst",
       "description": "Nxirrni tekst nga imazhet duke perdorur njohjen optike te karaktereve.",
       "language": "Gjuha e Dokumentit",
       "extract_text": "Nxirr Tekstin",
@@ -422,13 +422,13 @@
       "background": "Ngjyra e Sfondit",
       "contrast_ratio": "Raporti i Kontrastit",
       "preview_text": "Tekst Shembull",
-      "wcag_aa_normal": "WCAG AA — Tekst normal",
+      "wcag_aa_normal": "WCAG AA: Tekst normal",
       "wcag_aa_normal_desc": "Kerkon raportin ≥ 4.5:1",
-      "wcag_aa_large": "WCAG AA — Tekst i madh",
+      "wcag_aa_large": "WCAG AA: Tekst i madh",
       "wcag_aa_large_desc": "Kerkon raportin ≥ 3:1 (18pt ose 14pt te trashura)",
-      "wcag_aaa_normal": "WCAG AAA — Tekst normal",
+      "wcag_aaa_normal": "WCAG AAA: Tekst normal",
       "wcag_aaa_normal_desc": "Kerkon raportin ≥ 7:1",
-      "wcag_aaa_large": "WCAG AAA — Tekst i madh",
+      "wcag_aaa_large": "WCAG AAA: Tekst i madh",
       "wcag_aaa_large_desc": "Kerkon raportin ≥ 4.5:1",
       "pass": "Kalon",
       "fail": "Deshtoi",
@@ -895,7 +895,7 @@
     },
     "image-filter": {
       "name": "Filtra Imazhesh",
-      "description": "Aplikoni filtra ne imazhe — rregulloni ndricimin, kontrastin, ngopjen, turbullimin dhe me shume.",
+      "description": "Aplikoni filtra ne imazhe. Rregulloni ndricimin, kontrastin, ngopjen, turbullimin dhe me shume.",
       "brightness": "Ndricimi",
       "contrast": "Kontrasti",
       "saturation": "Ngopja",

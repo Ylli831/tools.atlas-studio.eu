@@ -65,7 +65,7 @@ export async function POST(req: NextRequest) {
   const html = `
     <div style="font-family:sans-serif;max-width:600px;margin:0 auto;color:#37474b">
       <h2 style="font-size:24px;margin-bottom:24px;border-bottom:2px solid #487877;padding-bottom:12px">
-        New message — Atlas Studio Tools
+        New message - Atlas Studio Tools
       </h2>
       <table style="width:100%;border-collapse:collapse">
         <tr><td style="padding:8px 0;font-weight:600;width:120px">Name</td><td style="padding:8px 0">${name}</td></tr>
@@ -97,7 +97,7 @@ export async function POST(req: NextRequest) {
         },
         body: JSON.stringify({
           message: {
-            subject: `[Tools] New message from ${name}${subject ? ` — ${subject}` : ""}`,
+            subject: `[Tools] New message from ${name}${subject ? ` - ${subject}` : ""}`,
             body: { contentType: "HTML", content: html },
             from: {
               emailAddress: { address: sender, name: "Atlas Studio Tools" },

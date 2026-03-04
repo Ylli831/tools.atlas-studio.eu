@@ -9,7 +9,7 @@ import CopyButton from "@/components/CopyButton";
 type ExifData = Record<string, unknown>;
 
 function formatValue(val: unknown): string {
-  if (val === null || val === undefined) return "—";
+  if (val === null || val === undefined) return "-";
   if (val instanceof Date) return val.toLocaleString();
   if (typeof val === "object" && !Array.isArray(val)) return JSON.stringify(val);
   if (Array.isArray(val)) return val.join(", ");

@@ -30,7 +30,7 @@ export default function NumberBaseConverterTool() {
   const getConverted = (toBase: number): string => {
     if (!value.trim()) return "";
     const n = parseInt(value.trim().replace(/^0[bBxXoO]/, ""), inputBase);
-    if (isNaN(n)) return "—";
+    if (isNaN(n)) return "-";
     return n.toString(toBase).toUpperCase();
   };
 
@@ -72,10 +72,10 @@ export default function NumberBaseConverterTool() {
               <div key={b.base} className={`bg-card border rounded-xl p-4 ${inputBase === b.base ? "border-teal" : "border-border"}`}>
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">{b.label} ({b.base})</span>
-                  {result && result !== "—" && <CopyButton text={result} />}
+                  {result && result !== "-" && <CopyButton text={result} />}
                 </div>
                 <p className="font-mono text-lg font-semibold text-slate break-all">
-                  {result ? (b.prefix ? <><span className="text-muted-foreground text-sm">{b.prefix}</span>{result}</> : result) : <span className="text-muted-foreground text-sm">—</span>}
+                  {result ? (b.prefix ? <><span className="text-muted-foreground text-sm">{b.prefix}</span>{result}</> : result) : <span className="text-muted-foreground text-sm">-</span>}
                 </p>
               </div>
             );

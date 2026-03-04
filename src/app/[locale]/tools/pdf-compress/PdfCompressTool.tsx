@@ -157,7 +157,7 @@ export default function PdfCompressTool() {
 
             <div>
               <label className="block text-sm font-medium text-foreground mb-1.5">
-                {t("quality")} — {Math.round(quality * 100)}%
+                {t("quality")}: {Math.round(quality * 100)}%
               </label>
               <input
                 type="range"
@@ -176,7 +176,7 @@ export default function PdfCompressTool() {
 
             <div>
               <label className="block text-sm font-medium text-foreground mb-1.5">
-                {t("resolution")} — {scale}x
+                {t("resolution")}: {scale}x
               </label>
               <input
                 type="range"

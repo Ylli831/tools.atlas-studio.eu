@@ -57,7 +57,7 @@ function ToolName({ slug }: { slug: string }) {
   const t = useTranslations(`tools.${slug}`);
   return (
     <p className="text-sm font-semibold text-slate truncate">
-      {t("name")} — <span className="font-normal text-muted-foreground">{t("description")}</span>
+      {t("name")}: <span className="font-normal text-muted-foreground">{t("description")}</span>
     </p>
   );
 }

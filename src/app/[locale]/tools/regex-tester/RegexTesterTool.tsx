@@ -107,7 +107,7 @@ export default function RegexTesterTool() {
                   : "bg-surface border-border hover:border-teal"
               }`}
             >
-              {flag} — {label}
+              {flag}: {label}
             </button>
           ))}
         </div>
@@ -159,7 +159,7 @@ export default function RegexTesterTool() {
                       <td className="px-3 py-2 font-mono text-teal">{m.match || t("empty_match")}</td>
                       <td className="px-3 py-2 text-muted-foreground">{m.index}</td>
                       <td className="px-3 py-2 font-mono text-xs">
-                        {m.groups.length > 0 ? m.groups.join(", ") : "—"}
+                        {m.groups.length > 0 ? m.groups.join(", ") : "-"}
                       </td>
                     </tr>
                   ))}

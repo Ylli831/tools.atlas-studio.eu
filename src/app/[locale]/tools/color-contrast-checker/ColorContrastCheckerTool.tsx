@@ -41,7 +41,7 @@ export default function ColorContrastCheckerTool() {
   const [bg, setBg] = useState("#ffffff");
 
   const ratio = useMemo(() => contrastRatio(fg, bg), [fg, bg]);
-  const ratioStr = ratio ? ratio.toFixed(2) : "—";
+  const ratioStr = ratio ? ratio.toFixed(2) : "-";
 
   const aa_normal = ratio ? ratio >= 4.5 : false;
   const aa_large = ratio ? ratio >= 3 : false;

@@ -95,7 +95,7 @@ export default function PdfPageExtractorTool() {
                 <polyline points="14 2 14 8 20 8"/>
               </svg>
               <span className="font-medium text-foreground">{file.name}</span>
-              <span>— {t("page_count", { count: pageCount })}</span>
+              <span>({t("page_count", { count: pageCount })})</span>
             </div>
 
             <div>

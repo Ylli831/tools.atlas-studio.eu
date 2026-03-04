@@ -93,7 +93,7 @@ export default function UrlSlugGeneratorTool() {
           <div className="space-y-1">
             {[
               "10 Best Tips for SEO in 2024",
-              "Hëllo Wörld — Ça va?",
+              "Hëllo Wörld, Ça va?",
               "My Article: A Guide to Web Dev",
             ].map((ex) => (
               <button key={ex} onClick={() => setInput(ex)}

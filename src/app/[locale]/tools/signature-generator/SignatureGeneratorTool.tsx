@@ -220,7 +220,7 @@ export default function SignatureGeneratorTool() {
           {mode === "draw" && (
             <div>
               <label className="block text-sm font-medium text-foreground mb-1.5">
-                {t("stroke_width")} — {strokeWidth}px
+                {t("stroke_width")}: {strokeWidth}px
               </label>
               <input
                 type="range"
@@ -272,7 +272,7 @@ export default function SignatureGeneratorTool() {
 
               <div>
                 <label className="block text-sm font-medium text-foreground mb-1.5">
-                  {t("font_size")} — {typedFontSize}px
+                  {t("font_size")}: {typedFontSize}px
                 </label>
                 <input
                   type="range"

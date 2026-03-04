@@ -171,7 +171,7 @@ export default function ColorPaletteExtractorTool() {
             {/* Color count selector */}
             <div className="bg-card border border-border rounded-xl p-4">
               <label className="block text-sm font-medium text-foreground mb-2">
-                {t("num_colors")} — {colorCount}
+                {t("num_colors")}: {colorCount}
               </label>
               <input
                 type="range"

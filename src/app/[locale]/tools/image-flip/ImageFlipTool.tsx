@@ -130,7 +130,7 @@ export default function ImageFlipTool() {
               {/* Rotation controls */}
               <div>
                 <label className="block text-sm font-medium text-foreground mb-2">
-                  {t("rotate")} — {rotation}&deg;
+                  {t("rotate")}: {rotation}&deg;
                 </label>
                 <div className="flex gap-2">
                   <button

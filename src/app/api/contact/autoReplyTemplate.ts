@@ -15,7 +15,7 @@ const translations: Record<
   }
 > = {
   en: {
-    subject: "We received your message — Atlas Studio",
+    subject: "We received your message - Atlas Studio",
     greeting: (name) => `Hi ${name},`,
     thankYou: "Thank you for reaching out to Atlas Studio.",
     expectation:
@@ -25,7 +25,7 @@ const translations: Record<
     team: "The Atlas Studio Team",
   },
   sq: {
-    subject: "Kemi marrë mesazhin tuaj — Atlas Studio",
+    subject: "Kemi marrë mesazhin tuaj - Atlas Studio",
     greeting: (name) => `Përshëndetje ${name},`,
     thankYou: "Faleminderit që na kontaktuat në Atlas Studio.",
     expectation:
