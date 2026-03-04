@@ -71,7 +71,8 @@ export default function PdfCompressTool() {
         canvas.width = viewport.width;
         canvas.height = viewport.height;
 
-        await pdfPage.render({ canvasContext: ctx, viewport }).promise;
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        await pdfPage.render({ canvasContext: ctx, viewport, canvas } as any).promise;
 
         // Convert canvas to JPEG blob
         const blob = await new Promise<Blob>((resolve) => {

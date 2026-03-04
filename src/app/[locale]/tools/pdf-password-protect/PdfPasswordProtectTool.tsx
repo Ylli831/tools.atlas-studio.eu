@@ -35,7 +35,9 @@ export default function PdfPasswordProtectTool() {
       const bytes = await file.arrayBuffer();
       const pdfDoc = await PDFDocument.load(bytes);
 
-      const pdfBytes = await pdfDoc.save({
+      // pdf-lib supports password options at runtime even though types don't expose them
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const pdfBytes = await (pdfDoc as any).save({
         userPassword,
         ownerPassword: ownerPassword || userPassword,
       });
