@@ -122,6 +122,50 @@ export default function ToolIcon({ icon, size = 20 }: { icon: string; size?: num
       return (<svg {...props}><polyline points="4 17 10 11 4 5" /><line x1="12" y1="19" x2="20" y2="19" /></svg>);
     case "calendar-range":
       return (<svg {...props}><rect x="3" y="4" width="18" height="18" rx="2" /><line x1="16" y1="2" x2="16" y2="6" /><line x1="8" y1="2" x2="8" y2="6" /><line x1="3" y1="10" x2="21" y2="10" /><path d="M8 14h.01" /><path d="M12 14h.01" /><path d="M16 14h.01" /><path d="M8 18h.01" /><path d="M12 18h.01" /></svg>);
+    case "file-compress":
+      return (<svg {...props}><path d="M14.5 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V7.5L14.5 2z" /><polyline points="14 2 14 8 20 8" /><path d="M10 12h4" /><path d="M10 16h4" /><path d="M12 12v4" /></svg>);
+    case "file-lock":
+      return (<svg {...props}><path d="M14.5 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V7.5L14.5 2z" /><polyline points="14 2 14 8 20 8" /><rect x="8" y="14" width="8" height="6" rx="1" /><path d="M10 14v-2a2 2 0 014 0v2" /></svg>);
+    case "crop":
+      return (<svg {...props}><path d="M6 2v14a2 2 0 002 2h14" /><path d="M18 22V8a2 2 0 00-2-2H2" /></svg>);
+    case "droplet":
+      return (<svg {...props}><path d="M12 22a7 7 0 007-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 007 7z" /></svg>);
+    case "sliders":
+      return (<svg {...props}><line x1="4" y1="21" x2="4" y2="14" /><line x1="4" y1="10" x2="4" y2="3" /><line x1="12" y1="21" x2="12" y2="12" /><line x1="12" y1="8" x2="12" y2="3" /><line x1="20" y1="21" x2="20" y2="16" /><line x1="20" y1="12" x2="20" y2="3" /><line x1="1" y1="14" x2="7" y2="14" /><line x1="9" y1="8" x2="15" y2="8" /><line x1="17" y1="16" x2="23" y2="16" /></svg>);
+    case "flip-horizontal":
+      return (<svg {...props}><path d="M8 3H5a2 2 0 00-2 2v14c0 1.1.9 2 2 2h3" /><path d="M16 3h3a2 2 0 012 2v14a2 2 0 01-2 2h-3" /><line x1="12" y1="20" x2="12" y2="4" /><path d="M12 4l-4 4" /><path d="M12 4l4 4" /></svg>);
+    case "pipette":
+      return (<svg {...props}><path d="M2 22l1-1h3l9-9" /><path d="M3 21v-3l9-9" /><path d="M14.5 5.5l4-4a1.4 1.4 0 012 2l-4 4" /><path d="M12.5 7.5l4 4" /></svg>);
+    case "pen-tool":
+      return (<svg {...props}><path d="M12 19l7-7 3 3-7 7-3-3z" /><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" /><path d="M2 2l7.586 7.586" /><circle cx="11" cy="11" r="2" /></svg>);
+    case "timer":
+      return (<svg {...props}><circle cx="12" cy="13" r="8" /><path d="M12 9v4l2 2" /><path d="M5 3L2 6" /><path d="M22 6l-3-3" /><path d="M10 2h4" /><path d="M12 2v2" /></svg>);
+    case "user-fake":
+      return (<svg {...props}><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2" /><circle cx="9" cy="7" r="4" /><line x1="17" y1="11" x2="22" y2="11" /><line x1="17" y1="8" x2="22" y2="8" /><line x1="17" y1="14" x2="22" y2="14" /></svg>);
+    case "pen-line":
+      return (<svg {...props}><path d="M12 20h9" /><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z" /></svg>);
+    case "lock-keyhole":
+      return (<svg {...props}><circle cx="12" cy="16" r="1" /><rect x="3" y="10" width="18" height="12" rx="2" /><path d="M7 10V7a5 5 0 0110 0v3" /></svg>);
+    case "arrow-down-to-line":
+      return (<svg {...props}><path d="M12 17V3" /><path d="M6 11l6 6 6-6" /><line x1="19" y1="21" x2="5" y2="21" /></svg>);
+    case "file-json":
+      return (<svg {...props}><path d="M14.5 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V7.5L14.5 2z" /><polyline points="14 2 14 8 20 8" /><path d="M10 13a1 1 0 00-1-1H8a1 1 0 00-1 1v2a1 1 0 001 1h1a1 1 0 011 1v2a1 1 0 01-1 1H7" /><path d="M17 13a1 1 0 00-1-1h-1a1 1 0 00-1 1v2a1 1 0 001 1h1a1 1 0 011 1v2a1 1 0 01-1 1h-1" /></svg>);
+    case "book-open":
+      return (<svg {...props}><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z" /><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z" /></svg>);
+    case "file-type":
+      return (<svg {...props}><path d="M14.5 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V7.5L14.5 2z" /><polyline points="14 2 14 8 20 8" /><path d="M9 13v-1h6v1" /><path d="M12 12v6" /><path d="M11 18h2" /></svg>);
+    case "monitor":
+      return (<svg {...props}><rect x="2" y="3" width="20" height="14" rx="2" /><line x1="8" y1="21" x2="16" y2="21" /><line x1="12" y1="17" x2="12" y2="21" /></svg>);
+    case "database":
+      return (<svg {...props}><ellipse cx="12" cy="5" rx="9" ry="3" /><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" /><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" /></svg>);
+    case "git-compare":
+      return (<svg {...props}><circle cx="18" cy="18" r="3" /><circle cx="6" cy="6" r="3" /><path d="M13 6h3a2 2 0 012 2v7" /><path d="M11 18H8a2 2 0 01-2-2V9" /></svg>);
+    case "layout-grid":
+      return (<svg {...props}><rect x="3" y="3" width="7" height="7" rx="1" /><rect x="14" y="3" width="7" height="7" rx="1" /><rect x="3" y="14" width="7" height="7" rx="1" /><rect x="14" y="14" width="7" height="7" rx="1" /></svg>);
+    case "type":
+      return (<svg {...props}><polyline points="4 7 4 4 20 4 20 7" /><line x1="9" y1="20" x2="15" y2="20" /><line x1="12" y1="4" x2="12" y2="20" /></svg>);
+    case "scroll":
+      return (<svg {...props}><path d="M8 21h12a2 2 0 002-2v-2H10v2a2 2 0 11-4 0V5a2 2 0 10-4 0v3h4" /><path d="M19 17V5a2 2 0 00-2-2H4" /></svg>);
     default:
       return (<svg {...props}><circle cx="12" cy="12" r="10" /></svg>);
   }

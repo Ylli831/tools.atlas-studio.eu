@@ -81,6 +81,35 @@ export const tools: ToolDefinition[] = [
   { slug: "html-entity-encoder", icon: "code-xml", category: "developer", hasFileUpload: false, isNew: true },
   { slug: "xml-formatter", icon: "file-xml", category: "developer", hasFileUpload: false, isNew: true },
   { slug: "chmod-calculator", icon: "terminal", category: "developer", hasFileUpload: false, isNew: true },
+  // Sprint 2 - PDF
+  { slug: "pdf-compress", icon: "file-compress", category: "pdf", hasFileUpload: true, isNew: true },
+  { slug: "pdf-password-protect", icon: "file-lock", category: "pdf", hasFileUpload: true, isNew: true },
+  // Sprint 2 - Image
+  { slug: "image-cropper", icon: "crop", category: "image", hasFileUpload: true, isNew: true },
+  { slug: "image-watermark", icon: "droplet", category: "image", hasFileUpload: true, isNew: true },
+  { slug: "image-filter", icon: "sliders", category: "image", hasFileUpload: true, isNew: true },
+  { slug: "image-flip", icon: "flip-horizontal", category: "image", hasFileUpload: true, isNew: true },
+  { slug: "color-palette-extractor", icon: "pipette", category: "image", hasFileUpload: true, isNew: true },
+  // Sprint 2 - Generator
+  { slug: "signature-generator", icon: "pen-tool", category: "generator", hasFileUpload: false, isNew: true },
+  { slug: "cron-expression-generator", icon: "timer", category: "generator", hasFileUpload: false, isNew: true },
+  { slug: "fake-data-generator", icon: "user-fake", category: "generator", hasFileUpload: false, isNew: true },
+  // Sprint 2 - Text
+  { slug: "text-to-handwriting", icon: "pen-line", category: "text", hasFileUpload: false, isNew: true },
+  { slug: "text-encryptor", icon: "lock-keyhole", category: "text", hasFileUpload: false, isNew: true },
+  { slug: "html-to-markdown", icon: "arrow-down-to-line", category: "text", hasFileUpload: false, isNew: true },
+  { slug: "json-to-yaml", icon: "file-json", category: "text", hasFileUpload: false, isNew: true },
+  { slug: "readability-checker", icon: "book-open", category: "text", hasFileUpload: false, isNew: true },
+  // Sprint 2 - Developer
+  { slug: "json-to-typescript", icon: "file-type", category: "developer", hasFileUpload: false, isNew: true },
+  { slug: "html-preview", icon: "monitor", category: "developer", hasFileUpload: false, isNew: true },
+  { slug: "sql-formatter", icon: "database", category: "developer", hasFileUpload: false, isNew: true },
+  { slug: "diff-checker", icon: "git-compare", category: "developer", hasFileUpload: false, isNew: true },
+  // Sprint 2 - Design
+  { slug: "flexbox-playground", icon: "layout-grid", category: "design", hasFileUpload: false, isNew: true },
+  { slug: "font-pair-previewer", icon: "type", category: "design", hasFileUpload: false, isNew: true },
+  // Sprint 2 - Security
+  { slug: "privacy-policy-generator", icon: "scroll", category: "security", hasFileUpload: false, isNew: true },
 ];
 
 export const categories = ["pdf", "image", "generator", "text", "developer", "business", "design", "security"] as const;
