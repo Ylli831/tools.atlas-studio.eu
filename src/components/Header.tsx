@@ -28,7 +28,8 @@ export default function Header() {
             alt="Atlas Studio Tools"
             width={773}
             height={279}
-            className="h-8 w-auto"
+            className="h-10 w-auto"
+            unoptimized
           />
         </Link>
 

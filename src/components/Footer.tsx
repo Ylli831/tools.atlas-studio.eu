@@ -20,7 +20,8 @@ export default async function Footer() {
                 alt="Atlas Studio Tools"
                 width={773}
                 height={279}
-                className="h-7 w-auto"
+                className="h-10 w-auto"
+                unoptimized
               />
             </a>
             <p className="text-sm text-muted-foreground">{t("description")}</p>
