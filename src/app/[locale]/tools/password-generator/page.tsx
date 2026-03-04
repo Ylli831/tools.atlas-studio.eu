@@ -39,16 +39,29 @@ export default async function PasswordGeneratorPage({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebApplication",
-            name: "Password Generator - Atlas Studio Tools",
-            url: "https://tools.atlas-studio.eu/tools/password-generator",
-            applicationCategory: "UtilityApplication",
-            operatingSystem: "Any",
-            offers: { "@type": "Offer", price: "0", priceCurrency: "EUR" },
-            creator: { "@type": "Organization", name: "Atlas Studio", url: "https://atlas-studio.eu" },
-          }),
+          __html: JSON.stringify([
+            {
+              "@context": "https://schema.org",
+              "@type": "WebApplication",
+              name: "Password Generator - Atlas Studio Tools",
+              url: "https://tools.atlas-studio.eu/tools/password-generator",
+              applicationCategory: "UtilityApplication",
+              operatingSystem: "Any",
+              offers: { "@type": "Offer", price: "0", priceCurrency: "EUR" },
+              creator: { "@type": "Organization", name: "Atlas Studio", url: "https://atlas-studio.eu" },
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "HowTo",
+              name: "How to Generate a Secure Password",
+              step: [
+                { "@type": "HowToStep", position: 1, name: "Set length", text: "Choose your desired password length using the slider." },
+                { "@type": "HowToStep", position: 2, name: "Select options", text: "Toggle uppercase, lowercase, numbers, and special characters." },
+                { "@type": "HowToStep", position: 3, name: "Copy password", text: "Click the copy button to copy the generated password to your clipboard." },
+              ],
+              tool: { "@type": "HowToTool", name: "Atlas Studio Password Generator" },
+            },
+          ]),
         }}
       />
       <PasswordGeneratorTool />
