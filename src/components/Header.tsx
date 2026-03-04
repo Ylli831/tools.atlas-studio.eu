@@ -58,7 +58,7 @@ export default function Header() {
               <circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" />
             </svg>
             <span className="hidden lg:inline">Search</span>
-            <kbd className="text-xs border border-border rounded px-1 py-0.5 font-mono leading-none">⌘K</kbd>
+            <kbd className="text-xs border border-border rounded px-1 py-0.5 font-mono leading-none">Ctrl K</kbd>
           </button>
           <ThemeToggle />
           <LanguageSwitch />
