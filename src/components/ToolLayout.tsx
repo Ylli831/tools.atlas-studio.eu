@@ -44,8 +44,25 @@ export default function ToolLayout({
     }
   };
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://tools.atlas-studio.eu" },
+      { "@type": "ListItem", position: 2, name: tc("back_to_tools"), item: "https://tools.atlas-studio.eu/tools" },
+      ...(currentTool
+        ? [{ "@type": "ListItem", position: 3, name: tcat(currentTool.category), item: `https://tools.atlas-studio.eu/tools?category=${currentTool.category}` }]
+        : []),
+      { "@type": "ListItem", position: currentTool ? 4 : 3, name: t("name") },
+    ],
+  };
+
   return (
     <div className="max-w-4xl mx-auto px-4 md:px-8 py-8 md:py-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <nav className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-2 text-sm text-muted-foreground">
           <Link href="/tools" className="hover:text-foreground transition-colors">

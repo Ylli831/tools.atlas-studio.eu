@@ -1,7 +1,7 @@
 export interface ToolDefinition {
   slug: string;
   icon: string;
-  category: "generator" | "image" | "developer" | "text" | "pdf" | "business";
+  category: "generator" | "image" | "developer" | "text" | "pdf" | "business" | "design" | "security";
   hasFileUpload: boolean;
   isNew?: boolean;
 }
@@ -57,6 +57,30 @@ export const tools: ToolDefinition[] = [
   { slug: "age-calculator", icon: "calendar", category: "business", hasFileUpload: false, isNew: true },
   { slug: "vat-calculator", icon: "percent", category: "business", hasFileUpload: false, isNew: true },
   { slug: "iban-validator", icon: "bank", category: "business", hasFileUpload: false, isNew: true },
+  { slug: "loan-calculator", icon: "coins", category: "business", hasFileUpload: false, isNew: true },
+  { slug: "percentage-calculator", icon: "percent-circle", category: "business", hasFileUpload: false, isNew: true },
+  { slug: "bmi-calculator", icon: "heart-pulse", category: "business", hasFileUpload: false, isNew: true },
+  { slug: "tip-calculator", icon: "wallet", category: "business", hasFileUpload: false, isNew: true },
+  // Design Tools
+  { slug: "box-shadow-generator", icon: "layers", category: "design", hasFileUpload: false, isNew: true },
+  // Security Tools
+  { slug: "password-strength-checker", icon: "shield", category: "security", hasFileUpload: false, isNew: true },
+  // Business Tools (continued)
+  { slug: "date-calculator", icon: "calendar-range", category: "business", hasFileUpload: false, isNew: true },
+  // Sprint 1 - PDF
+  { slug: "pdf-rotate", icon: "file-rotate", category: "pdf", hasFileUpload: true, isNew: true },
+  // Sprint 1 - Image
+  { slug: "image-to-base64", icon: "file-code", category: "image", hasFileUpload: true, isNew: true },
+  { slug: "image-metadata-remover", icon: "eye-off", category: "image", hasFileUpload: true, isNew: true },
+  // Sprint 1 - Generator
+  { slug: "placeholder-image-generator", icon: "frame", category: "generator", hasFileUpload: false, isNew: true },
+  { slug: "emoji-picker", icon: "smile", category: "generator", hasFileUpload: false, isNew: true },
+  // Sprint 1 - Text
+  { slug: "text-to-speech", icon: "volume", category: "text", hasFileUpload: false, isNew: true },
+  // Sprint 1 - Developer
+  { slug: "html-entity-encoder", icon: "code-xml", category: "developer", hasFileUpload: false, isNew: true },
+  { slug: "xml-formatter", icon: "file-xml", category: "developer", hasFileUpload: false, isNew: true },
+  { slug: "chmod-calculator", icon: "terminal", category: "developer", hasFileUpload: false, isNew: true },
 ];
 
-export const categories = ["pdf", "image", "generator", "text", "developer", "business"] as const;
+export const categories = ["pdf", "image", "generator", "text", "developer", "business", "design", "security"] as const;

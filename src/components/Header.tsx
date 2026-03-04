@@ -5,6 +5,8 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
 import LanguageSwitch from "./LanguageSwitch";
+import SearchDialog from "./SearchDialog";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Header() {
   const t = useTranslations("nav");
@@ -48,8 +50,20 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
+          <button
+            onClick={() => document.dispatchEvent(new KeyboardEvent("keydown", { key: "k", ctrlKey: true }))}
+            className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors border border-border rounded-lg px-3 py-1.5 hover:border-teal"
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+            <span className="hidden lg:inline">Search</span>
+            <kbd className="text-xs border border-border rounded px-1 py-0.5 font-mono leading-none">⌘K</kbd>
+          </button>
+          <ThemeToggle />
           <LanguageSwitch />
         </nav>
+        <SearchDialog />
 
         <button
           className="md:hidden p-2"

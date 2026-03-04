@@ -4,7 +4,7 @@ import { Link } from "@/i18n/navigation";
 import { tools } from "@/lib/tools-registry";
 import ToolCard from "@/components/ToolCard";
 import ToolIcon from "@/components/ToolIcon";
-import { RecentToolsSection, NewToolsSection } from "@/components/HomeSections";
+import { RecentToolsSection, NewToolsSection, FavoriteToolsSection } from "@/components/HomeSections";
 import AnnouncementBanner from "@/components/AnnouncementBanner";
 import HeroGreeting from "@/components/HeroGreeting";
 import ToolOfTheDay from "@/components/ToolOfTheDay";
@@ -32,6 +32,8 @@ function HomeContent() {
     text: "text",
     developer: "code",
     business: "receipt",
+    design: "layers",
+    security: "shield",
   };
 
   const categories = [
@@ -41,12 +43,44 @@ function HomeContent() {
     { key: "text", count: tools.filter((t) => t.category === "text").length },
     { key: "developer", count: tools.filter((t) => t.category === "developer").length },
     { key: "business", count: tools.filter((t) => t.category === "business").length },
+    { key: "design", count: tools.filter((t) => t.category === "design").length },
+    { key: "security", count: tools.filter((t) => t.category === "security").length },
   ];
 
   const popularTools = tools.slice(0, 8);
 
+  const homepageJsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      name: "Atlas Studio Tools",
+      url: "https://tools.atlas-studio.eu",
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      name: "Free Online Tools",
+      description: "60+ free online tools for developers, designers, and businesses.",
+      itemListElement: categories.map((cat, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        item: {
+          "@type": "SoftwareApplication",
+          name: tc(cat.key),
+          applicationCategory: "UtilityApplication",
+          url: `https://tools.atlas-studio.eu/tools?category=${cat.key}`,
+          offers: { "@type": "Offer", price: "0", priceCurrency: "EUR" },
+        },
+      })),
+    },
+  ];
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homepageJsonLd) }}
+      />
       {/* Announcement banner */}
       <AnnouncementBanner />
 
@@ -90,7 +124,7 @@ function HomeContent() {
       {/* Categories */}
       <section className="pb-12">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-3">
             {categories.map((cat) => (
               <Link
                 key={cat.key}
@@ -112,6 +146,9 @@ function HomeContent() {
 
       {/* New tools */}
       <NewToolsSection />
+
+      {/* Favorites (client, localStorage) */}
+      <FavoriteToolsSection />
 
       {/* Recently used (client, localStorage) */}
       <RecentToolsSection />
