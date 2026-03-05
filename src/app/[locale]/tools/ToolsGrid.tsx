@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import { useSearchParams, useRouter, usePathname } from "next/navigation";
 import { tools, categories } from "@/lib/tools-registry";
 import ToolCard from "@/components/ToolCard";
+import ToolSuggestionForm from "@/components/ToolSuggestionForm";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 export default function ToolsGrid() {
@@ -184,6 +185,10 @@ export default function ToolsGrid() {
             ))}
           </div>
         )}
+
+        <div className="mt-12">
+          <ToolSuggestionForm />
+        </div>
       </div>
     </section>
   );

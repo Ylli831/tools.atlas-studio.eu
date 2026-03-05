@@ -284,17 +284,6 @@
       "alternating": "aLtErNuEsE",
       "inverse": "iNVERSE"
     },
-    "text-diff": {
-      "name": "Krahasues Tekstesh",
-      "description": "Krahasoni dy tekste krah per krah dhe shfaqni ndryshimet.",
-      "original": "Teksti Origjinal",
-      "modified": "Teksti i Modifikuar",
-      "original_placeholder": "Ngjisni tekstin origjinal ketu...",
-      "modified_placeholder": "Ngjisni tekstin e modifikuar ketu...",
-      "added": "shtuar",
-      "removed": "hequr",
-      "unchanged": "pa ndryshim"
-    },
     "ocr-image-to-text": {
       "name": "OCR: Imazh ne Tekst",
       "description": "Nxirrni tekst nga imazhet duke perdorur njohjen optike te karaktereve.",
@@ -1145,6 +1134,476 @@
       "copy_html": "Kopjo si HTML",
       "copy_text": "Kopjo si Tekst",
       "download_pdf": "Shkarko PDF"
+    },
+    "css-minifier": {
+      "name": "Minifikues CSS",
+      "description": "Minifikoni kodin CSS duke hequr hapesirat, komentet dhe sintaksen e tepert.",
+      "input_label": "Hyrja CSS",
+      "input_placeholder": "Ngjisni kodin CSS ketu...",
+      "minify": "Minifiko",
+      "output_label": "CSS e Minifikuar",
+      "original_size": "Madhesia Origjinale",
+      "minified_size": "Madhesia e Minifikuar",
+      "savings": "Kursimi"
+    },
+    "javascript-minifier": {
+      "name": "Minifikues JavaScript",
+      "description": "Minifikoni kodin JavaScript per te reduktuar madhesine e skedarit.",
+      "input_label": "Hyrja JavaScript",
+      "input_placeholder": "Ngjisni kodin JavaScript ketu...",
+      "minify": "Minifiko",
+      "output_label": "JavaScript e Minifikuar",
+      "original_size": "Madhesia Origjinale",
+      "minified_size": "Madhesia e Minifikuar",
+      "savings": "Kursimi"
+    },
+    "html-minifier": {
+      "name": "Minifikues HTML",
+      "description": "Kompresoni HTML duke hequr hapesirat, komentet dhe etiketat opsionale.",
+      "input_label": "Hyrja HTML",
+      "input_placeholder": "Ngjisni kodin HTML ketu...",
+      "minify": "Minifiko",
+      "output_label": "HTML e Minifikuar",
+      "original_size": "Madhesia Origjinale",
+      "minified_size": "Madhesia e Minifikuar",
+      "savings": "Kursimi"
+    },
+    "svg-optimizer": {
+      "name": "Optimizues SVG",
+      "description": "Optimizoni dhe kompresoni skedaret SVG duke hequr metadatat dhe atributet e panevojshme.",
+      "optimize": "Optimizo SVG",
+      "original_size": "Madhesia Origjinale",
+      "optimized_size": "Madhesia e Optimizuar",
+      "savings": "Kursimi",
+      "download": "Shkarko SVG te Optimizuar"
+    },
+    "css-beautifier": {
+      "name": "Formatues CSS",
+      "description": "Formatoni dhe zbukuroni CSS te minifikuar me dhembje te duhur dhe rreshta te rinj.",
+      "input_label": "Hyrja CSS e Minifikuar",
+      "input_placeholder": "Ngjisni CSS te minifikuar ketu...",
+      "beautify": "Formato",
+      "output_label": "CSS e Formatuar",
+      "indent_size": "Madhesia e Dhembjes"
+    },
+    "json-to-xml": {
+      "name": "Konvertues JSON ne XML",
+      "description": "Konvertoni te dhenat JSON ne format XML menjehere ne shfletuesin tuaj.",
+      "input_label": "Hyrja JSON",
+      "input_placeholder": "Ngjisni JSON ketu...",
+      "convert": "Konverto ne XML",
+      "output_label": "Dalja XML",
+      "root_element": "Emri i Elementit Rrenjes"
+    },
+    "xml-to-json": {
+      "name": "Konvertues XML ne JSON",
+      "description": "Konvertoni te dhenat XML ne format JSON menjehere ne shfletuesin tuaj.",
+      "input_label": "Hyrja XML",
+      "input_placeholder": "Ngjisni XML ketu...",
+      "convert": "Konverto ne JSON",
+      "output_label": "Dalja JSON"
+    },
+    "json-to-csv": {
+      "name": "Konvertues JSON ne CSV",
+      "description": "Konvertoni vargjet JSON ne skedare CSV te shkarkueshem.",
+      "input_label": "Hyrja JSON",
+      "input_placeholder": "Ngjisni nje varg JSON ketu...",
+      "convert": "Konverto ne CSV",
+      "output_label": "Dalja CSV",
+      "download_csv": "Shkarko CSV"
+    },
+    "toml-to-json": {
+      "name": "Konvertues TOML ne JSON",
+      "description": "Konvertoni skedaret e konfigurimit TOML ne format JSON.",
+      "input_label": "Hyrja TOML",
+      "input_placeholder": "Ngjisni TOML ketu...",
+      "convert": "Konverto ne JSON",
+      "output_label": "Dalja JSON"
+    },
+    "json-to-toml": {
+      "name": "Konvertues JSON ne TOML",
+      "description": "Konvertoni te dhenat JSON ne formatin e konfigurimit TOML.",
+      "input_label": "Hyrja JSON",
+      "input_placeholder": "Ngjisni JSON ketu...",
+      "convert": "Konverto ne TOML",
+      "output_label": "Dalja TOML"
+    },
+    "markdown-to-html": {
+      "name": "Konvertues Markdown ne HTML",
+      "description": "Konvertoni Markdown ne kod HTML te paster, gati per kopjim.",
+      "input_label": "Hyrja Markdown",
+      "input_placeholder": "Shkruani ose ngjisni Markdown ketu...",
+      "convert": "Konverto ne HTML",
+      "output_label": "Dalja HTML",
+      "preview": "Parashikim"
+    },
+    "meta-tag-generator": {
+      "name": "Gjenerues Meta Etiketash",
+      "description": "Gjeneroni meta etiketa HTML per SEO, Open Graph dhe Twitter Cards.",
+      "page_title": "Titulli i Faqjes",
+      "page_description": "Pershkrimi i Faqjes",
+      "keywords": "Fjalet Kyqe",
+      "og_image": "URL e Imazhit OG",
+      "twitter_card": "Lloji i Kartes Twitter",
+      "author": "Autori",
+      "generate": "Gjenero Meta Etiketat",
+      "output_label": "HTML e Gjeneruar",
+      "preview": "Parashikim"
+    },
+    "robots-txt-generator": {
+      "name": "Gjenerues Robots.txt",
+      "description": "Ndertoni nje skedar robots.txt me rregulla per motoret e kerkimit.",
+      "user_agent": "User Agent",
+      "allow": "Lejo",
+      "disallow": "Mos Lejo",
+      "sitemap_url": "URL e Sitemap",
+      "add_rule": "Shto Rregull",
+      "generate": "Gjenero",
+      "output_label": "Dalja robots.txt"
+    },
+    "schema-markup-generator": {
+      "name": "Gjenerues Schema Markup",
+      "description": "Gjeneroni te dhena te strukturuara JSON-LD per dukshmeri me te mire ne motoret e kerkimit.",
+      "schema_type": "Lloji i Skemes",
+      "generate": "Gjenero Skemen",
+      "output_label": "Dalja JSON-LD",
+      "article": "Artikull",
+      "faq": "FAQ",
+      "product": "Produkt",
+      "local_business": "Biznes Lokal",
+      "howto": "Si Te"
+    },
+    "htaccess-generator": {
+      "name": "Gjenerues .htaccess",
+      "description": "Gjeneroni rregulla .htaccess per ridrejtime, cache dhe tituj sigurie.",
+      "https_redirect": "Detyro HTTPS",
+      "www_redirect": "Ridrejto ne www",
+      "non_www_redirect": "Ridrejto ne pa-www",
+      "gzip": "Aktivizo Kompresimin GZIP",
+      "caching": "Aktivizo Cache te Shfletuesit",
+      "security_headers": "Shto Tituj Sigurie",
+      "custom_error": "Faqe Gabimesh te Personalizuara",
+      "generate": "Gjenero .htaccess",
+      "output_label": "Dalja .htaccess"
+    },
+    "sitemap-generator": {
+      "name": "Gjenerues Sitemap",
+      "description": "Gjeneroni sitemap XML nga nje liste URL-sh per motoret e kerkimit.",
+      "add_url": "Shto URL",
+      "url": "URL",
+      "priority": "Prioriteti",
+      "changefreq": "Frekuenca e Ndryshimit",
+      "lastmod": "Modifikimi i Fundit",
+      "generate": "Gjenero Sitemap",
+      "download": "Shkarko sitemap.xml",
+      "output_label": "XML Sitemap"
+    },
+    "css-clip-path-generator": {
+      "name": "Gjenerues CSS Clip Path",
+      "description": "Krijoni forma CSS clip-path me nje redaktues vizual interaktiv.",
+      "shape": "Forma",
+      "circle": "Rreth",
+      "ellipse": "Elips",
+      "polygon": "Poligon",
+      "inset": "Brendshme",
+      "output_label": "Dalja CSS"
+    },
+    "css-animation-generator": {
+      "name": "Gjenerues Animacioni CSS",
+      "description": "Krijoni animacione CSS keyframe me kontrolle vizuale te kohezgjatjes dhe lehtesimit.",
+      "animation_name": "Emri i Animacionit",
+      "duration": "Kohezgjatja",
+      "timing": "Funksioni i Kohes",
+      "delay": "Vonesa",
+      "iteration": "Perseritjet",
+      "direction": "Drejtimi",
+      "add_keyframe": "Shto Keyframe",
+      "output_label": "Dalja CSS",
+      "preview": "Parashikim"
+    },
+    "glassmorphism-generator": {
+      "name": "Gjenerues Glassmorphism",
+      "description": "Gjeneroni efekte CSS te xhamit te ngrire me turbullim dhe transparence te rregullueshme.",
+      "blur": "Turbullim",
+      "transparency": "Transparenca",
+      "border": "Korniza",
+      "bg_color": "Ngjyra e Sfondit",
+      "output_label": "Dalja CSS"
+    },
+    "border-radius-generator": {
+      "name": "Gjenerues Border Radius",
+      "description": "Gjeneroni vlera komplekse CSS border-radius me nje redaktues vizual.",
+      "top_left": "Lart Majtas",
+      "top_right": "Lart Djathtas",
+      "bottom_right": "Posht Djathtas",
+      "bottom_left": "Posht Majtas",
+      "link_corners": "Lidh Te Gjitha Qoshet",
+      "output_label": "Dalja CSS"
+    },
+    "aspect-ratio-calculator": {
+      "name": "Llogarites Raportit te Aspektit",
+      "description": "Llogaritni raportet e aspektit dhe ndryshoni dimensionet ne menyre proporcionale.",
+      "width": "Gjeresia",
+      "height": "Lartesia",
+      "ratio": "Raporti",
+      "calculate": "Llogarit",
+      "presets": "Paracaktimet e Zakonshme",
+      "social_media": "Madhesit e Mediave Sociale"
+    },
+    "text-to-binary": {
+      "name": "Konvertues Tekst ne Binar",
+      "description": "Konvertoni tekst ne perfaqesim binar dhe binar prapa ne tekst.",
+      "text_input": "Hyrja e Tekstit",
+      "text_placeholder": "Shkruani tekstin ketu...",
+      "binary_output": "Dalja Binare",
+      "binary_input": "Hyrja Binare",
+      "binary_placeholder": "Ngjisni binar ketu...",
+      "text_output": "Dalja e Tekstit",
+      "to_binary": "Konverto ne Binar",
+      "to_text": "Konverto ne Tekst"
+    },
+    "ascii-art-generator": {
+      "name": "Gjenerues ASCII Art",
+      "description": "Konvertoni tekst ne art ASCII duke perdorur stile te ndryshme fontesh.",
+      "input_label": "Shkruani Tekst",
+      "input_placeholder": "Shkruani tekstin tuaj...",
+      "font_style": "Stili i Fontit",
+      "output_label": "Dalja ASCII Art"
+    },
+    "html-to-text": {
+      "name": "Konvertues HTML ne Tekst",
+      "description": "Hiqni etiketat HTML dhe konvertoni ne tekst te paster te lexueshem.",
+      "input_label": "Hyrja HTML",
+      "input_placeholder": "Ngjisni HTML ketu...",
+      "convert": "Hiq HTML",
+      "output_label": "Dalja Tekst i Paster"
+    },
+    "text-to-nato-alphabet": {
+      "name": "Alfabeti Fonetik NATO",
+      "description": "Konvertoni tekst ne alfabetin fonetik NATO dhe anasjelltas.",
+      "input_label": "Hyrja e Tekstit",
+      "input_placeholder": "Shkruani tekstin ketu...",
+      "output_label": "Dalja NATO",
+      "reference": "Tabela e Referimit"
+    },
+    "bcrypt-generator": {
+      "name": "Hashues Fjalkalimesh",
+      "description": "Hashoni fjalekalime ne menyre te sigurt duke perdorur PBKDF2 me perseritje te konfigurueshme.",
+      "password": "Fjalekalimi",
+      "password_placeholder": "Shkruani fjalekalimin per te hashuar...",
+      "iterations": "Perseritjet",
+      "hash": "Gjenero Hash",
+      "output_label": "Dalja Hash",
+      "verify": "Verifiko",
+      "verify_hash": "Hash per Verifikim",
+      "match": "Fjalekalimi perputhet!",
+      "no_match": "Fjalekalimi nuk perputhet."
+    },
+    "hmac-generator": {
+      "name": "Gjenerues HMAC",
+      "description": "Gjeneroni HMAC duke perdorur SHA-256, SHA-384 ose SHA-512.",
+      "message": "Mesazhi",
+      "message_placeholder": "Shkruani mesazhin...",
+      "secret": "Celesi Sekret",
+      "secret_placeholder": "Shkruani celesin sekret...",
+      "algorithm": "Algoritmi",
+      "generate": "Gjenero HMAC",
+      "output_label": "Dalja HMAC"
+    },
+    "rsa-key-pair-generator": {
+      "name": "Gjenerues Cifti Celesash RSA",
+      "description": "Gjeneroni cifte celesash publike dhe private RSA ne formatin PEM.",
+      "key_size": "Madhesia e Celesit",
+      "generate": "Gjenero Ciftin e Celesave",
+      "public_key": "Celesi Publik",
+      "private_key": "Celesi Privat",
+      "generating": "Duke gjeneruar..."
+    },
+    "pomodoro-timer": {
+      "name": "Kohemates Pomodoro",
+      "description": "Rrisni produktivitetin me tekniken Pomodoro — intervale pune dhe pushimi.",
+      "work": "Pune",
+      "break": "Pushim",
+      "long_break": "Pushim i Gjate",
+      "start": "Fillo",
+      "pause": "Ndalo",
+      "reset": "Rivendos",
+      "sessions": "Seanca te Perfunduara",
+      "minutes": "minuta"
+    },
+    "stopwatch-timer": {
+      "name": "Kronometer dhe Kohemates",
+      "description": "Kronometer online me kohe turne dhe kohemates me alarm.",
+      "stopwatch": "Kronometer",
+      "timer": "Kohemates",
+      "start": "Fillo",
+      "stop": "Ndalo",
+      "reset": "Rivendos",
+      "lap": "Tur",
+      "laps": "Turne",
+      "set_time": "Vendos Kohen",
+      "hours": "Ore",
+      "minutes": "Minuta",
+      "seconds": "Sekonda"
+    },
+    "ipv4-subnet-calculator": {
+      "name": "Llogarites Subnet IPv4",
+      "description": "Llogaritni diapazoni subnet, notimin CIDR, adresat broadcast dhe hostet e perdorshem.",
+      "ip_address": "Adresa IP",
+      "subnet_mask": "Maska Subnet / CIDR",
+      "calculate": "Llogarit",
+      "network": "Adresa e Rrjetit",
+      "broadcast": "Adresa Broadcast",
+      "first_host": "Hosti i Pare i Perdorshem",
+      "last_host": "Hosti i Fundit i Perdorshem",
+      "total_hosts": "Gjithsej Hoste te Perdorshem",
+      "wildcard": "Maska Wildcard",
+      "cidr": "Notimi CIDR"
+    },
+    "user-agent-parser": {
+      "name": "Analizues User Agent",
+      "description": "Analizoni dhe shfaqni informacione te detajuara nga cdo stringe User-Agent.",
+      "input_label": "Stringa User Agent",
+      "detect_current": "Detekto Shfletuesin Aktual",
+      "browser": "Shfletuesi",
+      "os": "Sistemi Operativ",
+      "device": "Pajisja",
+      "engine": "Motori i Renderimit"
+    },
+    "http-status-codes": {
+      "name": "Kodet e Statusit HTTP",
+      "description": "Reference interaktive per te gjitha kodet e statusit HTTP me pershkrime dhe raste perdorimi.",
+      "search": "Kerko kodet e statusit...",
+      "informational": "1xx Informues",
+      "success": "2xx Sukses",
+      "redirection": "3xx Ridrejtim",
+      "client_error": "4xx Gabim Klienti",
+      "server_error": "5xx Gabim Serveri"
+    },
+    "device-information": {
+      "name": "Informacioni i Pajisjes",
+      "description": "Shikoni informacione te detajuara per pajisjen, shfletuesin, ekranin dhe rrjetin tuaj.",
+      "screen": "Ekrani",
+      "browser": "Shfletuesi",
+      "system": "Sistemi",
+      "network": "Rrjeti",
+      "copy_all": "Kopjo Te Gjitha"
+    },
+    "css-triangle-generator": {
+      "name": "Gjenerues Trekendeshi CSS",
+      "description": "Krijoni trekendisha CSS me drejtim, madhesi dhe ngjyre te personalizueshme.",
+      "direction": "Drejtimi",
+      "size": "Madhesia",
+      "color": "Ngjyra",
+      "output_label": "Dalja CSS"
+    },
+    "text-shadow-generator": {
+      "name": "Gjenerues Text Shadow",
+      "description": "Gjeneroni efekte CSS text-shadow me nje redaktues vizual.",
+      "x_offset": "Zhvendosja X",
+      "y_offset": "Zhvendosja Y",
+      "blur": "Turbullim",
+      "color": "Ngjyra",
+      "add_shadow": "Shto Hije",
+      "sample_text": "Tekst Shembull",
+      "output_label": "Dalja CSS"
+    },
+    "gradient-text-generator": {
+      "name": "Gjenerues Tekst Gradient",
+      "description": "Krijoni efekte te bukura teksti gradient me CSS.",
+      "text": "Teksti",
+      "text_placeholder": "Teksti juaj gradient...",
+      "color_1": "Ngjyra 1",
+      "color_2": "Ngjyra 2",
+      "direction": "Drejtimi",
+      "output_label": "Dalja CSS"
+    },
+    "css-grid-generator": {
+      "name": "Gjenerues CSS Grid",
+      "description": "Ndertues vizual i paraqitjes CSS Grid me rreshta, kolona dhe hapesira te personalizueshme.",
+      "columns": "Kolona",
+      "rows": "Rreshta",
+      "gap": "Hapesira",
+      "output_label": "Dalja CSS",
+      "add_item": "Shto Element"
+    },
+    "yaml-to-json": {
+      "name": "Konvertues YAML ne JSON",
+      "description": "Konvertoni te dhenat YAML ne format JSON menjehere ne shfletuesin tuaj.",
+      "input_label": "Hyrja YAML",
+      "input_placeholder": "Ngjisni YAML ketu...",
+      "convert": "Konverto ne JSON",
+      "output_label": "Dalja JSON"
+    },
+    "phone-number-formatter": {
+      "name": "Formatues Numri Telefoni",
+      "description": "Analizoni, validoni dhe formatoni numrat e telefonit ne formate nderkombetare.",
+      "input_label": "Numri i Telefonit",
+      "input_placeholder": "Shkruani numrin e telefonit...",
+      "country": "Kodi i Vendit",
+      "format": "Formati",
+      "international": "Nderkombetar",
+      "national": "Kombetar",
+      "e164": "E.164"
+    },
+    "wifi-qr-code-generator": {
+      "name": "Gjenerues QR Kodi WiFi",
+      "description": "Gjeneroni nje kod QR per ndajre te lehte te lidhjes me rrjetin WiFi.",
+      "ssid": "Emri i Rrjetit (SSID)",
+      "ssid_placeholder": "Shkruani emrin e WiFi...",
+      "password": "Fjalekalimi",
+      "password_placeholder": "Shkruani fjalekalimin e WiFi...",
+      "encryption": "Enkriptimi",
+      "hidden": "Rrjet i Fshehur",
+      "generate": "Gjenero Kodin QR",
+      "download": "Shkarko Kodin QR"
+    },
+    "countdown-creator": {
+      "name": "Krijues Numrimi Mbrapsht",
+      "description": "Krijoni kohemates numrimi mbrapsht per data dhe ngjarje specifike.",
+      "event_name": "Emri i Ngjarjes",
+      "event_placeholder": "Ngjarja Ime",
+      "target_date": "Data dhe Koha e Synuar",
+      "days": "Dite",
+      "hours": "Ore",
+      "minutes": "Minuta",
+      "seconds": "Sekonda",
+      "expired": "Ngjarja ka kaluar!"
+    },
+    "time-zone-converter": {
+      "name": "Konvertues Zonash Kohore",
+      "description": "Konvertoni kohet midis zonave kohore te botes menjehere.",
+      "from_zone": "Nga Zona Kohore",
+      "to_zone": "Ne Zonen Kohore",
+      "time": "Koha",
+      "date": "Data",
+      "convert": "Konverto",
+      "swap": "Nderro Zonat",
+      "current_time": "Koha Aktuale"
+    },
+    "random-number-generator": {
+      "name": "Gjenerues Numrash Rastesisht",
+      "description": "Gjeneroni numra rastesisht me diapazoni, sasi dhe opsione unike.",
+      "min": "Minimumi",
+      "max": "Maksimumi",
+      "quantity": "Sasia",
+      "unique": "Vetem Numra Unike",
+      "sorted": "Rendit Rezultatet",
+      "generate": "Gjenero",
+      "results": "Rezultatet",
+      "coin_flip": "Hedh Monedhe",
+      "dice_roll": "Hedh Zare"
+    },
+    "color-name-finder": {
+      "name": "Gjetes Emri Ngjyre",
+      "description": "Gjeni ngjyren me te afert CSS te emertuar nga cdo vlere hex ose RGB.",
+      "input_label": "Shkruani Ngjyren",
+      "input_placeholder": "#ff6347",
+      "closest_match": "Perputhjja me e Afert",
+      "color_name": "Emri i Ngjyres",
+      "hex_value": "Vlera Hex",
+      "distance": "Distanca",
+      "top_matches": "5 Ngjyrat me te Aferta"
     }
   },
   "contact": {
@@ -1182,7 +1641,21 @@
     "privacy_note": "Gjithcka procesohet ne shfletuesin tuaj. Asnje skedar nuk dergohet ne server.",
     "share": "Ndaj",
     "link_copied": "Lidhja u kopjua!",
-    "related_tools": "Vegla te Ngjashme"
+    "related_tools": "Vegla te Ngjashme",
+    "clear": "Pastro",
+    "how_it_works": "Si Funksionon",
+    "used_count": "Perdorur {count} here",
+    "continue_workflow": "Vazhdoni Punen Tuaj",
+    "howto_upload": {
+      "step1": "Ngarkoni skedarin tuaj duke e terhequr ose duke klikuar.",
+      "step2": "Rregulloni parametrat sipas nevojave tuaja.",
+      "step3": "Shkarkoni ose kopjoni rezultatin."
+    },
+    "howto_input": {
+      "step1": "Futni ose ngjisni permbajtjen ne fushen e hyrjes.",
+      "step2": "Konfiguroni opsionet dhe parametrat.",
+      "step3": "Kopjoni rezultatin ose shkarkoni skedarin."
+    }
   },
   "footer": {
     "built_by": "Ndertuar nga",
@@ -1213,5 +1686,15 @@
     "description": "Faqja qe po kerkoni nuk ekziston ose eshte zhvendosur.",
     "back_home": "Kthehu ne Ballina",
     "back_tools": "Shfleto Veglat"
+  },
+  "suggestion": {
+    "title": "Nuk e gjeni ate qe kerkoni?",
+    "subtitle": "Sugjeroni nje vegle dhe ne do ta marrim ne konsiderate.",
+    "placeholder": "Pershkruani veglen qe deshironi te shihni...",
+    "email_placeholder": "Email-i juaj (opsional)",
+    "submit": "Dergo Sugjerimin",
+    "sending": "Duke derguar...",
+    "thanks": "Faleminderit per sugjerimin! Do ta shqyrtojme se shpejti.",
+    "error": "Dergimi deshtoi. Provoni perseri me vone."
   }
 }

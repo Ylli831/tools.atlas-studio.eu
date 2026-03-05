@@ -4,9 +4,13 @@ import { useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { tools } from "@/lib/tools-registry";
+import { getRelatedTools } from "@/lib/related-tools";
 import ToolCard from "./ToolCard";
+import ToolChainSection from "./ToolChainSection";
+import HowToSection from "./HowToSection";
 import { useRecentTools } from "@/hooks/useRecentTools";
 import { useToolAnalytics } from "@/hooks/useToolAnalytics";
+import { useUsageCounter } from "@/hooks/useUsageCounter";
 import { toast } from "sonner";
 
 export default function ToolLayout({
@@ -21,16 +25,16 @@ export default function ToolLayout({
   const tcat = useTranslations("categories");
   const { addRecentTool } = useRecentTools();
   const { trackUsed } = useToolAnalytics(toolSlug);
+  const { count: usageCount, increment: incrementUsage } = useUsageCounter(toolSlug);
 
   useEffect(() => {
     addRecentTool(toolSlug);
     trackUsed();
-  }, [toolSlug, addRecentTool, trackUsed]);
+    incrementUsage();
+  }, [toolSlug, addRecentTool, trackUsed, incrementUsage]);
 
   const currentTool = tools.find((t) => t.slug === toolSlug);
-  const relatedTools = currentTool
-    ? tools.filter((t) => t.category === currentTool.category && t.slug !== toolSlug).slice(0, 3)
-    : [];
+  const relatedTools = getRelatedTools(toolSlug, 6);
 
   const handleShare = async () => {
     const url = window.location.href;
@@ -99,9 +103,14 @@ export default function ToolLayout({
           {t("name")}
         </h1>
         <p className="text-muted-foreground">{t("description")}</p>
+        {usageCount > 1 && (
+          <p className="text-xs text-muted-foreground mt-2">{tc("used_count", { count: usageCount })}</p>
+        )}
       </div>
 
       {children}
+
+      <HowToSection toolSlug={toolSlug} />
 
       <div className="mt-8 pt-6 border-t border-border">
         <p className="text-xs text-muted-foreground flex items-center gap-2">
@@ -113,10 +122,12 @@ export default function ToolLayout({
         </p>
       </div>
 
+      <ToolChainSection toolSlug={toolSlug} />
+
       {relatedTools.length > 0 && (
         <div className="mt-10">
           <h2 className="text-base font-semibold text-slate mb-4">{tc("related_tools")}</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
             {relatedTools.map((tool) => (
               <ToolCard key={tool.slug} tool={tool} />
             ))}

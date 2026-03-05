@@ -166,6 +166,91 @@ export default function ToolIcon({ icon, size = 20 }: { icon: string; size?: num
       return (<svg {...props}><polyline points="4 7 4 4 20 4 20 7" /><line x1="9" y1="20" x2="15" y2="20" /><line x1="12" y1="4" x2="12" y2="20" /></svg>);
     case "scroll":
       return (<svg {...props}><path d="M8 21h12a2 2 0 002-2v-2H10v2a2 2 0 11-4 0V5a2 2 0 10-4 0v3h4" /><path d="M19 17V5a2 2 0 00-2-2H4" /></svg>);
+    // Sprint 3 - Minifiers & Formatters
+    case "minimize":
+      return (<svg {...props}><path d="M4 12h16" /><path d="M4 6h16" /><path d="M4 18h10" /><path d="M18 14l2 2-2 2" /></svg>);
+    case "minimize-js":
+      return (<svg {...props}><path d="M4 12h16" /><path d="M4 6h10" /><path d="M18 4l2 2-2 2" /><path d="M4 18h8" /></svg>);
+    case "minimize-html":
+      return (<svg {...props}><path d="M4 12h16" /><polyline points="8 6 2 12 8 18" /><polyline points="16 6 22 12 16 18" /></svg>);
+    case "sparkles":
+      return (<svg {...props}><path d="M12 3l1.5 4.5L18 9l-4.5 1.5L12 15l-1.5-4.5L6 9l4.5-1.5L12 3z" /><path d="M19 15l.75 2.25L22 18l-2.25.75L19 21l-.75-2.25L16 18l2.25-.75L19 15z" /></svg>);
+    case "wand":
+      return (<svg {...props}><path d="M15 4V2" /><path d="M15 16v-2" /><path d="M8 9h2" /><path d="M20 9h2" /><path d="M17.8 11.8L19 13" /><path d="M15 9h.01" /><path d="M17.8 6.2L19 5" /><path d="M11 6.2L9.8 5" /><path d="M2 22l14-14" /></svg>);
+    // Sprint 3 - Converters
+    case "file-cog":
+      return (<svg {...props}><path d="M14.5 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V7.5L14.5 2z" /><polyline points="14 2 14 8 20 8" /><circle cx="12" cy="15" r="2" /><path d="M12 11v1" /><path d="M12 17v1" /><path d="M8.5 13.5l.7.7" /><path d="M14.8 16.8l.7.7" /></svg>);
+    // Sprint 3 - SEO & Web
+    case "globe":
+      return (<svg {...props}><circle cx="12" cy="12" r="10" /><line x1="2" y1="12" x2="22" y2="12" /><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" /></svg>);
+    case "bot":
+      return (<svg {...props}><rect x="3" y="11" width="18" height="10" rx="2" /><circle cx="12" cy="5" r="2" /><path d="M12 7v4" /><line x1="8" y1="16" x2="8" y2="16" /><line x1="16" y1="16" x2="16" y2="16" /></svg>);
+    case "server":
+      return (<svg {...props}><rect x="2" y="2" width="20" height="8" rx="2" /><rect x="2" y="14" width="20" height="8" rx="2" /><line x1="6" y1="6" x2="6.01" y2="6" /><line x1="6" y1="18" x2="6.01" y2="18" /></svg>);
+    case "sitemap":
+      return (<svg {...props}><rect x="9" y="2" width="6" height="4" rx="1" /><rect x="2" y="14" width="6" height="4" rx="1" /><rect x="9" y="14" width="6" height="4" rx="1" /><rect x="16" y="14" width="6" height="4" rx="1" /><path d="M12 6v4" /><path d="M5 10h14" /><path d="M5 10v4" /><path d="M12 10v4" /><path d="M19 10v4" /></svg>);
+    // Sprint 3 - Design
+    case "clip-path":
+      return (<svg {...props}><path d="M12 2l8 10H4l8-10z" /><circle cx="12" cy="17" r="4" /></svg>);
+    case "animation":
+      return (<svg {...props}><path d="M12 3v3" /><path d="M18.5 5.5l-2.1 2.1" /><path d="M21 12h-3" /><path d="M18.5 18.5l-2.1-2.1" /><path d="M12 21v-3" /><path d="M5.5 18.5l2.1-2.1" /><path d="M3 12h3" /><path d="M5.5 5.5l2.1 2.1" /></svg>);
+    case "glass":
+      return (<svg {...props}><rect x="3" y="3" width="18" height="18" rx="3" opacity="0.3" /><rect x="6" y="6" width="12" height="12" rx="2" /><path d="M6 6l12 12" opacity="0.2" /></svg>);
+    case "rounded-corner":
+      return (<svg {...props}><path d="M12 3h7a2 2 0 012 2v7" /><path d="M3 12v7a2 2 0 002 2h7" /><path d="M3 3h4" /><path d="M3 3v4" /><path d="M21 17v4" /><path d="M17 21h4" /></svg>);
+    case "ratio":
+      return (<svg {...props}><rect x="3" y="5" width="18" height="14" rx="2" /><path d="M9 12h6" /><path d="M12 9l3 3-3 3" /></svg>);
+    // Sprint 3 - Text & Encoding
+    case "text-art":
+      return (<svg {...props}><path d="M4 6h16" /><path d="M4 10h16" /><path d="M4 14h10" /><path d="M4 18h6" /><rect x="16" y="14" width="5" height="5" rx="1" /></svg>);
+    case "strip":
+      return (<svg {...props}><path d="M4 7h16" /><path d="M4 12h16" /><path d="M4 17h16" /><line x1="1" y1="1" x2="23" y2="23" /></svg>);
+    case "megaphone":
+      return (<svg {...props}><path d="M3 11l18-5v12L3 13v-2z" /><path d="M11.6 16.8a3 3 0 11-5.8-1.6" /></svg>);
+    // Sprint 3 - Security
+    case "shield-lock":
+      return (<svg {...props}><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /><rect x="9" y="11" width="6" height="5" rx="1" /><path d="M10 11V9a2 2 0 014 0v2" /></svg>);
+    case "shield-check":
+      return (<svg {...props}><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /><path d="M9 12l2 2 4-4" /></svg>);
+    case "key-round":
+      return (<svg {...props}><path d="M2 18v3c0 .6.4 1 1 1h4v-3h3v-3h2l1.4-1.4a6.5 6.5 0 10-4-4z" /><circle cx="16.5" cy="7.5" r="2.5" /></svg>);
+    // Sprint 3 - Utility
+    case "tomato":
+      return (<svg {...props}><circle cx="12" cy="13" r="8" /><path d="M12 5c-2 0-4 .5-5 1.5" /><path d="M12 5c2 0 4 .5 5 1.5" /><path d="M10 2c0 1.5 1 3 2 3s2-1.5 2-3" /></svg>);
+    case "stopwatch":
+      return (<svg {...props}><circle cx="12" cy="13" r="8" /><path d="M12 9v4l2 2" /><path d="M10 2h4" /><path d="M21 6l-2-2" /></svg>);
+    // Sprint 4 - Network
+    case "network":
+      return (<svg {...props}><rect x="9" y="2" width="6" height="6" rx="1" /><rect x="2" y="16" width="6" height="6" rx="1" /><rect x="16" y="16" width="6" height="6" rx="1" /><path d="M12 8v4" /><path d="M5 16v-4h14v4" /></svg>);
+    case "user-search":
+      return (<svg {...props}><circle cx="10" cy="7" r="4" /><path d="M10.3 15H7a4 4 0 00-4 4v2" /><circle cx="17" cy="17" r="3" /><path d="M21 21l-1.9-1.9" /></svg>);
+    case "status-code":
+      return (<svg {...props}><rect x="2" y="4" width="20" height="16" rx="2" /><path d="M6 8h.01" /><path d="M10 8h.01" /><path d="M14 8h.01" /><path d="M6 12h12" /><path d="M6 16h8" /></svg>);
+    case "smartphone":
+      return (<svg {...props}><rect x="5" y="2" width="14" height="20" rx="2" /><line x1="12" y1="18" x2="12.01" y2="18" /></svg>);
+    // Sprint 4 - Design
+    case "triangle":
+      return (<svg {...props}><path d="M12 3l9 18H3L12 3z" /></svg>);
+    case "text-shadow":
+      return (<svg {...props}><path d="M7 8h10" /><path d="M12 4v16" opacity="0.3" /><path d="M5 12h14" opacity="0.3" /><path d="M17 6.1H3" /><path d="M10 20h4" /></svg>);
+    case "gradient-text":
+      return (<svg {...props}><path d="M4 6h16" /><path d="M4 12h16" /><path d="M4 18h10" /><path d="M3 6l18 12" opacity="0.2" /></svg>);
+    case "grid":
+      return (<svg {...props}><rect x="3" y="3" width="18" height="18" rx="2" /><path d="M3 9h18" /><path d="M3 15h18" /><path d="M9 3v18" /><path d="M15 3v18" /></svg>);
+    // Sprint 4 - Converters & Generators
+    case "phone":
+      return (<svg {...props}><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" /></svg>);
+    case "wifi":
+      return (<svg {...props}><path d="M5 12.55a11 11 0 0114.08 0" /><path d="M1.42 9a16 16 0 0121.16 0" /><path d="M8.53 16.11a6 6 0 016.95 0" /><line x1="12" y1="20" x2="12.01" y2="20" /></svg>);
+    case "hourglass":
+      return (<svg {...props}><path d="M5 22h14" /><path d="M5 2h14" /><path d="M17 22v-4.172a2 2 0 00-.586-1.414L12 12l-4.414 4.414A2 2 0 007 17.828V22" /><path d="M7 2v4.172a2 2 0 00.586 1.414L12 12l4.414-4.414A2 2 0 0017 6.172V2" /></svg>);
+    // Sprint 4 - Utility
+    case "globe-clock":
+      return (<svg {...props}><circle cx="12" cy="12" r="10" /><path d="M2 12h4" /><path d="M18 12h4" /><polyline points="12 6 12 12 15 15" /></svg>);
+    case "dice":
+      return (<svg {...props}><rect x="2" y="2" width="20" height="20" rx="3" /><circle cx="7.5" cy="7.5" r="1.5" fill="currentColor" stroke="none" /><circle cx="16.5" cy="7.5" r="1.5" fill="currentColor" stroke="none" /><circle cx="7.5" cy="16.5" r="1.5" fill="currentColor" stroke="none" /><circle cx="16.5" cy="16.5" r="1.5" fill="currentColor" stroke="none" /><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none" /></svg>);
+    case "eye-dropper":
+      return (<svg {...props}><path d="M2 22l1-1h3l9-9" /><path d="M3 21v-3l9-9" /><circle cx="17" cy="7" r="4" /><path d="M14.5 9.5l-3 3" /></svg>);
     default:
       return (<svg {...props}><circle cx="12" cy="12" r="10" /></svg>);
   }

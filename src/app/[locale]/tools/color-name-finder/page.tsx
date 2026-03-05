@@ -1,7 +1,7 @@
 import { setRequestLocale } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
-import TextDiffTool from "./TextDiffTool";
+import ColorNameFinderTool from "./ColorNameFinderTool";
 
 export async function generateMetadata({
   params,
@@ -9,7 +9,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "tools.text-diff" });
+  const t = await getTranslations({ locale, namespace: "tools.color-name-finder" });
   const baseUrl = "https://tools.atlas-studio.eu";
   const localePath = locale === "en" ? "" : `/${locale}`;
 
@@ -17,16 +17,16 @@ export async function generateMetadata({
     title: t("name"),
     description: t("description"),
     alternates: {
-      canonical: `${baseUrl}${localePath}/tools/text-diff`,
+      canonical: `${baseUrl}${localePath}/tools/color-name-finder`,
       languages: {
-        en: `${baseUrl}/tools/text-diff`,
-        sq: `${baseUrl}/sq/tools/text-diff`,
+        en: `${baseUrl}/tools/color-name-finder`,
+        sq: `${baseUrl}/sq/tools/color-name-finder`,
       },
     },
   };
 }
 
-export default async function TextDiffPage({
+export default async function ColorNameFinderPage({
   params,
 }: {
   params: Promise<{ locale: string }>;
@@ -42,16 +42,16 @@ export default async function TextDiffPage({
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebApplication",
-            name: "Text Diff - Atlas Studio Tools",
-            url: "https://tools.atlas-studio.eu/tools/text-diff",
-            applicationCategory: "UtilityApplication",
+            name: "Color Name Finder - Atlas Studio Tools",
+            url: "https://tools.atlas-studio.eu/tools/color-name-finder",
+            applicationCategory: "DesignApplication",
             operatingSystem: "Any",
             offers: { "@type": "Offer", price: "0", priceCurrency: "EUR" },
             creator: { "@type": "Organization", name: "Atlas Studio", url: "https://atlas-studio.eu" },
           }),
         }}
       />
-      <TextDiffTool />
+      <ColorNameFinderTool />
     </>
   );
 }

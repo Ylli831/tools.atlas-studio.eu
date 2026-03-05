@@ -30,7 +30,6 @@ export const tools: ToolDefinition[] = [
   // Text Tools
   { slug: "case-converter", icon: "case", category: "text", hasFileUpload: false },
   { slug: "word-counter", icon: "counter", category: "text", hasFileUpload: false },
-  { slug: "text-diff", icon: "diff", category: "text", hasFileUpload: false },
   { slug: "ocr-image-to-text", icon: "scan", category: "text", hasFileUpload: true },
   { slug: "lorem-ipsum-generator", icon: "text", category: "text", hasFileUpload: false },
   { slug: "markdown-preview", icon: "markdown", category: "text", hasFileUpload: false },
@@ -110,6 +109,62 @@ export const tools: ToolDefinition[] = [
   { slug: "font-pair-previewer", icon: "type", category: "design", hasFileUpload: false, isNew: true },
   // Sprint 2 - Security
   { slug: "privacy-policy-generator", icon: "scroll", category: "security", hasFileUpload: false, isNew: true },
+  // Sprint 3 - Code Minifiers & Formatters
+  { slug: "css-minifier", icon: "minimize", category: "developer", hasFileUpload: false, isNew: true },
+  { slug: "javascript-minifier", icon: "minimize-js", category: "developer", hasFileUpload: false, isNew: true },
+  { slug: "html-minifier", icon: "minimize-html", category: "developer", hasFileUpload: false, isNew: true },
+  { slug: "svg-optimizer", icon: "sparkles", category: "image", hasFileUpload: true, isNew: true },
+  { slug: "css-beautifier", icon: "wand", category: "developer", hasFileUpload: false, isNew: true },
+  // Sprint 3 - Data Format Converters
+  { slug: "json-to-xml", icon: "file-xml", category: "developer", hasFileUpload: false, isNew: true },
+  { slug: "xml-to-json", icon: "braces", category: "developer", hasFileUpload: false, isNew: true },
+  { slug: "json-to-csv", icon: "table", category: "developer", hasFileUpload: false, isNew: true },
+  { slug: "toml-to-json", icon: "file-cog", category: "developer", hasFileUpload: false, isNew: true },
+  { slug: "json-to-toml", icon: "file-cog", category: "developer", hasFileUpload: false, isNew: true },
+  { slug: "markdown-to-html", icon: "markdown", category: "text", hasFileUpload: false, isNew: true },
+  // Sprint 3 - SEO & Web Tools
+  { slug: "meta-tag-generator", icon: "globe", category: "business", hasFileUpload: false, isNew: true },
+  { slug: "robots-txt-generator", icon: "bot", category: "developer", hasFileUpload: false, isNew: true },
+  { slug: "schema-markup-generator", icon: "braces", category: "developer", hasFileUpload: false, isNew: true },
+  { slug: "htaccess-generator", icon: "server", category: "developer", hasFileUpload: false, isNew: true },
+  { slug: "sitemap-generator", icon: "sitemap", category: "developer", hasFileUpload: false, isNew: true },
+  // Sprint 3 - CSS & Design Tools
+  { slug: "css-clip-path-generator", icon: "clip-path", category: "design", hasFileUpload: false, isNew: true },
+  { slug: "css-animation-generator", icon: "animation", category: "design", hasFileUpload: false, isNew: true },
+  { slug: "glassmorphism-generator", icon: "glass", category: "design", hasFileUpload: false, isNew: true },
+  { slug: "border-radius-generator", icon: "rounded-corner", category: "design", hasFileUpload: false, isNew: true },
+  { slug: "aspect-ratio-calculator", icon: "ratio", category: "business", hasFileUpload: false, isNew: true },
+  // Sprint 3 - Text & Encoding Tools
+  { slug: "text-to-binary", icon: "binary", category: "text", hasFileUpload: false, isNew: true },
+  { slug: "ascii-art-generator", icon: "text-art", category: "generator", hasFileUpload: false, isNew: true },
+  { slug: "html-to-text", icon: "strip", category: "text", hasFileUpload: false, isNew: true },
+  { slug: "text-to-nato-alphabet", icon: "megaphone", category: "text", hasFileUpload: false, isNew: true },
+  // Sprint 3 - Security & Crypto Tools
+  { slug: "bcrypt-generator", icon: "shield-lock", category: "security", hasFileUpload: false, isNew: true },
+  { slug: "hmac-generator", icon: "shield-check", category: "security", hasFileUpload: false, isNew: true },
+  { slug: "rsa-key-pair-generator", icon: "key-round", category: "security", hasFileUpload: false, isNew: true },
+  // Sprint 3 - Utility Tools
+  { slug: "pomodoro-timer", icon: "tomato", category: "business", hasFileUpload: false, isNew: true },
+  { slug: "stopwatch-timer", icon: "stopwatch", category: "business", hasFileUpload: false, isNew: true },
+  // Sprint 4 - Network & System Tools
+  { slug: "ipv4-subnet-calculator", icon: "network", category: "developer", hasFileUpload: false, isNew: true },
+  { slug: "user-agent-parser", icon: "user-search", category: "developer", hasFileUpload: false, isNew: true },
+  { slug: "http-status-codes", icon: "status-code", category: "developer", hasFileUpload: false, isNew: true },
+  { slug: "device-information", icon: "smartphone", category: "developer", hasFileUpload: false, isNew: true },
+  // Sprint 4 - More Design Tools
+  { slug: "css-triangle-generator", icon: "triangle", category: "design", hasFileUpload: false, isNew: true },
+  { slug: "text-shadow-generator", icon: "text-shadow", category: "design", hasFileUpload: false, isNew: true },
+  { slug: "gradient-text-generator", icon: "gradient-text", category: "design", hasFileUpload: false, isNew: true },
+  { slug: "css-grid-generator", icon: "grid", category: "design", hasFileUpload: false, isNew: true },
+  // Sprint 4 - More Converters & Generators
+  { slug: "yaml-to-json", icon: "file-json", category: "developer", hasFileUpload: false, isNew: true },
+  { slug: "phone-number-formatter", icon: "phone", category: "business", hasFileUpload: false, isNew: true },
+  { slug: "wifi-qr-code-generator", icon: "wifi", category: "generator", hasFileUpload: false, isNew: true },
+  { slug: "countdown-creator", icon: "hourglass", category: "business", hasFileUpload: false, isNew: true },
+  // Sprint 4 - More Utility
+  { slug: "time-zone-converter", icon: "globe-clock", category: "business", hasFileUpload: false, isNew: true },
+  { slug: "random-number-generator", icon: "dice", category: "generator", hasFileUpload: false, isNew: true },
+  { slug: "color-name-finder", icon: "eye-dropper", category: "design", hasFileUpload: false, isNew: true },
 ];
 
 export const categories = ["pdf", "image", "generator", "text", "developer", "business", "design", "security"] as const;

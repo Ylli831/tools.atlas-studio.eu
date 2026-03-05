@@ -284,17 +284,6 @@
       "alternating": "aLtErNaTiNg",
       "inverse": "iNVERSE"
     },
-    "text-diff": {
-      "name": "Text Diff",
-      "description": "Compare two texts side by side and highlight the differences.",
-      "original": "Original Text",
-      "modified": "Modified Text",
-      "original_placeholder": "Paste original text here...",
-      "modified_placeholder": "Paste modified text here...",
-      "added": "added",
-      "removed": "removed",
-      "unchanged": "unchanged"
-    },
     "ocr-image-to-text": {
       "name": "OCR: Image to Text",
       "description": "Extract text from images using optical character recognition.",
@@ -1145,6 +1134,476 @@
       "copy_html": "Copy as HTML",
       "copy_text": "Copy as Text",
       "download_pdf": "Download PDF"
+    },
+    "css-minifier": {
+      "name": "CSS Minifier",
+      "description": "Minify CSS code by removing whitespace, comments, and redundant syntax.",
+      "input_label": "CSS Input",
+      "input_placeholder": "Paste your CSS here...",
+      "minify": "Minify",
+      "output_label": "Minified CSS",
+      "original_size": "Original Size",
+      "minified_size": "Minified Size",
+      "savings": "Savings"
+    },
+    "javascript-minifier": {
+      "name": "JavaScript Minifier",
+      "description": "Minify JavaScript code to reduce file size for production.",
+      "input_label": "JavaScript Input",
+      "input_placeholder": "Paste your JavaScript here...",
+      "minify": "Minify",
+      "output_label": "Minified JavaScript",
+      "original_size": "Original Size",
+      "minified_size": "Minified Size",
+      "savings": "Savings"
+    },
+    "html-minifier": {
+      "name": "HTML Minifier",
+      "description": "Compress HTML by removing whitespace, comments, and optional tags.",
+      "input_label": "HTML Input",
+      "input_placeholder": "Paste your HTML here...",
+      "minify": "Minify",
+      "output_label": "Minified HTML",
+      "original_size": "Original Size",
+      "minified_size": "Minified Size",
+      "savings": "Savings"
+    },
+    "svg-optimizer": {
+      "name": "SVG Optimizer",
+      "description": "Optimize and compress SVG files by removing metadata and unnecessary attributes.",
+      "optimize": "Optimize SVG",
+      "original_size": "Original Size",
+      "optimized_size": "Optimized Size",
+      "savings": "Savings",
+      "download": "Download Optimized SVG"
+    },
+    "css-beautifier": {
+      "name": "CSS Beautifier",
+      "description": "Format and beautify minified CSS with proper indentation and line breaks.",
+      "input_label": "Minified CSS Input",
+      "input_placeholder": "Paste minified CSS here...",
+      "beautify": "Beautify",
+      "output_label": "Formatted CSS",
+      "indent_size": "Indent Size"
+    },
+    "json-to-xml": {
+      "name": "JSON to XML Converter",
+      "description": "Convert JSON data to XML format instantly in your browser.",
+      "input_label": "JSON Input",
+      "input_placeholder": "Paste your JSON here...",
+      "convert": "Convert to XML",
+      "output_label": "XML Output",
+      "root_element": "Root Element Name"
+    },
+    "xml-to-json": {
+      "name": "XML to JSON Converter",
+      "description": "Convert XML data to JSON format instantly in your browser.",
+      "input_label": "XML Input",
+      "input_placeholder": "Paste your XML here...",
+      "convert": "Convert to JSON",
+      "output_label": "JSON Output"
+    },
+    "json-to-csv": {
+      "name": "JSON to CSV Converter",
+      "description": "Convert JSON arrays to downloadable CSV files.",
+      "input_label": "JSON Input",
+      "input_placeholder": "Paste a JSON array here...",
+      "convert": "Convert to CSV",
+      "output_label": "CSV Output",
+      "download_csv": "Download CSV"
+    },
+    "toml-to-json": {
+      "name": "TOML to JSON Converter",
+      "description": "Convert TOML configuration files to JSON format.",
+      "input_label": "TOML Input",
+      "input_placeholder": "Paste your TOML here...",
+      "convert": "Convert to JSON",
+      "output_label": "JSON Output"
+    },
+    "json-to-toml": {
+      "name": "JSON to TOML Converter",
+      "description": "Convert JSON data to TOML configuration format.",
+      "input_label": "JSON Input",
+      "input_placeholder": "Paste your JSON here...",
+      "convert": "Convert to TOML",
+      "output_label": "TOML Output"
+    },
+    "markdown-to-html": {
+      "name": "Markdown to HTML Converter",
+      "description": "Convert Markdown to clean, copy-paste-ready HTML code.",
+      "input_label": "Markdown Input",
+      "input_placeholder": "Type or paste your Markdown here...",
+      "convert": "Convert to HTML",
+      "output_label": "HTML Output",
+      "preview": "Preview"
+    },
+    "meta-tag-generator": {
+      "name": "Meta Tag Generator",
+      "description": "Generate HTML meta tags for SEO, Open Graph, and Twitter Cards.",
+      "page_title": "Page Title",
+      "page_description": "Page Description",
+      "keywords": "Keywords",
+      "og_image": "OG Image URL",
+      "twitter_card": "Twitter Card Type",
+      "author": "Author",
+      "generate": "Generate Meta Tags",
+      "output_label": "Generated HTML",
+      "preview": "Preview"
+    },
+    "robots-txt-generator": {
+      "name": "Robots.txt Generator",
+      "description": "Build a robots.txt file with allow and disallow rules for search engines.",
+      "user_agent": "User Agent",
+      "allow": "Allow",
+      "disallow": "Disallow",
+      "sitemap_url": "Sitemap URL",
+      "add_rule": "Add Rule",
+      "generate": "Generate",
+      "output_label": "robots.txt Output"
+    },
+    "schema-markup-generator": {
+      "name": "Schema Markup Generator",
+      "description": "Generate JSON-LD structured data for better search engine visibility.",
+      "schema_type": "Schema Type",
+      "generate": "Generate Schema",
+      "output_label": "JSON-LD Output",
+      "article": "Article",
+      "faq": "FAQ",
+      "product": "Product",
+      "local_business": "Local Business",
+      "howto": "HowTo"
+    },
+    "htaccess-generator": {
+      "name": ".htaccess Generator",
+      "description": "Generate .htaccess rules for redirects, caching, and security headers.",
+      "https_redirect": "Force HTTPS",
+      "www_redirect": "Redirect to www",
+      "non_www_redirect": "Redirect to non-www",
+      "gzip": "Enable GZIP Compression",
+      "caching": "Enable Browser Caching",
+      "security_headers": "Add Security Headers",
+      "custom_error": "Custom Error Pages",
+      "generate": "Generate .htaccess",
+      "output_label": ".htaccess Output"
+    },
+    "sitemap-generator": {
+      "name": "Sitemap Generator",
+      "description": "Generate XML sitemaps from a list of URLs for search engines.",
+      "add_url": "Add URL",
+      "url": "URL",
+      "priority": "Priority",
+      "changefreq": "Change Frequency",
+      "lastmod": "Last Modified",
+      "generate": "Generate Sitemap",
+      "download": "Download sitemap.xml",
+      "output_label": "Sitemap XML"
+    },
+    "css-clip-path-generator": {
+      "name": "CSS Clip Path Generator",
+      "description": "Visually create CSS clip-path shapes with an interactive editor.",
+      "shape": "Shape",
+      "circle": "Circle",
+      "ellipse": "Ellipse",
+      "polygon": "Polygon",
+      "inset": "Inset",
+      "output_label": "CSS Output"
+    },
+    "css-animation-generator": {
+      "name": "CSS Animation Generator",
+      "description": "Create CSS keyframe animations with visual timeline and easing controls.",
+      "animation_name": "Animation Name",
+      "duration": "Duration",
+      "timing": "Timing Function",
+      "delay": "Delay",
+      "iteration": "Iterations",
+      "direction": "Direction",
+      "add_keyframe": "Add Keyframe",
+      "output_label": "CSS Output",
+      "preview": "Preview"
+    },
+    "glassmorphism-generator": {
+      "name": "Glassmorphism Generator",
+      "description": "Generate frosted-glass CSS effects with adjustable blur and transparency.",
+      "blur": "Blur",
+      "transparency": "Transparency",
+      "border": "Border",
+      "bg_color": "Background Color",
+      "output_label": "CSS Output"
+    },
+    "border-radius-generator": {
+      "name": "Border Radius Generator",
+      "description": "Generate complex CSS border-radius values with a visual editor.",
+      "top_left": "Top Left",
+      "top_right": "Top Right",
+      "bottom_right": "Bottom Right",
+      "bottom_left": "Bottom Left",
+      "link_corners": "Link All Corners",
+      "output_label": "CSS Output"
+    },
+    "aspect-ratio-calculator": {
+      "name": "Aspect Ratio Calculator",
+      "description": "Calculate aspect ratios and resize dimensions proportionally.",
+      "width": "Width",
+      "height": "Height",
+      "ratio": "Ratio",
+      "calculate": "Calculate",
+      "presets": "Common Presets",
+      "social_media": "Social Media Sizes"
+    },
+    "text-to-binary": {
+      "name": "Text to Binary Converter",
+      "description": "Convert text to binary representation and binary back to text.",
+      "text_input": "Text Input",
+      "text_placeholder": "Type your text here...",
+      "binary_output": "Binary Output",
+      "binary_input": "Binary Input",
+      "binary_placeholder": "Paste binary here...",
+      "text_output": "Text Output",
+      "to_binary": "Convert to Binary",
+      "to_text": "Convert to Text"
+    },
+    "ascii-art-generator": {
+      "name": "ASCII Art Generator",
+      "description": "Convert text into ASCII art using various font styles.",
+      "input_label": "Enter Text",
+      "input_placeholder": "Type your text...",
+      "font_style": "Font Style",
+      "output_label": "ASCII Art Output"
+    },
+    "html-to-text": {
+      "name": "HTML to Text Converter",
+      "description": "Strip HTML tags and convert HTML to clean, readable plain text.",
+      "input_label": "HTML Input",
+      "input_placeholder": "Paste your HTML here...",
+      "convert": "Strip HTML",
+      "output_label": "Plain Text Output"
+    },
+    "text-to-nato-alphabet": {
+      "name": "NATO Phonetic Alphabet",
+      "description": "Convert text to NATO phonetic alphabet and back.",
+      "input_label": "Text Input",
+      "input_placeholder": "Type your text here...",
+      "output_label": "NATO Output",
+      "reference": "Reference Table"
+    },
+    "bcrypt-generator": {
+      "name": "Password Hasher",
+      "description": "Hash passwords securely using PBKDF2 with configurable iterations.",
+      "password": "Password",
+      "password_placeholder": "Enter password to hash...",
+      "iterations": "Iterations",
+      "hash": "Generate Hash",
+      "output_label": "Hash Output",
+      "verify": "Verify",
+      "verify_hash": "Hash to Verify Against",
+      "match": "Password matches!",
+      "no_match": "Password does not match."
+    },
+    "hmac-generator": {
+      "name": "HMAC Generator",
+      "description": "Generate HMAC (Hash-based Message Authentication Code) using SHA-256, SHA-384, or SHA-512.",
+      "message": "Message",
+      "message_placeholder": "Enter message...",
+      "secret": "Secret Key",
+      "secret_placeholder": "Enter secret key...",
+      "algorithm": "Algorithm",
+      "generate": "Generate HMAC",
+      "output_label": "HMAC Output"
+    },
+    "rsa-key-pair-generator": {
+      "name": "RSA Key Pair Generator",
+      "description": "Generate RSA public and private key pairs in PEM format.",
+      "key_size": "Key Size",
+      "generate": "Generate Key Pair",
+      "public_key": "Public Key",
+      "private_key": "Private Key",
+      "generating": "Generating..."
+    },
+    "pomodoro-timer": {
+      "name": "Pomodoro Timer",
+      "description": "Boost productivity with the Pomodoro technique — timed work and break intervals.",
+      "work": "Work",
+      "break": "Break",
+      "long_break": "Long Break",
+      "start": "Start",
+      "pause": "Pause",
+      "reset": "Reset",
+      "sessions": "Sessions Completed",
+      "minutes": "minutes"
+    },
+    "stopwatch-timer": {
+      "name": "Stopwatch & Timer",
+      "description": "Online stopwatch with lap times and countdown timer with alarm.",
+      "stopwatch": "Stopwatch",
+      "timer": "Timer",
+      "start": "Start",
+      "stop": "Stop",
+      "reset": "Reset",
+      "lap": "Lap",
+      "laps": "Laps",
+      "set_time": "Set Time",
+      "hours": "Hours",
+      "minutes": "Minutes",
+      "seconds": "Seconds"
+    },
+    "ipv4-subnet-calculator": {
+      "name": "IPv4 Subnet Calculator",
+      "description": "Calculate subnet ranges, CIDR notation, broadcast addresses, and usable hosts.",
+      "ip_address": "IP Address",
+      "subnet_mask": "Subnet Mask / CIDR",
+      "calculate": "Calculate",
+      "network": "Network Address",
+      "broadcast": "Broadcast Address",
+      "first_host": "First Usable Host",
+      "last_host": "Last Usable Host",
+      "total_hosts": "Total Usable Hosts",
+      "wildcard": "Wildcard Mask",
+      "cidr": "CIDR Notation"
+    },
+    "user-agent-parser": {
+      "name": "User Agent Parser",
+      "description": "Parse and display detailed information from any User-Agent string.",
+      "input_label": "User Agent String",
+      "detect_current": "Detect Current Browser",
+      "browser": "Browser",
+      "os": "Operating System",
+      "device": "Device",
+      "engine": "Rendering Engine"
+    },
+    "http-status-codes": {
+      "name": "HTTP Status Codes",
+      "description": "Interactive reference for all HTTP status codes with descriptions and use cases.",
+      "search": "Search status codes...",
+      "informational": "1xx Informational",
+      "success": "2xx Success",
+      "redirection": "3xx Redirection",
+      "client_error": "4xx Client Error",
+      "server_error": "5xx Server Error"
+    },
+    "device-information": {
+      "name": "Device Information",
+      "description": "View detailed information about your device, browser, screen, and network.",
+      "screen": "Screen",
+      "browser": "Browser",
+      "system": "System",
+      "network": "Network",
+      "copy_all": "Copy All Info"
+    },
+    "css-triangle-generator": {
+      "name": "CSS Triangle Generator",
+      "description": "Create CSS triangles using the border trick with customizable direction, size, and color.",
+      "direction": "Direction",
+      "size": "Size",
+      "color": "Color",
+      "output_label": "CSS Output"
+    },
+    "text-shadow-generator": {
+      "name": "Text Shadow Generator",
+      "description": "Generate CSS text-shadow effects with a visual editor.",
+      "x_offset": "X Offset",
+      "y_offset": "Y Offset",
+      "blur": "Blur",
+      "color": "Color",
+      "add_shadow": "Add Shadow",
+      "sample_text": "Sample Text",
+      "output_label": "CSS Output"
+    },
+    "gradient-text-generator": {
+      "name": "Gradient Text Generator",
+      "description": "Create beautiful gradient text effects with CSS.",
+      "text": "Text",
+      "text_placeholder": "Your gradient text...",
+      "color_1": "Color 1",
+      "color_2": "Color 2",
+      "direction": "Direction",
+      "output_label": "CSS Output"
+    },
+    "css-grid-generator": {
+      "name": "CSS Grid Generator",
+      "description": "Visual CSS Grid layout builder with customizable rows, columns, and gaps.",
+      "columns": "Columns",
+      "rows": "Rows",
+      "gap": "Gap",
+      "output_label": "CSS Output",
+      "add_item": "Add Item"
+    },
+    "yaml-to-json": {
+      "name": "YAML to JSON Converter",
+      "description": "Convert YAML data to JSON format instantly in your browser.",
+      "input_label": "YAML Input",
+      "input_placeholder": "Paste your YAML here...",
+      "convert": "Convert to JSON",
+      "output_label": "JSON Output"
+    },
+    "phone-number-formatter": {
+      "name": "Phone Number Formatter",
+      "description": "Parse, validate, and format phone numbers to international formats.",
+      "input_label": "Phone Number",
+      "input_placeholder": "Enter phone number...",
+      "country": "Country Code",
+      "format": "Format",
+      "international": "International",
+      "national": "National",
+      "e164": "E.164"
+    },
+    "wifi-qr-code-generator": {
+      "name": "WiFi QR Code Generator",
+      "description": "Generate a QR code for easy WiFi network connection sharing.",
+      "ssid": "Network Name (SSID)",
+      "ssid_placeholder": "Enter WiFi name...",
+      "password": "Password",
+      "password_placeholder": "Enter WiFi password...",
+      "encryption": "Encryption",
+      "hidden": "Hidden Network",
+      "generate": "Generate QR Code",
+      "download": "Download QR Code"
+    },
+    "countdown-creator": {
+      "name": "Countdown Creator",
+      "description": "Create countdown timers to specific dates and events.",
+      "event_name": "Event Name",
+      "event_placeholder": "My Event",
+      "target_date": "Target Date & Time",
+      "days": "Days",
+      "hours": "Hours",
+      "minutes": "Minutes",
+      "seconds": "Seconds",
+      "expired": "Event has passed!"
+    },
+    "time-zone-converter": {
+      "name": "Time Zone Converter",
+      "description": "Convert times between world time zones instantly.",
+      "from_zone": "From Time Zone",
+      "to_zone": "To Time Zone",
+      "time": "Time",
+      "date": "Date",
+      "convert": "Convert",
+      "swap": "Swap Zones",
+      "current_time": "Current Time"
+    },
+    "random-number-generator": {
+      "name": "Random Number Generator",
+      "description": "Generate random numbers with custom range, quantity, and uniqueness options.",
+      "min": "Minimum",
+      "max": "Maximum",
+      "quantity": "Quantity",
+      "unique": "Unique Numbers Only",
+      "sorted": "Sort Results",
+      "generate": "Generate",
+      "results": "Results",
+      "coin_flip": "Coin Flip",
+      "dice_roll": "Dice Roll"
+    },
+    "color-name-finder": {
+      "name": "Color Name Finder",
+      "description": "Find the closest named CSS color from any hex or RGB value.",
+      "input_label": "Enter Color",
+      "input_placeholder": "#ff6347",
+      "closest_match": "Closest Match",
+      "color_name": "Color Name",
+      "hex_value": "Hex Value",
+      "distance": "Distance",
+      "top_matches": "Top 5 Closest Colors"
     }
   },
   "contact": {
@@ -1182,7 +1641,21 @@
     "privacy_note": "Everything is processed in your browser. No files are sent to any server.",
     "share": "Share",
     "link_copied": "Link copied!",
-    "related_tools": "Related Tools"
+    "related_tools": "Related Tools",
+    "clear": "Clear",
+    "how_it_works": "How It Works",
+    "used_count": "Used {count} times",
+    "continue_workflow": "Continue Your Workflow",
+    "howto_upload": {
+      "step1": "Upload your file using drag & drop or the file picker.",
+      "step2": "Adjust the settings to match your needs.",
+      "step3": "Download or copy the result."
+    },
+    "howto_input": {
+      "step1": "Enter or paste your content into the input field.",
+      "step2": "Configure the options and settings.",
+      "step3": "Copy the output or download the result."
+    }
   },
   "footer": {
     "built_by": "Built by",
@@ -1213,5 +1686,15 @@
     "description": "The page you're looking for doesn't exist or has been moved.",
     "back_home": "Go Home",
     "back_tools": "Browse Tools"
+  },
+  "suggestion": {
+    "title": "Can't find what you need?",
+    "subtitle": "Suggest a tool and we'll consider building it.",
+    "placeholder": "Describe the tool you'd like to see...",
+    "email_placeholder": "Your email (optional)",
+    "submit": "Send Suggestion",
+    "sending": "Sending...",
+    "thanks": "Thanks for your suggestion! We'll review it soon.",
+    "error": "Failed to send. Please try again later."
   }
 }
