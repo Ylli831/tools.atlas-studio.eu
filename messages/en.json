@@ -1696,5 +1696,16 @@
     "sending": "Sending...",
     "thanks": "Thanks for your suggestion! We'll review it soon.",
     "error": "Failed to send. Please try again later."
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "q1": "Are all tools completely free?",
+    "a1": "Yes, every tool on Atlas Studio Tools is 100% free with no hidden fees, no premium tiers, and no usage limits. Use them as much as you need.",
+    "q2": "Is my data private and secure?",
+    "a2": "Absolutely. All tools process your data entirely in your browser. Your files and text are never uploaded to our servers. Everything stays on your device.",
+    "q3": "Do I need to create an account?",
+    "a3": "No. All tools work instantly without any sign-up or registration. Just open a tool and start using it.",
+    "q4": "What file formats are supported?",
+    "a4": "It depends on the tool. Our image tools support PNG, JPG, WebP, AVIF, SVG, and GIF. PDF tools handle standard PDF files. Text and developer tools work with plain text, JSON, XML, YAML, CSV, and more."
   }
 }

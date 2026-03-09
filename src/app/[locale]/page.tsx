@@ -24,6 +24,7 @@ export default async function HomePage({
 function HomeContent() {
   const t = useTranslations("home");
   const tc = useTranslations("categories");
+  const tf = useTranslations("faq");
 
   const categoryIcons: Record<string, string> = {
     pdf: "file-image",
@@ -71,6 +72,15 @@ function HomeContent() {
           url: `https://tools.atlas-studio.eu/tools?category=${cat.key}`,
           offers: { "@type": "Offer", price: "0", priceCurrency: "EUR" },
         },
+      })),
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [1, 2, 3, 4].map((i) => ({
+        "@type": "Question",
+        name: tf(`q${i}`),
+        acceptedAnswer: { "@type": "Answer", text: tf(`a${i}`) },
       })),
     },
   ];
@@ -202,6 +212,30 @@ function HomeContent() {
                 <p className="text-sm text-muted-foreground">{t("instant_description")}</p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="pb-16 md:pb-24">
+        <div className="max-w-3xl mx-auto px-4 md:px-8">
+          <h2 className="text-2xl font-bold text-slate text-center mb-10">
+            {tf("title")}
+          </h2>
+          <div className="space-y-4">
+            {[1, 2, 3, 4].map((i) => (
+              <details key={i} className="group bg-card rounded-xl border border-border p-5">
+                <summary className="flex items-center justify-between cursor-pointer font-medium text-foreground">
+                  {tf(`q${i}`)}
+                  <svg className="w-5 h-5 text-muted-foreground group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </summary>
+                <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
+                  {tf(`a${i}`)}
+                </p>
+              </details>
+            ))}
           </div>
         </div>
       </section>

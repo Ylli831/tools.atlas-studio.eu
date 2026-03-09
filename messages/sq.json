@@ -1696,5 +1696,16 @@
     "sending": "Duke derguar...",
     "thanks": "Faleminderit per sugjerimin! Do ta shqyrtojme se shpejti.",
     "error": "Dergimi deshtoi. Provoni perseri me vone."
+  },
+  "faq": {
+    "title": "Pyetjet e Bera Shpesh",
+    "q1": "A jane te gjitha veglat falas?",
+    "a1": "Po, cdo vegle ne Atlas Studio Tools eshte 100% falas pa tarifa te fshehura, pa nivele premium dhe pa kufizime perdorimi. Perdorini sa here te deshironi.",
+    "q2": "A jane te dhenat e mia private dhe te sigurta?",
+    "a2": "Absolutisht. Te gjitha veglat i perpunojne te dhenat tuaja plotesisht ne shfletuesin tuaj. Skedaret dhe tekstet tuaja nuk ngarkohen kurre ne serverat tane. Gjithcka mbetet ne pajisjen tuaj.",
+    "q3": "A duhet te krijoj nje llogari?",
+    "a3": "Jo. Te gjitha veglat funksionojne menjehere pa asnje regjistrim. Thjesht hapni nje vegle dhe filloni ta perdorni.",
+    "q4": "Cilat formate skedaresh mbeshteten?",
+    "a4": "Varet nga vegla. Veglat tona te imazheve mbeshtesin PNG, JPG, WebP, AVIF, SVG dhe GIF. Veglat PDF trajtojne skedare standarde PDF. Veglat e tekstit dhe zhvilluesve punojne me tekst te theshte, JSON, XML, YAML, CSV dhe me shume."
   }
 }
