@@ -62,7 +62,32 @@
       "fg_color": "Foreground Color",
       "bg_color": "Background Color",
       "download_png": "Download PNG",
-      "download_svg": "Download SVG"
+      "download_svg": "Download SVG",
+      "preset": "Type",
+      "preset_text": "Text",
+      "preset_url": "URL",
+      "preset_wifi": "WiFi",
+      "preset_email": "Email",
+      "preset_phone": "Phone",
+      "wifi_ssid": "Network Name (SSID)",
+      "wifi_password": "Password",
+      "wifi_encryption": "Encryption",
+      "wifi_none": "None",
+      "email_to": "Email Address",
+      "email_subject": "Subject",
+      "email_subject_placeholder": "Optional subject line",
+      "phone_number": "Phone Number",
+      "margin": "Margin",
+      "copy_image": "Copy Image",
+      "copied": "Copied!",
+      "how_to_use": {
+        "title": "How to use",
+        "step_1": "Choose a type: Text, URL, WiFi, Email, or Phone.",
+        "step_2": "Fill in the required fields for your chosen type.",
+        "step_3": "Customize size, colors, margin, and error correction level.",
+        "step_4": "Download as PNG or SVG, or copy the image to your clipboard.",
+        "tip": "Use the WiFi preset to let guests connect by scanning — no need to share your password."
+      }
     },
     "image-converter": {
       "name": "Image Converter",
@@ -80,9 +105,26 @@
       "max_width": "Max Width",
       "max_height": "Max Height",
       "compress": "Compress",
-      "original_size": "Original Size",
-      "compressed_size": "Compressed Size",
-      "savings": "Savings"
+      "original_size": "Original",
+      "compressed_size": "Compressed",
+      "savings": "Savings",
+      "files_selected": "files selected",
+      "smaller": "Smaller file",
+      "better_quality": "Better quality",
+      "compare": "Before / After",
+      "original_label": "Original",
+      "compressed_label": "Compressed",
+      "download_all": "Download All",
+      "show_compare": "Compare",
+      "hide_compare": "Hide",
+      "how_to_use": {
+        "title": "How to use",
+        "step_1": "Drag and drop one or more images, or click to select them.",
+        "step_2": "Adjust the quality slider — lower values mean smaller file sizes.",
+        "step_3": "Optionally set a maximum width or height to resize.",
+        "step_4": "Use the before/after slider to compare quality visually.",
+        "tip": "For web use, 80% quality usually reduces file size by 60-70% with no visible difference."
+      }
     },
     "background-remover": {
       "name": "Background Remover",
@@ -92,7 +134,14 @@
       "downloading_model": "Downloading AI model...",
       "download": "Download Without Background",
       "max_size_warning": "For best results, use images under 10MB",
-      "try_again": "Try again"
+      "try_again": "Try again",
+      "how_to_use": {
+        "title": "How to use",
+        "step_1": "Upload a photo with a clear subject (person, product, or object).",
+        "step_2": "Wait a few seconds while the AI processes the image in your browser.",
+        "step_3": "Download the result as a transparent PNG.",
+        "tip": "Works best with high-contrast subjects. Photos with busy backgrounds may need manual touch-up."
+      }
     },
     "color-picker": {
       "name": "Color Picker",
@@ -105,7 +154,27 @@
       "split_complementary": "Split Complementary",
       "monochromatic": "Monochromatic",
       "copy_css": "Copy as CSS Variables",
-      "eyedropper": "Pick from Screen"
+      "eyedropper": "Pick from Screen",
+      "contrast_checker": "Contrast Checker",
+      "foreground": "Foreground (text)",
+      "background": "Background",
+      "swap": "Swap colors",
+      "preview_text": "Preview Text",
+      "preview_small": "This is how smaller text would look.",
+      "wcag_fail": "Fail — Does not meet WCAG",
+      "wcag_AA_large": "AA Large — Passes for large text only",
+      "wcag_AA": "AA — Passes for normal and large text",
+      "wcag_AAA": "AAA — Passes highest standard",
+      "normal_text": "Normal text (4.5:1)",
+      "large_text": "Large text (3:1)",
+      "how_to_use": {
+        "title": "How to use",
+        "step_1": "Pick a color using the color wheel or type a HEX value.",
+        "step_2": "Copy the color in HEX, RGB, or HSL format.",
+        "step_3": "Use the contrast checker to verify text readability against a background.",
+        "step_4": "Generate harmonious palettes with the palette section below.",
+        "tip": "WCAG AA requires a contrast ratio of at least 4.5:1 for normal text."
+      }
     },
     "base64-encoder": {
       "name": "Base64 Encoder / Decoder",
@@ -115,7 +184,14 @@
       "encode": "Encode",
       "decode": "Decode",
       "input_placeholder": "Enter text to encode or decode...",
-      "output_label": "Output"
+      "output_label": "Output",
+      "how_to_use": {
+        "title": "How to use",
+        "step_1": "Switch between text mode and file mode depending on your input.",
+        "step_2": "For text: paste content and click Encode or Decode.",
+        "step_3": "For files: drag and drop a file to get its Base64 representation.",
+        "tip": "Base64 encoding increases data size by ~33%. Use it for embedding small images in HTML or CSS."
+      }
     },
     "json-formatter": {
       "name": "JSON Formatter",
@@ -128,7 +204,19 @@
       "error_at": "Error at",
       "tree_view": "Tree View",
       "raw_view": "Raw View",
-      "input_placeholder": "Paste your JSON here..."
+      "input_placeholder": "Paste your JSON here...",
+      "indent": "Indent",
+      "json_path": "JSON Path",
+      "query": "Query",
+      "load_sample": "Load sample",
+      "how_to_use": {
+        "title": "How to use",
+        "step_1": "Paste your JSON into the input area.",
+        "step_2": "Click Format to pretty-print, or Minify to compress it.",
+        "step_3": "Switch between Raw View and Tree View to explore the structure.",
+        "step_4": "Use JSON Path (e.g. $.config.theme) to query specific values.",
+        "tip": "Invalid JSON will show the exact error location to help you fix syntax issues."
+      }
     },
     "lorem-ipsum-generator": {
       "name": "Lorem Ipsum Generator",
@@ -160,7 +248,20 @@
       "weak": "Weak",
       "fair": "Fair",
       "strong": "Strong",
-      "very_strong": "Very Strong"
+      "very_strong": "Very Strong",
+      "mode_password": "Password",
+      "mode_passphrase": "Passphrase",
+      "word_count": "Word Count",
+      "separator": "Separator",
+      "capitalize_words": "Capitalize words",
+      "add_number": "Add number",
+      "how_to_use": {
+        "title": "How to use",
+        "step_1": "Choose between Password mode (random characters) or Passphrase mode (memorable words).",
+        "step_2": "Adjust length, character types, or word count depending on the mode.",
+        "step_3": "Click Generate and copy the result to your clipboard.",
+        "tip": "Passphrases with 5+ words are both secure and easier to remember than random passwords."
+      }
     },
     "word-counter": {
       "name": "Word Counter",
@@ -232,7 +333,16 @@
       "name": "PDF Merge",
       "description": "Combine multiple PDF files into one document.",
       "drag_to_reorder": "Drag files to reorder them",
-      "merge": "Merge PDFs"
+      "merge": "Merge PDFs",
+      "files": "files",
+      "pages": "pages",
+      "how_to_use": {
+        "title": "How to use",
+        "step_1": "Upload two or more PDF files using the file picker.",
+        "step_2": "Arrange the files in the order you want them merged.",
+        "step_3": "Click Merge and download your combined PDF.",
+        "tip": "All processing happens in your browser — your files are never uploaded to a server."
+      }
     },
     "pdf-to-image": {
       "name": "PDF to Image",
@@ -307,7 +417,23 @@
       "match": "Match",
       "index": "Index",
       "groups": "Groups",
-      "empty_match": "(empty)"
+      "empty_match": "(empty)",
+      "pattern_library": "Common Patterns",
+      "lib_email": "Email",
+      "lib_url": "URL",
+      "lib_ipv4": "IPv4 Address",
+      "lib_phone": "Phone Number",
+      "lib_date_iso": "Date (ISO)",
+      "lib_hex_color": "Hex Color",
+      "lib_html_tag": "HTML Tag",
+      "lib_credit_card": "Credit Card",
+      "how_to_use": {
+        "title": "How to use",
+        "step_1": "Enter your regular expression or pick one from the Common Patterns library.",
+        "step_2": "Type or paste your test string in the text area below.",
+        "step_3": "Matches will be highlighted in real-time as you type.",
+        "tip": "Use flags like 'g' for global matching or 'i' for case-insensitive matching."
+      }
     },
     "uuid-generator": {
       "name": "UUID Generator",
@@ -327,7 +453,14 @@
       "text_mode": "Text",
       "file_mode": "File",
       "input_label": "Enter text",
-      "input_placeholder": "Type or paste text to hash..."
+      "input_placeholder": "Type or paste text to hash...",
+      "how_to_use": {
+        "title": "How to use",
+        "step_1": "Choose between text input or file upload mode.",
+        "step_2": "Enter your text or select a file to hash.",
+        "step_3": "All supported hash algorithms (SHA-1, SHA-256, SHA-384, SHA-512) are computed at once.",
+        "tip": "SHA-256 is the most commonly used hash for file integrity checks and security."
+      }
     },
     "invoice-generator": {
       "name": "Invoice Generator",

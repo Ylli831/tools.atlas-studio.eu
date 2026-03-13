@@ -54,6 +54,9 @@ export default function FileUpload({
   return (
     <div>
       <div
+        role="button"
+        tabIndex={0}
+        aria-label={t("upload")}
         className={`drop-zone rounded-xl p-8 text-center cursor-pointer ${
           dragActive ? "active" : ""
         }`}
@@ -64,6 +67,12 @@ export default function FileUpload({
         onDragLeave={() => setDragActive(false)}
         onDrop={handleDrop}
         onClick={() => inputRef.current?.click()}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            inputRef.current?.click();
+          }
+        }}
       >
         {preview ? (
           <div className="flex flex-col items-center gap-4">

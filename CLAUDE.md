@@ -19,17 +19,8 @@ Free online tools platform under the Atlas Studio brand. All tools run client-si
 - [`src/i18n/routing.ts`](src/i18n/routing.ts) — Locale routing config
 - [`messages/`](messages/) — i18n translation files (sq.json, en.json)
 
-## Tools (8 total)
-| Tool | Route | Library |
-|---|---|---|
-| QR Code Generator | `/tools/qr-code-generator` | `qrcode` |
-| Image Converter | `/tools/image-converter` | Canvas API |
-| Image Compressor | `/tools/image-compressor` | `browser-image-compression` |
-| Background Remover | `/tools/background-remover` | `@imgly/background-removal` |
-| Color Picker | `/tools/color-picker` | Native (color math) |
-| Base64 Encoder | `/tools/base64-encoder` | Native (`btoa`/`atob`) |
-| JSON Formatter | `/tools/json-formatter` | Native (`JSON.parse`) |
-| Lorem Ipsum | `/tools/lorem-ipsum-generator` | Custom (Albanian + Latin) |
+## Tools
+83 tools across 8 categories: pdf, image, generator, text, developer, business, design, security. All definitions live in [`src/lib/tools-registry.ts`](src/lib/tools-registry.ts). Each tool has a `page.tsx` (server metadata + JSON-LD) and a client `*Tool.tsx` component under `src/app/[locale]/tools/<slug>/`.
 
 ## Brand Colors
 - Background: `#f5f3ef` (cream)

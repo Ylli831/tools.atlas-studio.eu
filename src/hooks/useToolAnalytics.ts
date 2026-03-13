@@ -1,7 +1,6 @@
 "use client";
 
 import { useCallback } from "react";
-import { useConfetti } from "./useConfetti";
 
 declare global {
   interface Window {
@@ -10,8 +9,6 @@ declare global {
 }
 
 export function useToolAnalytics(toolSlug: string) {
-  const { fire } = useConfetti();
-
   const trackUsed = useCallback(() => {
     if (typeof window !== "undefined" && window.gtag) {
       window.gtag("event", "tool_used", {
@@ -29,8 +26,7 @@ export function useToolAnalytics(toolSlug: string) {
         event_category: "Tools",
       });
     }
-    fire();
-  }, [toolSlug, fire]);
+  }, [toolSlug]);
 
   return { trackUsed, trackOutput };
 }

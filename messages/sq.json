@@ -62,7 +62,32 @@
       "fg_color": "Ngjyra e Pare",
       "bg_color": "Ngjyra e Sfondit",
       "download_png": "Shkarko PNG",
-      "download_svg": "Shkarko SVG"
+      "download_svg": "Shkarko SVG",
+      "preset": "Lloji",
+      "preset_text": "Tekst",
+      "preset_url": "URL",
+      "preset_wifi": "WiFi",
+      "preset_email": "Email",
+      "preset_phone": "Telefon",
+      "wifi_ssid": "Emri i Rrjetit (SSID)",
+      "wifi_password": "Fjalëkalimi",
+      "wifi_encryption": "Enkriptimi",
+      "wifi_none": "Asnjë",
+      "email_to": "Adresa Email",
+      "email_subject": "Subjekti",
+      "email_subject_placeholder": "Subjekt opsional",
+      "phone_number": "Numri i Telefonit",
+      "margin": "Hapësira",
+      "copy_image": "Kopjo Imazhin",
+      "copied": "U kopjua!",
+      "how_to_use": {
+        "title": "Si të përdoret",
+        "step_1": "Zgjidhni llojin: Tekst, URL, WiFi, Email ose Telefon.",
+        "step_2": "Plotësoni fushat e nevojshme për llojin e zgjedhur.",
+        "step_3": "Personalizoni madhësinë, ngjyrat, hapësirën dhe korrigjimin e gabimeve.",
+        "step_4": "Shkarkoni si PNG ose SVG, ose kopjoni imazhin.",
+        "tip": "Përdorni WiFi preset për t'i lejuar mysafirët të lidhen duke skanuar — pa nevojë të ndani fjalëkalimin."
+      }
     },
     "image-converter": {
       "name": "Konvertues Imazhesh",
@@ -80,9 +105,26 @@
       "max_width": "Gjeresia Maksimale",
       "max_height": "Lartesia Maksimale",
       "compress": "Komprimo",
-      "original_size": "Madhesia Origjinale",
-      "compressed_size": "Madhesia e Re",
-      "savings": "Kursimi"
+      "original_size": "Origjinale",
+      "compressed_size": "E kompresuar",
+      "savings": "Kursimi",
+      "files_selected": "skedarë të zgjedhur",
+      "smaller": "Skedar më i vogël",
+      "better_quality": "Cilësi më e mirë",
+      "compare": "Para / Pas",
+      "original_label": "Origjinale",
+      "compressed_label": "E kompresuar",
+      "download_all": "Shkarko të gjitha",
+      "show_compare": "Krahaso",
+      "hide_compare": "Fshih",
+      "how_to_use": {
+        "title": "Si të përdoret",
+        "step_1": "Tërhiqni dhe lëshoni një ose më shumë imazhe, ose klikoni për t'i zgjedhur.",
+        "step_2": "Rregulloni cilësinë — vlera më e ulët do të thotë madhësi më e vogël.",
+        "step_3": "Opsionalisht vendosni gjerësinë ose lartësinë maksimale.",
+        "step_4": "Përdorni krahasuesin para/pas për të parë ndryshimin vizualisht.",
+        "tip": "Për përdorim në ueb, cilësia 80% zakonisht zvogëlon madhësinë 60-70% pa ndryshim të dukshëm."
+      }
     },
     "background-remover": {
       "name": "Heqes Sfondi",
@@ -92,7 +134,14 @@
       "downloading_model": "Duke shkarkuar modelin AI...",
       "download": "Shkarko pa Sfond",
       "max_size_warning": "Per rezultate me te mira, perdorni imazhe nen 10MB",
-      "try_again": "Provo perseri"
+      "try_again": "Provo perseri",
+      "how_to_use": {
+        "title": "Si të përdoret",
+        "step_1": "Ngarkoni një foto me një subjekt të qartë (person, produkt ose objekt).",
+        "step_2": "Prisni disa sekonda ndërsa AI-ja përpunon imazhin në shfletuesin tuaj.",
+        "step_3": "Shkarkoni rezultatin si PNG transparent.",
+        "tip": "Funksionon më mirë me subjekte me kontrast të lartë."
+      }
     },
     "color-picker": {
       "name": "Zgjedhes Ngjyrash",
@@ -105,7 +154,27 @@
       "split_complementary": "Komplementare e Ndare",
       "monochromatic": "Monokromatike",
       "copy_css": "Kopjo si Variabla CSS",
-      "eyedropper": "Merr nga Ekrani"
+      "eyedropper": "Merr nga Ekrani",
+      "contrast_checker": "Kontrolluesi i Kontrastit",
+      "foreground": "Paraplani (teksti)",
+      "background": "Sfondi",
+      "swap": "Ndërro ngjyrat",
+      "preview_text": "Teksti Paraqitës",
+      "preview_small": "Kështu do të dukej teksti më i vogël.",
+      "wcag_fail": "Dështim — Nuk plotëson WCAG",
+      "wcag_AA_large": "AA i Madh — Kalon vetëm për tekst të madh",
+      "wcag_AA": "AA — Kalon për tekst normal dhe të madh",
+      "wcag_AAA": "AAA — Kalon standardin më të lartë",
+      "normal_text": "Tekst normal (4.5:1)",
+      "large_text": "Tekst i madh (3:1)",
+      "how_to_use": {
+        "title": "Si të përdoret",
+        "step_1": "Zgjidhni një ngjyrë me rrotën e ngjyrave ose shkruani vlerën HEX.",
+        "step_2": "Kopjoni ngjyrën në formatin HEX, RGB ose HSL.",
+        "step_3": "Përdorni kontrolluesin e kontrastit për të verifikuar lexueshmërinë e tekstit.",
+        "step_4": "Gjeneroni paleta harmonike me seksionin e paletave.",
+        "tip": "WCAG AA kërkon raport kontrasti të paktën 4.5:1 për tekst normal."
+      }
     },
     "base64-encoder": {
       "name": "Base64 Enkoder / Dekoder",
@@ -115,7 +184,14 @@
       "encode": "Enkodo",
       "decode": "Dekodo",
       "input_placeholder": "Shkruani tekstin per te enkoduar ose dekoduar...",
-      "output_label": "Dalja"
+      "output_label": "Dalja",
+      "how_to_use": {
+        "title": "Si të përdoret",
+        "step_1": "Ndërroni mes modalitetit tekst dhe skedar sipas nevojës.",
+        "step_2": "Për tekst: ngjisni përmbajtjen dhe klikoni Kodifico ose Dekodifico.",
+        "step_3": "Për skedarë: tërhiqni dhe lëshoni një skedar për të marrë paraqitjen Base64.",
+        "tip": "Kodifikimi Base64 rrit madhësinë e të dhënave ~33%. Përdoreni për imazhe të vogla në HTML ose CSS."
+      }
     },
     "json-formatter": {
       "name": "Formatues JSON",
@@ -128,7 +204,19 @@
       "error_at": "Gabim ne",
       "tree_view": "Pamja ne Dege",
       "raw_view": "Pamja Tekst",
-      "input_placeholder": "Ngjisni JSON-in tuaj ketu..."
+      "input_placeholder": "Ngjisni JSON-in tuaj ketu...",
+      "indent": "Hapësira",
+      "json_path": "Rruga JSON",
+      "query": "Kërko",
+      "load_sample": "Ngarko shembull",
+      "how_to_use": {
+        "title": "Si të përdoret",
+        "step_1": "Ngjisni JSON-in tuaj në fushën e hyrjes.",
+        "step_2": "Klikoni Formato për ta rregulluar, ose Minimizo për ta ngjeshur.",
+        "step_3": "Ndërroni mes Pamjes së Thjeshtë dhe Pamjes së Pemës për të eksploruar strukturën.",
+        "step_4": "Përdorni Rrugën JSON (p.sh. $.config.theme) për të kërkuar vlera specifike.",
+        "tip": "JSON i pavlefshëm do të tregojë vendndodhjen e saktë të gabimit."
+      }
     },
     "lorem-ipsum-generator": {
       "name": "Gjenerues Lorem Ipsum",
@@ -160,7 +248,20 @@
       "weak": "E dobet",
       "fair": "Mesatare",
       "strong": "E forte",
-      "very_strong": "Shume e forte"
+      "very_strong": "Shume e forte",
+      "mode_password": "Fjalëkalim",
+      "mode_passphrase": "Frazëkalim",
+      "word_count": "Numri i fjalëve",
+      "separator": "Ndarësi",
+      "capitalize_words": "Shkronja e madhe",
+      "add_number": "Shto numër",
+      "how_to_use": {
+        "title": "Si të përdoret",
+        "step_1": "Zgjidhni midis Fjalëkalimit (karaktere të rastësishme) ose Frazëkalimit (fjalë të memorizueshme).",
+        "step_2": "Rregulloni gjatësinë, llojet e karaktereve ose numrin e fjalëve.",
+        "step_3": "Klikoni Gjenero dhe kopjoni rezultatin.",
+        "tip": "Frazëkalimet me 5+ fjalë janë të sigurta dhe më të lehta për t'u mbajtur mend."
+      }
     },
     "word-counter": {
       "name": "Numerues Fjalesh",
@@ -232,7 +333,16 @@
       "name": "Bashko PDF",
       "description": "Kombinoni shume skedare PDF ne nje dokument.",
       "drag_to_reorder": "Terhiqni skedaret per ti rirenditur",
-      "merge": "Bashko PDF-te"
+      "merge": "Bashko PDF-te",
+      "files": "skedarë",
+      "pages": "faqe",
+      "how_to_use": {
+        "title": "Si të përdoret",
+        "step_1": "Ngarkoni dy ose më shumë skedarë PDF.",
+        "step_2": "Rradhisni skedarët në rendin që dëshironi.",
+        "step_3": "Klikoni Bashko dhe shkarkoni PDF-në e kombinuar.",
+        "tip": "Gjithë përpunimi ndodh në shfletuesin tuaj — skedarët tuaj nuk ngarkohen kurrë në server."
+      }
     },
     "pdf-to-image": {
       "name": "PDF ne Imazh",
@@ -307,7 +417,23 @@
       "match": "Perputhja",
       "index": "Indeksi",
       "groups": "Grupet",
-      "empty_match": "(bosh)"
+      "empty_match": "(bosh)",
+      "pattern_library": "Shabllone të zakonshme",
+      "lib_email": "Email",
+      "lib_url": "URL",
+      "lib_ipv4": "Adresë IPv4",
+      "lib_phone": "Numër telefoni",
+      "lib_date_iso": "Datë (ISO)",
+      "lib_hex_color": "Ngjyrë Hex",
+      "lib_html_tag": "Etiketë HTML",
+      "lib_credit_card": "Kartë krediti",
+      "how_to_use": {
+        "title": "Si të përdoret",
+        "step_1": "Shkruani shprehjen regex ose zgjidhni një nga libraria e shablloneve.",
+        "step_2": "Shkruani ose ngjisni tekstin për testim në zonën e tekstit.",
+        "step_3": "Përputhjet do të theksohen në kohë reale ndërsa shkruani.",
+        "tip": "Përdorni flamurin 'g' për përputhje globale ose 'i' për pa dallim shkronjash."
+      }
     },
     "uuid-generator": {
       "name": "Gjenerues UUID",
@@ -327,7 +453,14 @@
       "text_mode": "Tekst",
       "file_mode": "Skedar",
       "input_label": "Shkruani tekstin",
-      "input_placeholder": "Shkruani ose ngjisni tekstin per hash..."
+      "input_placeholder": "Shkruani ose ngjisni tekstin per hash...",
+      "how_to_use": {
+        "title": "Si të përdoret",
+        "step_1": "Zgjidhni mes hyrjes së tekstit ose ngarkimit të skedarit.",
+        "step_2": "Shkruani tekstin ose zgjidhni një skedar për të gjeneruar hash.",
+        "step_3": "Të gjitha algoritmet (SHA-1, SHA-256, SHA-384, SHA-512) llogariten njëherësh.",
+        "tip": "SHA-256 është hash-i më i përdorur për kontrollin e integritetit të skedarëve."
+      }
     },
     "invoice-generator": {
       "name": "Gjenerues Faturash",

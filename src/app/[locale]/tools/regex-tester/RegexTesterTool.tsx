@@ -10,13 +10,24 @@ interface MatchResult {
   groups: string[];
 }
 
+const COMMON_PATTERNS = [
+  { key: "email", pattern: "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}", sample: "Contact us at hello@example.com or support@atlas-studio.eu for help." },
+  { key: "url", pattern: "https?://[\\w.-]+(?:\\.[a-zA-Z]{2,})(?:/[\\w./?#&=-]*)?", sample: "Visit https://atlas-studio.eu or http://example.com/path?q=test for more." },
+  { key: "ipv4", pattern: "\\b(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\b", sample: "Server IPs: 192.168.1.1, 10.0.0.255, 999.999.999.999 (invalid)." },
+  { key: "phone", pattern: "\\+?\\d{1,3}[-.\\s]?\\(?\\d{1,4}\\)?[-.\\s]?\\d{1,4}[-.\\s]?\\d{1,9}", sample: "Call us at +1-555-123-4567 or +355 69 123 4567." },
+  { key: "date_iso", pattern: "\\d{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12]\\d|3[01])", sample: "Events on 2026-03-13, 2026-12-25, and 2026-99-99 (invalid)." },
+  { key: "hex_color", pattern: "#(?:[0-9a-fA-F]{3}){1,2}\\b", sample: "Brand colors: #487877 (teal), #cb6a3f (terracotta), #f5f3ef (cream)." },
+  { key: "html_tag", pattern: "</?[a-zA-Z][a-zA-Z0-9]*(?:\\s[^>]*)?>", sample: "<div class=\"container\"><p>Hello</p></div>" },
+  { key: "credit_card", pattern: "\\b(?:4\\d{3}|5[1-5]\\d{2}|3[47]\\d{2}|6011)[- ]?\\d{4}[- ]?\\d{4}[- ]?\\d{4}\\b", sample: "Cards: 4111-1111-1111-1111, 5500 0000 0000 0004." },
+];
+
 export default function RegexTesterTool() {
   const t = useTranslations("tools.regex-tester");
-  const tc = useTranslations("common");
   const [pattern, setPattern] = useState("");
   const [flags, setFlags] = useState("g");
   const [testString, setTestString] = useState("");
   const [error, setError] = useState("");
+  const [showLibrary, setShowLibrary] = useState(false);
 
   const { matches, highlighted } = useMemo(() => {
     if (!pattern || !testString) return { matches: [] as MatchResult[], highlighted: "" };
@@ -74,9 +85,48 @@ export default function RegexTesterTool() {
     setFlags((prev) => prev.includes(flag) ? prev.replace(flag, "") : prev + flag);
   };
 
+  const loadPattern = (p: typeof COMMON_PATTERNS[number]) => {
+    setPattern(p.pattern);
+    setTestString(p.sample);
+    setFlags("g");
+    setShowLibrary(false);
+  };
+
   return (
     <ToolLayout toolSlug="regex-tester">
       <div className="space-y-6">
+        {/* Pattern library toggle */}
+        <div>
+          <button
+            onClick={() => setShowLibrary(!showLibrary)}
+            className="text-sm text-teal hover:underline flex items-center gap-1"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M4 19.5A2.5 2.5 0 016.5 17H20" />
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z" />
+            </svg>
+            {t("pattern_library")}
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className={`transition-transform ${showLibrary ? "rotate-180" : ""}`}>
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </button>
+
+          {showLibrary && (
+            <div className="mt-3 grid grid-cols-2 sm:grid-cols-4 gap-2">
+              {COMMON_PATTERNS.map((p) => (
+                <button
+                  key={p.key}
+                  onClick={() => loadPattern(p)}
+                  className="text-left bg-card border border-border rounded-lg px-3 py-2 hover:border-teal transition-colors"
+                >
+                  <span className="text-sm font-medium text-foreground block">{t(`lib_${p.key}`)}</span>
+                  <span className="text-xs text-muted-foreground font-mono truncate block mt-0.5">{p.pattern.slice(0, 30)}…</span>
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
+
         <div>
           <label className="block text-sm font-medium text-foreground mb-1.5">
             {t("pattern")}

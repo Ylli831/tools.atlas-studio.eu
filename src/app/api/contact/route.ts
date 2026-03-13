@@ -1,6 +1,15 @@
 import { NextRequest, NextResponse } from "next/server";
 import { buildAutoReplyHtml } from "./autoReplyTemplate";
 
+function escapeHtml(str: string): string {
+  return str
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
 // Simple in-memory rate limiter: 5 requests per 60 seconds per IP
 const rateLimitMap = new Map<string, { count: number; resetAt: number }>();
 const RATE_LIMIT = 5;
@@ -62,19 +71,24 @@ export async function POST(req: NextRequest) {
     );
   }
 
+  const safeName = escapeHtml(name);
+  const safeEmail = escapeHtml(email);
+  const safeSubject = subject ? escapeHtml(subject) : "";
+  const safeMessage = escapeHtml(message);
+
   const html = `
     <div style="font-family:sans-serif;max-width:600px;margin:0 auto;color:#37474b">
       <h2 style="font-size:24px;margin-bottom:24px;border-bottom:2px solid #487877;padding-bottom:12px">
         New message - Atlas Studio Tools
       </h2>
       <table style="width:100%;border-collapse:collapse">
-        <tr><td style="padding:8px 0;font-weight:600;width:120px">Name</td><td style="padding:8px 0">${name}</td></tr>
-        <tr><td style="padding:8px 0;font-weight:600">Email</td><td style="padding:8px 0"><a href="mailto:${email}" style="color:#487877">${email}</a></td></tr>
-        ${subject ? `<tr><td style="padding:8px 0;font-weight:600">Subject</td><td style="padding:8px 0">${subject}</td></tr>` : ""}
+        <tr><td style="padding:8px 0;font-weight:600;width:120px">Name</td><td style="padding:8px 0">${safeName}</td></tr>
+        <tr><td style="padding:8px 0;font-weight:600">Email</td><td style="padding:8px 0"><a href="mailto:${safeEmail}" style="color:#487877">${safeEmail}</a></td></tr>
+        ${safeSubject ? `<tr><td style="padding:8px 0;font-weight:600">Subject</td><td style="padding:8px 0">${safeSubject}</td></tr>` : ""}
       </table>
       <div style="margin-top:24px">
         <p style="font-weight:600;margin-bottom:8px">Message</p>
-        <div style="background:#f5f3ef;border-radius:8px;padding:16px;white-space:pre-wrap">${message}</div>
+        <div style="background:#f5f3ef;border-radius:8px;padding:16px;white-space:pre-wrap">${safeMessage}</div>
       </div>
       <div style="margin-top:24px;padding-top:16px;border-top:1px solid #e5e2dc;font-size:13px;color:#8a9295">
         Sent from tools.atlas-studio.eu
@@ -97,7 +111,7 @@ export async function POST(req: NextRequest) {
         },
         body: JSON.stringify({
           message: {
-            subject: `[Tools] New message from ${name}${subject ? ` - ${subject}` : ""}`,
+            subject: `[Tools] New message from ${safeName}${safeSubject ? ` - ${safeSubject}` : ""}`,
             body: { contentType: "HTML", content: html },
             from: {
               emailAddress: { address: sender, name: "Atlas Studio Tools" },

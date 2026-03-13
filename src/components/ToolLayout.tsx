@@ -12,6 +12,7 @@ import { useRecentTools } from "@/hooks/useRecentTools";
 import { useToolAnalytics } from "@/hooks/useToolAnalytics";
 import { useUsageCounter } from "@/hooks/useUsageCounter";
 import { toast } from "sonner";
+import ToolErrorBoundary from "./ToolErrorBoundary";
 
 export default function ToolLayout({
   toolSlug,
@@ -88,6 +89,7 @@ export default function ToolLayout({
         </div>
         <button
           onClick={handleShare}
+          aria-label={tc("share")}
           className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground transition-colors px-3 py-1.5 rounded-lg border border-border hover:border-teal"
         >
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -108,7 +110,32 @@ export default function ToolLayout({
         )}
       </div>
 
-      {children}
+      <ToolErrorBoundary>
+        {children}
+      </ToolErrorBoundary>
+
+      {t.has("how_to_use.title") && (
+        <div className="mt-10 bg-card border border-border rounded-xl p-6">
+          <h2 className="text-lg font-semibold text-slate mb-4">{t("how_to_use.title")}</h2>
+          <ol className="space-y-3">
+            {[1, 2, 3, 4, 5].map((i) =>
+              t.has(`how_to_use.step_${i}`) ? (
+                <li key={i} className="flex gap-3 text-sm">
+                  <span className="flex-shrink-0 w-6 h-6 rounded-full bg-teal/10 text-teal text-xs font-bold flex items-center justify-center">
+                    {i}
+                  </span>
+                  <span className="text-muted-foreground pt-0.5">{t(`how_to_use.step_${i}`)}</span>
+                </li>
+              ) : null
+            )}
+          </ol>
+          {t.has("how_to_use.tip") && (
+            <p className="mt-4 text-xs text-muted-foreground bg-teal/5 rounded-lg px-3 py-2">
+              {t("how_to_use.tip")}
+            </p>
+          )}
+        </div>
+      )}
 
       <HowToSection toolSlug={toolSlug} />
 

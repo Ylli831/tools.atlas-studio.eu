@@ -61,7 +61,7 @@ function HomeContent() {
       "@context": "https://schema.org",
       "@type": "ItemList",
       name: "Free Online Tools",
-      description: "60+ free online tools for developers, designers, and businesses.",
+      description: `${tools.length}+ free online tools for developers, designers, and businesses.`,
       itemListElement: categories.map((cat, i) => ({
         "@type": "ListItem",
         position: i + 1,

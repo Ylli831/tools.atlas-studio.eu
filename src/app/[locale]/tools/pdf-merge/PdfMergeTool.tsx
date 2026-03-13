@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import ToolLayout from "@/components/ToolLayout";
 import FileUpload from "@/components/FileUpload";
@@ -9,6 +9,7 @@ interface PdfItem {
   file: File;
   name: string;
   id: string;
+  pageCount: number | null;
 }
 
 export default function PdfMergeTool() {
@@ -23,24 +24,60 @@ export default function PdfMergeTool() {
       file,
       name: file.name,
       id: crypto.randomUUID(),
+      pageCount: null,
     }));
     setPdfs((prev) => [...prev, ...newPdfs]);
   }, []);
 
+  // Load page counts in the background
+  useEffect(() => {
+    const pending = pdfs.filter((p) => p.pageCount === null);
+    if (pending.length === 0) return;
+
+    let cancelled = false;
+    (async () => {
+      const { PDFDocument } = await import("pdf-lib");
+      for (const item of pending) {
+        if (cancelled) break;
+        try {
+          const bytes = await item.file.arrayBuffer();
+          const pdf = await PDFDocument.load(bytes, { ignoreEncryption: true });
+          const count = pdf.getPageCount();
+          if (!cancelled) {
+            setPdfs((prev) =>
+              prev.map((p) => (p.id === item.id ? { ...p, pageCount: count } : p))
+            );
+          }
+        } catch {
+          if (!cancelled) {
+            setPdfs((prev) =>
+              prev.map((p) => (p.id === item.id ? { ...p, pageCount: -1 } : p))
+            );
+          }
+        }
+      }
+    })();
+    return () => { cancelled = true; };
+  }, [pdfs]);
+
   const removePdf = (id: string) => {
     setPdfs((prev) => prev.filter((p) => p.id !== id));
+  };
+
+  const moveItem = (from: number, to: number) => {
+    setPdfs((prev) => {
+      const copy = [...prev];
+      const [item] = copy.splice(from, 1);
+      copy.splice(to, 0, item);
+      return copy;
+    });
   };
 
   const handleDragStart = (index: number) => setDragIndex(index);
   const handleDragOver = (e: React.DragEvent, index: number) => {
     e.preventDefault();
     if (dragIndex === null || dragIndex === index) return;
-    setPdfs((prev) => {
-      const copy = [...prev];
-      const [item] = copy.splice(dragIndex, 1);
-      copy.splice(index, 0, item);
-      return copy;
-    });
+    moveItem(dragIndex, index);
     setDragIndex(index);
   };
   const handleDragEnd = () => setDragIndex(null);
@@ -80,6 +117,8 @@ export default function PdfMergeTool() {
     return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
   };
 
+  const totalPages = pdfs.reduce((sum, p) => sum + (p.pageCount && p.pageCount > 0 ? p.pageCount : 0), 0);
+
   return (
     <ToolLayout toolSlug="pdf-merge">
       <div className="space-y-6">
@@ -91,7 +130,14 @@ export default function PdfMergeTool() {
 
         {pdfs.length > 0 && (
           <>
-            <p className="text-sm text-muted-foreground">{t("drag_to_reorder")}</p>
+            <div className="flex items-center justify-between">
+              <p className="text-sm text-muted-foreground">{t("drag_to_reorder")}</p>
+              {totalPages > 0 && (
+                <p className="text-sm text-muted-foreground">
+                  {pdfs.length} {t("files")} · {totalPages} {t("pages")}
+                </p>
+              )}
+            </div>
             <div className="space-y-2">
               {pdfs.map((pdf, index) => (
                 <div
@@ -102,12 +148,37 @@ export default function PdfMergeTool() {
                   onDragEnd={handleDragEnd}
                   className={`flex items-center gap-3 bg-card border border-border rounded-lg px-4 py-3 cursor-move group ${dragIndex === index ? "opacity-50" : ""}`}
                 >
+                  {/* Move buttons */}
+                  <div className="flex flex-col gap-0.5">
+                    <button
+                      onClick={() => index > 0 && moveItem(index, index - 1)}
+                      disabled={index === 0}
+                      className="text-muted-foreground hover:text-teal disabled:opacity-20 transition-colors"
+                    >
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <polyline points="18 15 12 9 6 15" />
+                      </svg>
+                    </button>
+                    <button
+                      onClick={() => index < pdfs.length - 1 && moveItem(index, index + 1)}
+                      disabled={index === pdfs.length - 1}
+                      className="text-muted-foreground hover:text-teal disabled:opacity-20 transition-colors"
+                    >
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <polyline points="6 9 12 15 18 9" />
+                      </svg>
+                    </button>
+                  </div>
+
                   <span className="text-sm font-mono text-muted-foreground w-6">{index + 1}.</span>
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-red-500 flex-shrink-0">
                     <path d="M14.5 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V7.5L14.5 2z" />
                     <polyline points="14 2 14 8 20 8" />
                   </svg>
                   <span className="text-sm text-foreground flex-1 truncate">{pdf.name}</span>
+                  <span className="text-xs text-muted-foreground">
+                    {pdf.pageCount === null ? "…" : pdf.pageCount === -1 ? "?" : `${pdf.pageCount} ${t("pages")}`}
+                  </span>
                   <span className="text-xs text-muted-foreground">{formatSize(pdf.file.size)}</span>
                   <button
                     onClick={() => removePdf(pdf.id)}
