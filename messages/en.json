@@ -1299,7 +1299,12 @@
       "output_label": "Minified HTML",
       "original_size": "Original Size",
       "minified_size": "Minified Size",
-      "savings": "Savings"
+      "savings": "Savings",
+      "options": "Options",
+      "option_removeComments": "Remove Comments",
+      "option_removeWhitespace": "Remove Whitespace",
+      "option_removeOptionalTags": "Remove Optional Tags",
+      "option_removeAttributeQuotes": "Remove Attribute Quotes"
     },
     "svg-optimizer": {
       "name": "SVG Optimizer",
@@ -1317,7 +1322,9 @@
       "input_placeholder": "Paste minified CSS here...",
       "beautify": "Beautify",
       "output_label": "Formatted CSS",
-      "indent_size": "Indent Size"
+      "indent_size": "Indent Size",
+      "options": "Options",
+      "use_tabs": "Use Tabs"
     },
     "json-to-xml": {
       "name": "JSON to XML Converter",
@@ -1326,7 +1333,9 @@
       "input_placeholder": "Paste your JSON here...",
       "convert": "Convert to XML",
       "output_label": "XML Output",
-      "root_element": "Root Element Name"
+      "root_element": "Root Element Name",
+      "root_tag": "Root Tag",
+      "include_declaration": "Include XML Declaration"
     },
     "xml-to-json": {
       "name": "XML to JSON Converter",
@@ -1334,7 +1343,8 @@
       "input_label": "XML Input",
       "input_placeholder": "Paste your XML here...",
       "convert": "Convert to JSON",
-      "output_label": "JSON Output"
+      "output_label": "JSON Output",
+      "indent_spaces": "Indent (spaces)"
     },
     "json-to-csv": {
       "name": "JSON to CSV Converter",
@@ -1343,7 +1353,11 @@
       "input_placeholder": "Paste a JSON array here...",
       "convert": "Convert to CSV",
       "output_label": "CSV Output",
-      "download_csv": "Download CSV"
+      "download_csv": "Download CSV",
+      "delimiter": "Delimiter",
+      "comma": "Comma",
+      "semicolon": "Semicolon",
+      "include_headers": "Include Headers"
     },
     "toml-to-json": {
       "name": "TOML to JSON Converter",
@@ -1351,7 +1365,8 @@
       "input_label": "TOML Input",
       "input_placeholder": "Paste your TOML here...",
       "convert": "Convert to JSON",
-      "output_label": "JSON Output"
+      "output_label": "JSON Output",
+      "indent_spaces": "Indent (spaces)"
     },
     "json-to-toml": {
       "name": "JSON to TOML Converter",
@@ -1381,7 +1396,21 @@
       "author": "Author",
       "generate": "Generate Meta Tags",
       "output_label": "Generated HTML",
-      "preview": "Preview"
+      "preview": "Preview",
+      "basic_meta": "Basic Meta Tags",
+      "title": "Title",
+      "title_placeholder": "e.g., My Awesome Website",
+      "description_label": "Description",
+      "description_placeholder": "Page description for search engines",
+      "keywords_placeholder": "Separated by commas",
+      "og_type": "Type",
+      "open_graph": "Open Graph",
+      "robots": "Robots",
+      "canonical_url": "Canonical URL",
+      "twitter_card_type": "Card Type",
+      "twitter_site": "Twitter Site",
+      "author_placeholder": "e.g., John Doe",
+      "google_preview": "Google Search Preview"
     },
     "robots-txt-generator": {
       "name": "Robots.txt Generator",
@@ -1424,12 +1453,17 @@
       "description": "Generate XML sitemaps from a list of URLs for search engines.",
       "add_url": "Add URL",
       "url": "URL",
+      "urls": "URLs",
       "priority": "Priority",
       "changefreq": "Change Frequency",
       "lastmod": "Last Modified",
+      "last_modified": "Last Modified",
       "generate": "Generate Sitemap",
       "download": "Download sitemap.xml",
-      "output_label": "Sitemap XML"
+      "output_label": "Sitemap XML",
+      "select": "Select",
+      "apply_to_all": "Apply to All",
+      "bulk_add": "Bulk Add"
     },
     "css-clip-path-generator": {
       "name": "CSS Clip Path Generator",
@@ -1779,6 +1813,7 @@
     "how_it_works": "How It Works",
     "used_count": "Used {count} times",
     "continue_workflow": "Continue Your Workflow",
+    "load_sample": "Load Sample",
     "howto_upload": {
       "step1": "Upload your file using drag & drop or the file picker.",
       "step2": "Adjust the settings to match your needs.",

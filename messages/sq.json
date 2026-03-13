@@ -1299,7 +1299,12 @@
       "output_label": "HTML e Minifikuar",
       "original_size": "Madhesia Origjinale",
       "minified_size": "Madhesia e Minifikuar",
-      "savings": "Kursimi"
+      "savings": "Kursimi",
+      "options": "Opsionet",
+      "option_removeComments": "Hiq Komentet",
+      "option_removeWhitespace": "Hiq Hapesirat",
+      "option_removeOptionalTags": "Hiq Etiketat Opsionale",
+      "option_removeAttributeQuotes": "Hiq Thonjezat e Atributeve"
     },
     "svg-optimizer": {
       "name": "Optimizues SVG",
@@ -1317,7 +1322,9 @@
       "input_placeholder": "Ngjisni CSS te minifikuar ketu...",
       "beautify": "Formato",
       "output_label": "CSS e Formatuar",
-      "indent_size": "Madhesia e Dhembjes"
+      "indent_size": "Madhesia e Dhembjes",
+      "options": "Opsionet",
+      "use_tabs": "Perdor Tabs"
     },
     "json-to-xml": {
       "name": "Konvertues JSON ne XML",
@@ -1326,7 +1333,9 @@
       "input_placeholder": "Ngjisni JSON ketu...",
       "convert": "Konverto ne XML",
       "output_label": "Dalja XML",
-      "root_element": "Emri i Elementit Rrenjes"
+      "root_element": "Emri i Elementit Rrenjes",
+      "root_tag": "Etiketa Rrenjes",
+      "include_declaration": "Perfshi Deklarimin XML"
     },
     "xml-to-json": {
       "name": "Konvertues XML ne JSON",
@@ -1334,7 +1343,8 @@
       "input_label": "Hyrja XML",
       "input_placeholder": "Ngjisni XML ketu...",
       "convert": "Konverto ne JSON",
-      "output_label": "Dalja JSON"
+      "output_label": "Dalja JSON",
+      "indent_spaces": "Dhembje (hapesira)"
     },
     "json-to-csv": {
       "name": "Konvertues JSON ne CSV",
@@ -1343,7 +1353,11 @@
       "input_placeholder": "Ngjisni nje varg JSON ketu...",
       "convert": "Konverto ne CSV",
       "output_label": "Dalja CSV",
-      "download_csv": "Shkarko CSV"
+      "download_csv": "Shkarko CSV",
+      "delimiter": "Ndaresi",
+      "comma": "Presje",
+      "semicolon": "Pike-presje",
+      "include_headers": "Perfshi Titujt"
     },
     "toml-to-json": {
       "name": "Konvertues TOML ne JSON",
@@ -1351,7 +1365,8 @@
       "input_label": "Hyrja TOML",
       "input_placeholder": "Ngjisni TOML ketu...",
       "convert": "Konverto ne JSON",
-      "output_label": "Dalja JSON"
+      "output_label": "Dalja JSON",
+      "indent_spaces": "Dhembje (hapesira)"
     },
     "json-to-toml": {
       "name": "Konvertues JSON ne TOML",
@@ -1381,7 +1396,21 @@
       "author": "Autori",
       "generate": "Gjenero Meta Etiketat",
       "output_label": "HTML e Gjeneruar",
-      "preview": "Parashikim"
+      "preview": "Parashikim",
+      "basic_meta": "Meta Etiketat Bazike",
+      "title": "Titulli",
+      "title_placeholder": "p.sh., Faqja Ime",
+      "description_label": "Pershkrimi",
+      "description_placeholder": "Pershkrimi i faqjes per motoret e kerkimit",
+      "keywords_placeholder": "Te ndara me presje",
+      "og_type": "Lloji",
+      "open_graph": "Open Graph",
+      "robots": "Robotet",
+      "canonical_url": "URL Kanonik",
+      "twitter_card_type": "Lloji i Kartes",
+      "twitter_site": "Faqja Twitter",
+      "author_placeholder": "p.sh., Emri Mbiemri",
+      "google_preview": "Parashikimi i Google Search"
     },
     "robots-txt-generator": {
       "name": "Gjenerues Robots.txt",
@@ -1424,12 +1453,17 @@
       "description": "Gjeneroni sitemap XML nga nje liste URL-sh per motoret e kerkimit.",
       "add_url": "Shto URL",
       "url": "URL",
+      "urls": "URL-te",
       "priority": "Prioriteti",
       "changefreq": "Frekuenca e Ndryshimit",
       "lastmod": "Modifikimi i Fundit",
+      "last_modified": "Modifikimi i Fundit",
       "generate": "Gjenero Sitemap",
       "download": "Shkarko sitemap.xml",
-      "output_label": "XML Sitemap"
+      "output_label": "XML Sitemap",
+      "select": "Zgjedh",
+      "apply_to_all": "Zbato per Te Gjitha",
+      "bulk_add": "Shto ne Mase"
     },
     "css-clip-path-generator": {
       "name": "Gjenerues CSS Clip Path",
@@ -1779,6 +1813,7 @@
     "how_it_works": "Si Funksionon",
     "used_count": "Perdorur {count} here",
     "continue_workflow": "Vazhdoni Punen Tuaj",
+    "load_sample": "Ngarko Shembull",
     "howto_upload": {
       "step1": "Ngarkoni skedarin tuaj duke e terhequr ose duke klikuar.",
       "step2": "Rregulloni parametrat sipas nevojave tuaja.",
