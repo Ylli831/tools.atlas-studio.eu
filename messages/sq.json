@@ -1850,10 +1850,10 @@
     "decline": "Refuzo"
   },
   "notFound": {
-    "title": "Faqja Nuk u Gjet",
-    "description": "Faqja qe po kerkoni nuk ekziston ose eshte zhvendosur.",
-    "back_home": "Kthehu ne Ballina",
-    "back_tools": "Shfleto Veglat"
+    "title": "Kjo vegle nuk ekziston",
+    "description": "Kemi gjenerues QR, konvertues imazhesh, dhe 20+ vegla te tjera, por kjo faqe nuk eshte njera prej tyre.",
+    "back_home": "Kthehu ne siguri",
+    "back_tools": "Shfleto veglat"
   },
   "suggestion": {
     "title": "Nuk e gjeni ate qe kerkoni?",

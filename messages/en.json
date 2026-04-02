@@ -1850,10 +1850,10 @@
     "decline": "Decline"
   },
   "notFound": {
-    "title": "Page Not Found",
-    "description": "The page you're looking for doesn't exist or has been moved.",
-    "back_home": "Go Home",
-    "back_tools": "Browse Tools"
+    "title": "This tool doesn't exist",
+    "description": "We have QR generators, image converters, and 20+ other tools, but this page isn't one of them.",
+    "back_home": "Back to safety",
+    "back_tools": "Browse tools"
   },
   "suggestion": {
     "title": "Can't find what you need?",
