@@ -1,41 +1,31 @@
 import Link from "next/link";
-import "./globals.css";
 
 export default function RootNotFound() {
   return (
-    <html lang="en" className="dark">
-      <body className="bg-background text-foreground">
-        <div className="min-h-screen flex items-center justify-center px-4">
-          <div className="max-w-md w-full text-center">
-            <p className="text-sm font-semibold tracking-widest text-muted-foreground/40 uppercase mb-8">
+    <html lang="en">
+      <body style={{ margin: 0, backgroundColor: "#fff", color: "#37474b", fontFamily: "system-ui, -apple-system, sans-serif" }}>
+        <div style={{ minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center", padding: "1rem" }}>
+          <div style={{ maxWidth: "28rem", width: "100%", textAlign: "center" }}>
+            <p style={{ fontSize: "0.875rem", fontWeight: 600, letterSpacing: "0.15em", color: "#999", textTransform: "uppercase" as const, marginBottom: "2rem" }}>
               Atlas Tools
             </p>
 
-            <p className="text-[8rem] sm:text-[10rem] font-bold leading-none tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-border to-transparent select-none mb-6">
+            <p style={{ fontSize: "10rem", fontWeight: "bold", lineHeight: 1, letterSpacing: "-0.05em", color: "#cb6a3f", userSelect: "none", margin: "0 0 1.5rem" }}>
               404
             </p>
 
-            <h1 className="text-xl sm:text-2xl font-bold text-foreground mb-3">
+            <h1 style={{ fontSize: "1.5rem", fontWeight: "bold", marginBottom: "0.75rem", color: "#37474b" }}>
               This tool doesn't exist
             </h1>
-            <p className="text-sm text-muted-foreground leading-relaxed mb-10 max-w-sm mx-auto">
+            <p style={{ fontSize: "0.875rem", color: "#6b7b80", lineHeight: 1.6, marginBottom: "2.5rem", maxWidth: "24rem", marginLeft: "auto", marginRight: "auto" }}>
               We have QR generators, image converters, and 20+ other tools, but this page isn't one of them.
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-              <Link
-                href="/"
-                className="inline-flex items-center gap-2 bg-teal text-white font-medium px-6 py-2.5 rounded-lg hover:bg-teal-hover transition-colors text-sm"
-              >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-                </svg>
+            <div style={{ display: "flex", gap: "0.75rem", justifyContent: "center", flexWrap: "wrap" }}>
+              <Link href="/" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", backgroundColor: "#487877", color: "#fff", fontWeight: 500, padding: "0.625rem 1.5rem", borderRadius: "0.5rem", fontSize: "0.875rem", textDecoration: "none" }}>
                 Back to safety
               </Link>
-              <Link
-                href="/tools"
-                className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground px-6 py-2.5 rounded-lg border border-border hover:border-teal/30 transition-colors"
-              >
+              <Link href="/tools" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", color: "#6b7b80", fontWeight: 500, padding: "0.625rem 1.5rem", borderRadius: "0.5rem", fontSize: "0.875rem", textDecoration: "none", border: "1px solid #ddd" }}>
                 Browse tools
               </Link>
             </div>
