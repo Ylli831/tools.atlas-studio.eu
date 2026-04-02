@@ -15,10 +15,10 @@ export default function RootNotFound() {
             </p>
 
             <h1 style={{ fontSize: "1.5rem", fontWeight: "bold", marginBottom: "0.75rem", color: "#37474b" }}>
-              This tool doesn't exist
+              This tool doesn&apos;t exist
             </h1>
             <p style={{ fontSize: "0.875rem", color: "#6b7b80", lineHeight: 1.6, marginBottom: "2.5rem", maxWidth: "24rem", marginLeft: "auto", marginRight: "auto" }}>
-              We have QR generators, image converters, and 20+ other tools, but this page isn't one of them.
+              We have QR generators, image converters, and 20+ other tools, but this page isn&apos;t one of them.
             </p>
 
             <div style={{ display: "flex", gap: "0.75rem", justifyContent: "center", flexWrap: "wrap" }}>
