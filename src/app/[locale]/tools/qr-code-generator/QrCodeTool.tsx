@@ -200,7 +200,9 @@ export default function QrCodeTool() {
         margin: logoMargin,
         imageSize: Math.min(MAX_LOGO_SIZE, Math.max(MIN_LOGO_SIZE, logoSize)),
         hideBackgroundDots: true,
-        saveAsBlob: true,
+        // saveAsBlob fetches the data URL through connect-src, which most
+        // strict CSPs block. Keep the logo inline as a data URI instead.
+        saveAsBlob: false,
       },
     };
   }, [
