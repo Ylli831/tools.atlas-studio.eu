@@ -137,6 +137,10 @@ export default function QrCodeTool() {
   const [gradientType, setGradientType] = useState<"linear" | "radial">("linear");
 
   const [logoDataUrl, setLogoDataUrl] = useState<string | null>(null);
+  // Raw SVG markup, only set when the uploaded logo is an SVG. Used to
+  // inline the logo as real vector paths in the SVG/PDF downloads instead
+  // of leaving it as a nested data: URI that rasterizes in PDF export.
+  const [logoSvgMarkup, setLogoSvgMarkup] = useState<string | null>(null);
   const [logoSize, setLogoSize] = useState(0.25);
   const [logoMargin, setLogoMargin] = useState(6);
   const [logoIsDragging, setLogoIsDragging] = useState(false);
@@ -268,11 +272,61 @@ export default function QrCodeTool() {
 
   const handleLogoFile = (file: File) => {
     if (!file) return;
+    const isSvg = file.type === "image/svg+xml" || /\.svg$/i.test(file.name);
     const reader = new FileReader();
     reader.onload = () => {
-      if (typeof reader.result === "string") setLogoDataUrl(reader.result);
+      if (typeof reader.result !== "string") return;
+      setLogoDataUrl(reader.result);
     };
     reader.readAsDataURL(file);
+    if (isSvg) {
+      const textReader = new FileReader();
+      textReader.onload = () => {
+        if (typeof textReader.result === "string") {
+          setLogoSvgMarkup(textReader.result);
+        }
+      };
+      textReader.readAsText(file);
+    } else {
+      setLogoSvgMarkup(null);
+    }
+  };
+
+  // Replace the qr-code-styling <image> tag with the uploaded SVG's content
+  // as a nested <svg> at the same position/size, so the output is fully
+  // vector with no rasterization step.
+  const inlineSvgLogo = (qrSvgRoot: Element): Element => {
+    if (!logoSvgMarkup) return qrSvgRoot;
+    const imageEl = qrSvgRoot.querySelector("image");
+    if (!imageEl) return qrSvgRoot;
+    const x = imageEl.getAttribute("x") ?? "0";
+    const y = imageEl.getAttribute("y") ?? "0";
+    const w = imageEl.getAttribute("width") ?? "0";
+    const h = imageEl.getAttribute("height") ?? "0";
+    const parser = new DOMParser();
+    const logoDoc = parser.parseFromString(logoSvgMarkup, "image/svg+xml");
+    const logoRoot = logoDoc.documentElement;
+    if (!logoRoot || logoRoot.nodeName !== "svg") return qrSvgRoot;
+    const ns = "http://www.w3.org/2000/svg";
+    const wrapper = qrSvgRoot.ownerDocument!.createElementNS(ns, "svg");
+    wrapper.setAttribute("x", x);
+    wrapper.setAttribute("y", y);
+    wrapper.setAttribute("width", w);
+    wrapper.setAttribute("height", h);
+    const vb = logoRoot.getAttribute("viewBox");
+    if (vb) {
+      wrapper.setAttribute("viewBox", vb);
+    } else {
+      const lw = logoRoot.getAttribute("width");
+      const lh = logoRoot.getAttribute("height");
+      if (lw && lh) wrapper.setAttribute("viewBox", `0 0 ${parseFloat(lw)} ${parseFloat(lh)}`);
+    }
+    wrapper.setAttribute("preserveAspectRatio", "xMidYMid meet");
+    Array.from(logoRoot.childNodes).forEach((node) => {
+      wrapper.appendChild(node.cloneNode(true));
+    });
+    imageEl.replaceWith(wrapper);
+    return qrSvgRoot;
   };
 
   const onLogoDrop = (e: React.DragEvent<HTMLLabelElement>) => {
@@ -284,10 +338,31 @@ export default function QrCodeTool() {
 
   const downloadSVG = async () => {
     const instance = qrInstanceRef.current as
-      | { download: (o: { name?: string; extension?: "svg" | "png" }) => Promise<void> }
+      | {
+          getRawData: (ext?: "svg" | "png") => Promise<Blob | null>;
+          download: (o: { name?: string; extension?: "svg" | "png" }) => Promise<void>;
+        }
       | null;
     if (!instance) return;
-    await instance.download({ name: "qr-code", extension: "svg" });
+    // No SVG logo → use the lib's built-in download path.
+    if (!logoSvgMarkup) {
+      await instance.download({ name: "qr-code", extension: "svg" });
+      return;
+    }
+    // SVG logo → inline its contents so the output is fully vector.
+    const raw = await instance.getRawData("svg");
+    if (!raw) return;
+    const svgText = await (raw as Blob).text();
+    const doc = new DOMParser().parseFromString(svgText, "image/svg+xml");
+    inlineSvgLogo(doc.documentElement);
+    const serialized = new XMLSerializer().serializeToString(doc.documentElement);
+    const blob = new Blob([serialized], { type: "image/svg+xml" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "qr-code.svg";
+    a.click();
+    URL.revokeObjectURL(url);
   };
 
   const downloadPNG = async () => {
@@ -311,6 +386,9 @@ export default function QrCodeTool() {
       const parser = new DOMParser();
       const svgDoc = parser.parseFromString(svgText, "image/svg+xml");
       const svgEl = svgDoc.documentElement as unknown as Element;
+      // Inline an uploaded SVG logo as real vector paths so the PDF stays
+      // fully vector instead of rasterizing the nested <image href> tag.
+      if (logoSvgMarkup) inlineSvgLogo(svgEl);
       const holder = document.createElement("div");
       holder.style.position = "fixed";
       holder.style.left = "-99999px";
@@ -691,7 +769,10 @@ export default function QrCodeTool() {
                     />
                   </div>
                   <button
-                    onClick={() => setLogoDataUrl(null)}
+                    onClick={() => {
+                      setLogoDataUrl(null);
+                      setLogoSvgMarkup(null);
+                    }}
                     className="px-3 py-1.5 rounded-lg text-sm font-medium bg-surface text-foreground hover:bg-border transition-colors"
                   >
                     {t("logo_remove")}
