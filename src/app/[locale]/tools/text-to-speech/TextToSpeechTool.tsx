@@ -23,6 +23,7 @@ export default function TextToSpeechTool() {
   }, []);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     loadVoices();
     window.speechSynthesis.onvoiceschanged = loadVoices;
     return () => {

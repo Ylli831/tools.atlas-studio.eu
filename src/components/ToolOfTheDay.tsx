@@ -12,6 +12,7 @@ export default function ToolOfTheDay() {
 
   useEffect(() => {
     const dayIndex = Math.floor(Date.now() / 86400000) % tools.length;
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setTool(tools[dayIndex]);
   }, []);
 

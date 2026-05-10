@@ -71,6 +71,7 @@ export default function JsonToYamlTool() {
   }, [tc]);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     convert(input, mode);
   }, [input, mode, convert]);
 

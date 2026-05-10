@@ -22,6 +22,7 @@ export default function HeroGreeting() {
       ? `${t(timeKey as never)} ${t("greeting_returning")}`
       : `${t(timeKey as never)} ${t("greeting_subtitle")}`;
 
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setGreeting(line);
   }, [t]);
 

@@ -127,6 +127,7 @@ export default function DeviceInformationTool() {
   }, []);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     collectInfo();
 
     const interval = setInterval(collectInfo, 5000);

@@ -54,7 +54,7 @@ export default function CronExpressionGeneratorTool() {
       if (!isValid) return [];
       const runs: Date[] = [];
       const now = new Date();
-      let check = new Date(now);
+      const check = new Date(now);
       check.setSeconds(0, 0);
       check.setMinutes(check.getMinutes() + 1);
 

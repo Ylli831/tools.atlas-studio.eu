@@ -33,7 +33,7 @@ export default function CssAnimationGeneratorTool() {
   ]);
   const [previewKey, setPreviewKey] = useState(0);
 
-  let nextId = Math.max(...keyframes.map((k) => k.id)) + 1;
+  const nextId = Math.max(...keyframes.map((k) => k.id)) + 1;
 
   const addKeyframe = () => {
     setKeyframes((prev) => [

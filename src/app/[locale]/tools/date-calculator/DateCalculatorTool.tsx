@@ -15,8 +15,8 @@ function dateDiff(start: Date, end: Date) {
   const remainingDays = totalDays % 7;
 
   // Calculate years, months, days
-  let d1 = start < end ? new Date(start) : new Date(end);
-  let d2 = start < end ? new Date(end) : new Date(start);
+  const d1 = start < end ? new Date(start) : new Date(end);
+  const d2 = start < end ? new Date(end) : new Date(start);
 
   let years = d2.getFullYear() - d1.getFullYear();
   let months = d2.getMonth() - d1.getMonth();

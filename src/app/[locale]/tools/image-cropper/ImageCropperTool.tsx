@@ -177,7 +177,7 @@ export default function ImageCropperTool() {
       }));
       setDragStart(coords);
     } else if (dragMode === "create") {
-      let w = coords.x - dragStart.x;
+      const w = coords.x - dragStart.x;
       let h = coords.y - dragStart.y;
 
       const aspectValue = getAspectValue(aspectRatio);

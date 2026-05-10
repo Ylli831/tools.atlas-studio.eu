@@ -48,7 +48,7 @@ export default function BoxShadowGeneratorTool() {
   const [shadows, setShadows] = useState<Shadow[]>([createDefaultShadow(1)]);
   const [activeIdx, setActiveIdx] = useState(0);
   const [copied, setCopied] = useState(false);
-  let nextId = shadows.length > 0 ? Math.max(...shadows.map((s) => s.id)) + 1 : 1;
+  const nextId = shadows.length > 0 ? Math.max(...shadows.map((s) => s.id)) + 1 : 1;
 
   const cssValue = useMemo(() => {
     return shadows.map(shadowToCss).join(",\n    ");

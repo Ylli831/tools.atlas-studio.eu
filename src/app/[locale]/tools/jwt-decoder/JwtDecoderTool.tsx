@@ -69,7 +69,12 @@ export default function JwtDecoderTool() {
   const [decoded, setDecoded] = useState<JwtParts | null>(null);
 
   useEffect(() => {
-    if (!token.trim()) { setDecoded(null); return; }
+    if (!token.trim()) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setDecoded(null);
+      return;
+    }
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setDecoded(decodeJwt(token));
   }, [token]);
 

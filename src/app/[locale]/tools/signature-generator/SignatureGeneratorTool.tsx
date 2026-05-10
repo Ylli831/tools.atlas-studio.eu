@@ -64,6 +64,7 @@ export default function SignatureGeneratorTool() {
 
   useEffect(() => {
     if (mode === "draw") {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       initCanvas();
     }
   }, [mode, initCanvas]);

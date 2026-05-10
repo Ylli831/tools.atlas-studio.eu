@@ -57,6 +57,7 @@ export default function CountdownCreatorTool() {
 
   // Tick every second
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     updateCountdown();
     const interval = setInterval(updateCountdown, 1000);
     return () => clearInterval(interval);

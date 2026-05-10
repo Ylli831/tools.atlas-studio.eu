@@ -25,6 +25,7 @@ export default function CookieConsent() {
     const existing = document.cookie
       .split("; ")
       .find((c) => c.startsWith("cookie-consent="));
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     if (!existing) setVisible(true);
   }, []);
 

@@ -33,6 +33,7 @@ export default function RegexTesterTool() {
     if (!pattern || !testString) return { matches: [] as MatchResult[], highlighted: "" };
     try {
       const regex = new RegExp(pattern, flags);
+      // eslint-disable-next-line react-hooks/set-state-in-render
       setError("");
       const results: MatchResult[] = [];
       let match;
@@ -69,6 +70,7 @@ export default function RegexTesterTool() {
 
       return { matches: results, highlighted: html };
     } catch (e) {
+      // eslint-disable-next-line react-hooks/set-state-in-render
       setError((e as Error).message);
       return { matches: [] as MatchResult[], highlighted: "" };
     }

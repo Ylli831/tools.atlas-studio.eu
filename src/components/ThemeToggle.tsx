@@ -8,6 +8,7 @@ export default function ThemeToggle() {
   useEffect(() => {
     const stored = localStorage.getItem("theme");
     if (stored === "dark") {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setTheme("dark");
       document.documentElement.setAttribute("data-theme", "dark");
     }

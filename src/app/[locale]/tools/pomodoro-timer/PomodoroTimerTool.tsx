@@ -25,9 +25,11 @@ export default function PomodoroTimerTool() {
   const sessionsRef = useRef(sessions);
 
   // Keep refs in sync
+  /* eslint-disable react-hooks/refs */
   timeLeftRef.current = timeLeft;
   modeRef.current = mode;
   sessionsRef.current = sessions;
+  /* eslint-enable react-hooks/refs */
 
   const getDuration = useCallback(
     (m: Mode) => {

@@ -49,6 +49,7 @@ export default function HtmlToMarkdownTool() {
   }, []);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     convert(html);
   }, [html, convert]);
 

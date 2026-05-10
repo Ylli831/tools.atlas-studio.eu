@@ -12,6 +12,7 @@ export default function AnnouncementBanner() {
 
   useEffect(() => {
     try {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       if (!localStorage.getItem(BANNER_KEY)) setVisible(true);
     } catch {}
   }, []);

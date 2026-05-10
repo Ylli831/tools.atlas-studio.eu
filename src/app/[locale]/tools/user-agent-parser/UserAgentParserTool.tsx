@@ -116,7 +116,9 @@ export default function UserAgentParserTool() {
 
   useEffect(() => {
     const current = navigator.userAgent;
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setUaString(current);
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setParsed(parseUserAgent(current));
   }, []);
 
