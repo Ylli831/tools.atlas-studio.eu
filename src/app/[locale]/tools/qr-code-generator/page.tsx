@@ -53,11 +53,12 @@ export default async function QrCodePage({
             {
               "@context": "https://schema.org",
               "@type": "HowTo",
-              name: "How to Generate a QR Code",
+              name: "How to Generate a Print-Ready QR Code",
               step: [
-                { "@type": "HowToStep", position: 1, name: "Enter content", text: "Type or paste the URL, text, or data you want to encode into the input field." },
-                { "@type": "HowToStep", position: 2, name: "Customize", text: "Adjust the QR code size, color, and error correction level to match your needs." },
-                { "@type": "HowToStep", position: 3, name: "Download", text: "Click the download button to save your QR code as a PNG image." },
+                { "@type": "HowToStep", position: 1, name: "Enter content", text: "Type or paste the URL, text, WiFi credentials, email or phone number you want to encode." },
+                { "@type": "HowToStep", position: 2, name: "Style it", text: "Pick a style preset or customize dot shape, corner shape, colors and gradient to match your brand." },
+                { "@type": "HowToStep", position: 3, name: "Add your logo", text: "Optionally upload a PNG, JPG or SVG logo. A clean white halo is added automatically so the logo stays readable." },
+                { "@type": "HowToStep", position: 4, name: "Download", text: "Export as vector SVG or PDF for print on business cards, or PNG for screen use." },
               ],
               tool: { "@type": "HowToTool", name: "Atlas Studio QR Code Generator" },
             },

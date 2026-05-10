@@ -23,11 +23,13 @@
     "next-intl": "^4.8.3",
     "pdf-lib": "^1.17.1",
     "pdfjs-dist": "^5.5.207",
+    "qr-code-styling": "^1.9.2",
     "qrcode": "^1.5.4",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "sonner": "^2.0.7",
     "sql-formatter": "^15.7.2",
+    "svg2pdf.js": "^2.7.0",
     "tesseract.js": "^7.0.0",
     "turndown": "^7.2.2"
   },
